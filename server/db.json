@@ -1,0 +1,323 @@
+{
+  "plan-free": [
+    {
+      "users": [
+        {
+          "id": 1,
+          "name": "",
+          "surname": "",
+          "email": "",
+          "password": ""
+        },
+        {
+          "id": 2,
+          "name": "",
+          "surname": "",
+          "email": "",
+          "password": ""
+        }
+      ]
+    },
+    {
+      "order": [
+        {
+          "fit-food": [
+            {
+              "exercise-pack": [
+                {
+                  "id": 1,
+                  "name": "",
+                  "description": "",
+                  "price" : ""
+                },
+                {
+                  "id": 2,
+                  "name": "",
+                  "description": "",
+                  "price" : ""
+                }
+              ]
+            },
+            {
+              "food-plates": [
+                {
+                  "id" : 1,
+                  "name": "Toast with Cheese and Spinach",
+                  "kcal" : "215 kcal",
+                  "protein" : "6.2 g",
+                  "carbohydrate" : "6.2 g",
+                  "fat" : "18.2 g"
+                },
+                {
+                  "id" : 2,
+                  "name": "Toast with Cheese and Spinach",
+                  "kcal" : "215 kcal",
+                  "protein" : "6.2 g",
+                  "carbohydrate" : "6.2 g",
+                  "fat" : "18.2 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "food-plates" : [
+            {
+              "id" : 1,
+              "name": "Toast with Cheese and Spinach",
+              "kcal" : "215 kcal",
+              "protein" : "6.2 g",
+              "carbohydrate" : "6.2 g",
+              "fat" : "18.2 g"
+            },
+            {
+              "id" : 2,
+              "name": "Toast with Cheese and Spinach",
+              "kcal" : "215 kcal",
+              "protein" : "6.2 g",
+              "carbohydrate" : "6.2 g",
+              "fat" : "18.2 g"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "plan-premium": [
+    {
+      "users": [
+        {
+          "id": 1,
+          "name": "",
+          "surname": "",
+          "email": "",
+          "password": ""
+        },
+        {
+          "id": 2,
+          "name": "",
+          "surname": "",
+          "email": "",
+          "password": ""
+        }
+      ]
+    },
+    {
+      "order-types": [
+        {
+          "sports": [
+            {
+              "powerLifting": [
+                {
+                  "breakfast": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "lunch": [
+                    {
+                      "id" : 1,
+                      "name": "Beef, Bean and Vegetable Burrito",
+                      "kcal" : "180 kcal",
+                      "protein" : "25.9 g",
+                      "carbohydrate" : "8.5 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "dinner": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "14 g"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "football": [
+                {
+                  "breakfast": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "lunch": [
+                    {
+                      "id" : 1,
+                      "name": "Beef, Bean and Vegetable Burrito",
+                      "kcal" : "180 kcal",
+                      "protein" : "25.9 g",
+                      "carbohydrate" : "8.5 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "dinner": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "14 g"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "basketball": [
+                {
+                  "breakfast": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "lunch": [
+                    {
+                      "id" : 1,
+                      "name": "Beef, Bean and Vegetable Burrito",
+                      "kcal" : "180 kcal",
+                      "protein" : "25.9 g",
+                      "carbohydrate" : "8.5 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "dinner": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "14 g"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "swimming": [
+                {
+                  "breakfast": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "lunch": [
+                    {
+                      "id" : 1,
+                      "name": "Beef, Bean and Vegetable Burrito",
+                      "kcal" : "180 kcal",
+                      "protein" : "25.9 g",
+                      "carbohydrate" : "8.5 g",
+                      "fat" : "18.2 g"
+                    }
+                  ]
+                },
+                {
+                  "dinner": [
+                    {
+                      "id" : 1,
+                      "name": "Toast with Cheese and Spinach",
+                      "kcal" : "215 kcal",
+                      "protein" : "6.2 g",
+                      "carbohydrate" : "6.2 g",
+                      "fat" : "14 g"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "healthy": [
+            {
+              "breakfast": [
+                {
+                  "id" : 1,
+                  "name": "Toast with Cheese and Spinach",
+                  "kcal" : "215 kcal",
+                  "protein" : "6.2 g",
+                  "carbohydrate" : "6.2 g",
+                  "fat" : "18.2 g"
+                }
+              ]
+            },
+            {
+              "lunch": [
+                {
+                  "id" : 1,
+                  "name": "Beef, Bean and Vegetable Burrito",
+                  "kcal" : "180 kcal",
+                  "protein" : "25.9 g",
+                  "carbohydrate" : "8.5 g",
+                  "fat" : "18.2 g"
+                }
+              ]
+            },
+            {
+              "dinner": [
+                {
+                  "id" : 1,
+                  "name": "Toast with Cheese and Spinach",
+                  "kcal" : "215 kcal",
+                  "protein" : "6.2 g",
+                  "carbohydrate" : "6.2 g",
+                  "fat" : "14 g"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "availability": [
+            {
+              "id": 1,
+              "name": "rice",
+              "provider": "Arroz La Fama"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
