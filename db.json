@@ -88,9 +88,10 @@
       "users": [
         {
           "id": 1,
-          "name": "",
-          "surname": "",
-          "email": "",
+          "name": "Luis",
+          "surname": "Estrada",
+          "email": "exampple@gmail.com",
+          "phone": "123456789",
           "password": ""
         },
         {
