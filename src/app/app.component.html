@@ -1,8 +1,18 @@
-<mat-toolbar class="nav">
-  <h1>NutriSend</h1>
-  <div class="mat-spacer"></div>
-  @for (option of options; track option.title) {
-    <a mat-button [routerLink]="option.path">{{ option.title }}</a>
-  }
-</mat-toolbar>
-<router-outlet />
+<nav class="navbar">
+  <img src="../../../../OPEN%20GIT/src/app/assets/logo.png" alt="NutriSend Logo" class="logo">
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Home</a></li>
+    <li><a routerLink="/sign-in" routerLinkActive="active" class="nav-link">Sign In</a></li>
+    <li><a routerLink="/sign-up" routerLinkActive="active" class="nav-link">Sign Up</a></li>
+    <li><a routerLink="/plans" routerLinkActive="active" class="nav-link">Plans</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet> <!-- Aquí se cargarán los componentes según la ruta -->
+
+<footer>
+  <p>NutriSend Copyright 2024, © Inc All rights reserved</p>
+</footer>
+
+
+

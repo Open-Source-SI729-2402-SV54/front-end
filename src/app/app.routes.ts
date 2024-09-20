@@ -1,15 +1,16 @@
 import { Routes } from '@angular/router';
-import {HomeComponent} from "./public/pages/home/home.component";
-import {PlansComponent} from "./nutrisend/pages/plans/plans.component";
-import {PageNotFoundComponent} from "./public/pages/page-not-found/page-not-found.component";
-import {OrderComponent} from "./nutrisend/pages/order/order.component";
-import {ProfileComponent} from "./nutrisend/pages/profile/profile.component";
+import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { PlansComponent } from './plans/plans.component';
+import { RegisterCongratsComponent } from './register-congrats/register-congrats.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent },
   { path: 'plans', component: PlansComponent },
-  { path: 'order', component: OrderComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent}
+  { path: 'register-congrats', component: RegisterCongratsComponent },
+  // Ruta comodín para redirigir a Home si la ruta no coincide
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

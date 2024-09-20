@@ -1,24 +1,34 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
-import {MatToolbar} from "@angular/material/toolbar";
-import {MatAnchor} from "@angular/material/button";
+import { Router } from '@angular/router'; // Importar Router
+import { RouterModule } from '@angular/router'; // Importar RouterModule
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, MatToolbar, MatAnchor, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  styleUrls: ['./app.component.css'],
+  imports: [RouterModule]
 })
 export class AppComponent {
-  title = 'front-end';
+  title = 'mi-app';
 
-  options = [
-    { path: '/home', title: 'Home'},
-    { path: '/plans', title: 'Plans'},
-    { path: '/order', title: 'Order'},
-    { path: '/profile', title: 'Profile'},
+  constructor(private router: Router) { }
 
-  ]
+  navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
 
+  navigateToSignIn(): void {
+    this.router.navigate(['/sign-in']);
+  }
+
+  navigateToSignUp(): void {
+    this.router.navigate(['/sign-up']);
+  }
+
+  navigateToPlans(): void {
+    this.router.navigate(['/plans']);
+  }
 }
+

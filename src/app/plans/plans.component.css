@@ -1,0 +1,131 @@
+.plans-container {
+  position: relative;
+}
+
+html, body {
+  height: 80%;
+  width: 80%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  width: 1440px;
+  height: 88px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 88px;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+}
+
+.nav-link {
+  color: #E08E36;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+.plan-card {
+  border-radius: 50px;
+  position: absolute;
+  width: 390px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.orange {
+  background-color: #F4B289;
+  right: -250px;
+  position: relative; /* O 'absolute' según tu diseño */
+  top: 20px;
+}
+
+.green {
+  background-color: #C4F888;
+  left: 850px;
+  position: relative; /* O 'absolute' según tu diseño */
+  top: -500px;
+}
+
+.plan-image {
+  width: 205px;
+  height: 187px;
+}
+
+.plan-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #000000;
+  margin: 20px 0;
+}
+
+.plan-benefits {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.buy-button {
+  background-color: #FF914D;
+  color: #FFFFFF;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.basic{
+  background-color: #ff8a00;
+  color: white;
+  border: none;
+  padding: 10px 100px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.premium{
+  background-color: #66cc66;
+  color: white;
+  border: none;
+  padding: 10px 100px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 1440px;
+  height: 88px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-text {
+  color: #E08E36;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
