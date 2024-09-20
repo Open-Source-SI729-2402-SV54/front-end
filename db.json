@@ -1,301 +1,247 @@
 {
-  "users": [
+  "users-free": [
     {
-      "plan-free": [
-        {
-          "id": 1,
-          "name": "",
-          "surname": "",
-          "email": "",
-          "password": ""
-        },
-        {
-          "id": 2,
-          "name": "",
-          "surname": "",
-          "email": "",
-          "password": ""
-        }
-      ]
+      "id": 1,
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": ""
     },
     {
-      "plan-premium": [
-        {
-          "id": 1,
-          "name": "",
-          "surname": "",
-          "email": "",
-          "password": ""
-        },
-        {
-          "id": 2,
-          "name": "",
-          "surname": "",
-          "email": "",
-          "password": ""
-        }
-      ]
+      "id": 2,
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": ""
     }
   ],
-  "order-free": [
+  "exercise-fit": [
     {
-      "exercise-fit": [
-        {
-          "id": 1,
-          "name": "",
-          "description": "",
-          "price" : ""
-        },
-        {
-          "id": 2,
-          "name": "",
-          "description": "",
-          "price" : ""
-        }
-      ]
+      "id": 1,
+      "name": "",
+      "description": "",
+      "price" : ""
     },
     {
-      "food-fit": [
-        {
-          "id" : 1,
-          "name": "Toast with Cheese and Spinach",
-          "kcal" : "215 kcal",
-          "protein" : "6.2 g",
-          "carbohydrate" : "6.2 g",
-          "fat" : "18.2 g"
-        },
-        {
-          "id" : 2,
-          "name": "Toast with Cheese and Spinach",
-          "kcal" : "215 kcal",
-          "protein" : "6.2 g",
-          "carbohydrate" : "6.2 g",
-          "fat" : "18.2 g"
-        }
-      ]
-    },
-    {
-      "food": [
-        {
-          "id" : 1,
-          "name": "Toast with Cheese and Spinach",
-          "kcal" : "215 kcal",
-          "protein" : "6.2 g",
-          "carbohydrate" : "6.2 g",
-          "fat" : "18.2 g"
-        },
-        {
-          "id" : 2,
-          "name": "Toast with Cheese and Spinach",
-          "kcal" : "215 kcal",
-          "protein" : "6.2 g",
-          "carbohydrate" : "6.2 g",
-          "fat" : "18.2 g"
-        }
-      ]
+      "id": 2,
+      "name": "",
+      "description": "",
+      "price" : ""
     }
   ],
-  "order-premium-sport": [
+  "food-fit": [
     {
-      "breakfast": [
-        {
-          "powerLifting": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        },
-        {
-          "football": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        },
-        {
-          "basketball": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        },
-        {
-          "swimming": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        }
-      ]
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
     },
     {
-    "lunch": [
-      {
-        "powerLifting": [
-          {
-            "id" : 1,
-            "name": "Toast with Cheese and Spinach",
-            "kcal" : "215 kcal",
-            "protein" : "6.2 g",
-            "carbohydrate" : "6.2 g",
-            "fat" : "18.2 g"
-          }
-        ]
-      },
-      {
-        "football": [
-          {
-            "id" : 1,
-            "name": "Toast with Cheese and Spinach",
-            "kcal" : "215 kcal",
-            "protein" : "6.2 g",
-            "carbohydrate" : "6.2 g",
-            "fat" : "18.2 g"
-          }
-        ]
-      },
-      {
-        "basketball": [
-          {
-            "id" : 1,
-            "name": "Toast with Cheese and Spinach",
-            "kcal" : "215 kcal",
-            "protein" : "6.2 g",
-            "carbohydrate" : "6.2 g",
-            "fat" : "18.2 g"
-          }
-        ]
-      },
-      {
-        "swimming": [
-          {
-            "id" : 1,
-            "name": "Toast with Cheese and Spinach",
-            "kcal" : "215 kcal",
-            "protein" : "6.2 g",
-            "carbohydrate" : "6.2 g",
-            "fat" : "18.2 g"
-          }
-        ]
-      }
-    ]
-    },
-    {
-      "dinner": [
-        {
-          "powerLifting": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        },
-        {
-          "football": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        },
-        {
-          "basketball": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        },
-        {
-          "swimming": [
-            {
-              "id" : 1,
-              "name": "Toast with Cheese and Spinach",
-              "kcal" : "215 kcal",
-              "protein" : "6.2 g",
-              "carbohydrate" : "6.2 g",
-              "fat" : "18.2 g"
-            }
-          ]
-        }
-      ]
+      "id" : 2,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
     }
   ],
-  "order-premium-healthy": [
+  "food": [
     {
-      "breakfast-healthy": [
-        {
-          "id" : 1,
-          "name": "Toast with Cheese and Spinach",
-          "kcal" : "215 kcal",
-          "protein" : "6.2 g",
-          "carbohydrate" : "6.2 g",
-          "fat" : "18.2 g"
-        }
-      ]
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
     },
     {
-      "lunch-healthy": [
-        {
-          "id" : 1,
-          "name": "Beef, Bean and Vegetable Burrito",
-          "kcal" : "180 kcal",
-          "protein" : "25.9 g",
-          "carbohydrate" : "8.5 g",
-          "fat" : "18.2 g"
-        }
-      ]
-    },
-    {
-      "dinner-healthy": [
-        {
-          "id" : 1,
-          "name": "Toast with Cheese and Spinach",
-          "kcal" : "215 kcal",
-          "protein" : "6.2 g",
-          "carbohydrate" : "6.2 g",
-          "fat" : "14 g"
-        }
-      ]
+      "id" : 2,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
     }
   ],
-  "order-premium-availability": [
+
+  "users-premium": [
+    {
+      "id": 1,
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": 2,
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": ""
+    }
+  ],
+  "breakfast-powerLifting": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "lunch-powerLifting": [
+    {
+      "id" : 1,
+      "name": "Beef, Bean and Vegetable Burrito",
+      "kcal" : "180 kcal",
+      "protein" : "25.9 g",
+      "carbohydrate" : "8.5 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "dinner-powerLifting": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "14 g"
+    }
+  ],
+
+  "breakfast-football": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "lunch-football": [
+    {
+      "id" : 1,
+      "name": "Beef, Bean and Vegetable Burrito",
+      "kcal" : "180 kcal",
+      "protein" : "25.9 g",
+      "carbohydrate" : "8.5 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "dinner-football": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "14 g"
+    }
+  ],
+
+  "breakfast-basketball": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "lunch-basketball": [
+    {
+      "id" : 1,
+      "name": "Beef, Bean and Vegetable Burrito",
+      "kcal" : "180 kcal",
+      "protein" : "25.9 g",
+      "carbohydrate" : "8.5 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "dinner-basketball": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "14 g"
+    }
+  ],
+
+  "breakfast-swimming": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "lunch-swimming": [
+    {
+      "id" : 1,
+      "name": "Beef, Bean and Vegetable Burrito",
+      "kcal" : "180 kcal",
+      "protein" : "25.9 g",
+      "carbohydrate" : "8.5 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "dinner-swimming": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "14 g"
+    }
+  ],
+
+  "breakfast-healthy": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "lunch-healthy": [
+    {
+      "id" : 1,
+      "name": "Beef, Bean and Vegetable Burrito",
+      "kcal" : "180 kcal",
+      "protein" : "25.9 g",
+      "carbohydrate" : "8.5 g",
+      "fat" : "18.2 g"
+    }
+  ],
+  "dinner-healthy": [
+    {
+      "id" : 1,
+      "name": "Toast with Cheese and Spinach",
+      "kcal" : "215 kcal",
+      "protein" : "6.2 g",
+      "carbohydrate" : "6.2 g",
+      "fat" : "14 g"
+    }
+  ],
+
+  "availability": [
     {
       "id": 1,
       "name": "rice",
       "provider": "Arroz La Fama"
     }
-  ],
+  ]
 }
