@@ -1,1 +1,91 @@
-<p>order works!</p>
+<div class="container">
+  <h2>Tu pedido</h2>
+
+  <!-- Desayuno Section -->
+  <mat-card class="section">
+    <mat-card-header>
+      <mat-card-title>Desayuno</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="item">
+        <mat-icon>fastfood</mat-icon>
+        <span>Avena con Arándanos y Almendras</span>
+        <div class="quantity">
+          <button mat-button (click)="decreaseQuantity('desayuno')">-</button>
+          <span>{{ desayunoQuantity }}</span>
+          <button mat-button (click)="increaseQuantity('desayuno')">+</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Almuerzo Section -->
+  <mat-card class="section">
+    <mat-card-header>
+      <mat-card-title>Almuerzo</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="item">
+        <mat-icon>lunch_dining</mat-icon>
+        <span>Lomo Saltado</span>
+        <div class="quantity">
+          <button mat-button (click)="decreaseQuantity('almuerzo')">-</button>
+          <span>{{ almuerzoQuantity }}</span>
+          <button mat-button (click)="increaseQuantity('almuerzo')">+</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Cena Section -->
+  <mat-card class="section">
+    <mat-card-header>
+      <mat-card-title>Cena</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="item">
+        <mat-icon>dinner_dining</mat-icon>
+        <span>Salmón al grill con puré de batata y espárragos</span>
+        <div class="quantity">
+          <button mat-button (click)="decreaseQuantity('cena')">-</button>
+          <span>{{ cenaQuantity }}</span>
+          <button mat-button (click)="increaseQuantity('cena')">+</button>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Dirección -->
+  <div class="section">
+    <div class="item-estimate">
+      <mat-icon>location_on</mat-icon>
+      <span>Dirección:</span>
+      <p>Av. Carlos Villarán 285</p>
+    </div>
+  </div>
+
+  <!-- Estimación -->
+  <div class="section">
+    <div class="item-estimate">
+      <mat-icon>access_time</mat-icon>
+      <span>Estimación de Llegada:</span>
+      <div class="quantity">
+        <button mat-button (click)="goToSchedule()">Horario</button>
+        <mat-form-field appearance="fill">
+          <mat-label>Selecciona Hora</mat-label>
+          <mat-select [(ngModel)]="selectedTime">
+            <mat-option *ngFor="let time of availableTimes" [value]="time">{{ time }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <!-- Total Section -->
+  <div class="total-section">
+    <h4>Total:</h4>
+    <p class="money">S/. {{ totalAmount }}</p>
+    <button mat-raised-button color="primary" (click)="payNow()">Pagar</button>
+  </div>
+
+</div>

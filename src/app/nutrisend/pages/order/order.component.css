@@ -1,0 +1,89 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  border-bottom: 1px solid rgba(255, 145, 77, 0.8);
+  padding: 10px 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-estimate{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+.section-estimate{
+  display: flex;
+  flex-direction: column;
+}
+.quantity button {
+  justify-content: end;
+  background-color:rgba(255, 145, 77, 0.2);
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.total-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: rgba(255, 145, 77, 0.2);
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: black;
+  border-radius: 5px;
+}
+h2{
+  text-align: center;
+  color: rgba(255, 145, 77, 0.2);
+  font-weight: bold;
+  font-size: 40px;
+}
+h3{
+  font-size: 30px;
+  color: rgba(255, 145, 77, 0.2);
+  font-weight: bold;
+}
+h4{
+  font-size: 24px;
+  font-weight: bold;
+}
+span{
+  padding: 10px;
+}
+p{
+  margin: 0px;
+}
+.btn-horario{
+  margin-left: 80px;
+  margin-right: 80px;
+}
+select{
+  background-color: rgba(255, 145, 77, 0.2);
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+  color: black;
+  border-radius: 5px;
+}
