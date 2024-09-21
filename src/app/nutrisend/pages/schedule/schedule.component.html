@@ -1,0 +1,25 @@
+<div class="schedule-container">
+  <h2>Horarios</h2>
+
+  <div class="edit-button-container">
+    <button mat-icon-button (click)="editSchedule()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </div>
+
+  <div class="schedule-grid">
+    <!-- Header for Days of the Week -->
+    <div class="day"></div>
+    <div *ngFor="let day of days" class="day">{{ day }}</div>
+
+    <!-- Meals and Plans -->
+    <div class="meal">Desayuno</div>
+    <div *ngFor="let meal of schedule.desayuno" class="meal-item">{{ meal }}</div>
+
+    <div class="meal">Almuerzo</div>
+    <div *ngFor="let meal of schedule.almuerzo" class="meal-item">{{ meal }}</div>
+
+    <div class="meal">Cena</div>
+    <div *ngFor="let meal of schedule.cena" class="meal-item">{{ meal }}</div>
+  </div>
+</div>
