@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; // Importar Router
-import { RouterModule } from '@angular/router'; // Importar RouterModule
+import { RouterModule } from '@angular/router';
+import {MatCard} from "@angular/material/card"; // Importar RouterModule
 
 @Component({
   selector: 'app-register-congrats',
   templateUrl: './register-congrats.component.html',
   standalone: true,
   styleUrls: ['./register-congrats.component.css'],
-  imports: [RouterModule] // Añadir RouterModule a los imports
+  imports: [RouterModule, MatCard] // Añadir RouterModule a los imports
 })
 export class RegisterCongratsComponent {
   welcomeMessage: string = 'Welcome to NutriSend';

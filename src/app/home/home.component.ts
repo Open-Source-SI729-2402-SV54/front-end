@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; // Importar RouterModule
+import { RouterModule } from '@angular/router';
+import {MatFormField} from "@angular/material/form-field"; // Importar RouterModule
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   standalone: true,
   styleUrls: ['./home.component.css'],
-  imports: [RouterModule] // Añadir RouterModule a los imports
+  imports: [RouterModule, MatFormField] // Añadir RouterModule a los imports
 })
 export class HomeComponent {
   title: string = '¡ Welcome to NutriSend !';

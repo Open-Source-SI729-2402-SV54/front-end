@@ -2,9 +2,13 @@
 <div class="register-congrats-container">
   <h1 class="welcome-message">{{ welcomeMessage }}</h1>
 
-  <div class="success-box">
+  <mat-card class="success-box">
     <h2 class="success-message">{{ successMessage }}</h2>
-    <button class="ready-button" (click)="goToPlans()">{{ buttonText }}</button>
-  </div>
+    <button mat-raised-button color="primary" class="ready-button" (click)="goToPlans()">
+      {{ buttonText }}
+    </button>
+  </mat-card>
 </div>
+
 </body>
+
