@@ -1,1 +1,16 @@
-<p>profile works!</p>
+<mat-card class="profile-card">
+  <mat-card-content>
+    <h1>My profile</h1>
+    <p>Name: {{ profile?.name }}</p>
+    <p>Surname: {{ profile?.surname }}</p>
+    <p>Email: {{ profile?.email }}</p>
+    <p>Phone: {{ profile?.phone }}</p> <!-- Asegúrate de que esto no cause problemas -->
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="navigateToSupport()">Soporte</button>
+    <button mat-raised-button color="accent" (click)="navigateToNotifications()">Notificaciones</button>
+    <button mat-raised-button color="warn" (click)="navigateToSchedule()">Horarios</button>
+    <button mat-raised-button color="warn" (click)="navigateToLogOut()">Cerrar Sesión</button>
+  </mat-card-actions>
+</mat-card>

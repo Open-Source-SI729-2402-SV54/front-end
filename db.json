@@ -2,10 +2,10 @@
   "users-free": [
     {
       "id": 1,
-      "name": "",
-      "surname": "",
-      "email": "",
-      "password": ""
+      "name": "Juan",
+      "surname": "Pescoran",
+      "email": "tank12345@gmail.com",
+      "password": "12345"
     },
     {
       "id": 2,
@@ -69,10 +69,10 @@
   "users-premium": [
     {
       "id": 1,
-      "name": "",
-      "surname": "",
-      "email": "",
-      "password": ""
+      "name": "Camila",
+      "surname": "Espinoza",
+      "email": "example@gmail.com",
+      "password": "12345"
     },
     {
       "id": 2,
@@ -206,42 +206,272 @@
     }
   ],
 
-  "breakfast-healthy": [
-    {
-      "id" : 1,
-      "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "carbohydrate" : "6.2 g",
-      "fat" : "18.2 g"
-    }
-  ],
-  "lunch-healthy": [
-    {
-      "id" : 1,
-      "name": "Beef, Bean and Vegetable Burrito",
-      "kcal" : "180 kcal",
-      "protein" : "25.9 g",
-      "carbohydrate" : "8.5 g",
-      "fat" : "18.2 g"
-    }
-  ],
-  "dinner-healthy": [
-    {
-      "id" : 1,
-      "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "carbohydrate" : "6.2 g",
-      "fat" : "14 g"
-    }
-  ],
-
   "availability": [
     {
       "id": 1,
       "name": "rice",
-      "provider": "Arroz La Fama"
+      "provider": "Arroz del Norte",
+      "img-product": "https://www.costenoalimentos.com.pe/media/392/6I3KmKTseD6EFvRGXi8OAmvQwna7SwwYZpOrGIlv.jpeg",
+      "description": "A staple food in many cultures, rice is versatile and nutritious."
+    },
+    {
+      "id": 2,
+      "name": "quinoa",
+      "provider": "Quinoa Real Perú",
+      "img-product": "https://saboresandinos.com/wp-content/uploads/2021/08/quinoa-peru-1.jpg",
+      "description": "Known as a superfood, quinoa is high in protein and gluten-free."
+    },
+    {
+      "id": 3,
+      "name": "potatoes",
+      "provider": "Papas Andinas SAC",
+      "img-product": "https://plazavea.vteximg.com.br/arquivos/ids/1265149-450-450/107771.jpg?v=637520242241930000",
+      "description": "Potatoes are a versatile ingredient, perfect for various dishes."
+    },
+    {
+      "id": 4,
+      "name": "avocado",
+      "provider": "Palta Hass Perú",
+      "img-product": "https://peru.info/archivos/publicacion/172-imagen-11535321102020.jpg",
+      "description": "Rich in healthy fats, avocados are great for salads and spreads."
+    },
+    {
+      "id": 5,
+      "name": "corn",
+      "provider": "Maíz Dorado SRL",
+      "img-product": "https://png.pngtree.com/thumb_back/fw800/background/20231226/pngtree-vibrant-golden-corn-a-stunning-background-texture-of-fresh-yellow-corn-image_13874466.png",
+      "description": "Corn is sweet and crunchy, used in many dishes and snacks."
+    },
+    {
+      "id": 6,
+      "name": "coffee",
+      "provider": "Café de los Andes",
+      "img-product": "https://d2j6dbq0eux0bg.cloudfront.net/images/39631008/1733346063.jpg",
+      "description": "Peruvian coffee is known for its rich flavor and aromatic profile."
+    },
+    {
+      "id": 7,
+      "name": "cocoa",
+      "provider": "Cacao Perú Exports",
+      "img-product": "https://agraria.pe/imgs/a/lx/exportaciones-peruanas-de-cacao-y-derivados-en-2023-deberia--31962.jpg",
+      "description": "Cocoa from Peru is renowned for its high quality and unique flavor."
+    },
+    {
+      "id": 8,
+      "name": "bananas",
+      "provider": "Banano Orgánico Piura",
+      "img-product": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2020/10/29/000722015W.jpg",
+      "description": "Sweet and nutritious, Peruvian bananas are perfect for snacks."
+    },
+    {
+      "id": 9,
+      "name": "chicken",
+      "provider": "Pollos del Sur SAC",
+      "img-product": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWO5e6eqBSxLIycAcdj0Cr6spiioDAGZX9U_hmr7_4zvmOKx6xcKyGYPOZkghJsfXcIZs&usqp=CAU",
+      "description": "Farm-raised chicken from Peru is known for its freshness and flavor."
+    }
+  ],
+  "healthy": [
+    {
+      "id": 1,
+      "name": "Quinoa Salad",
+      "type": "lunch",
+      "calories": 250,
+      "protein": 8,
+      "carbohydrates": 45,
+      "fats": 5,
+      "price": 7.5
+    },
+    {
+      "id": 2,
+      "name": "Spinach Omelette",
+      "type": "breakfast",
+      "calories": 200,
+      "protein": 15,
+      "carbohydrates": 10,
+      "fats": 12,
+      "price": 6.0
+    },
+    {
+      "id": 3,
+      "name": "Grilled Salmon",
+      "type": "dinner",
+      "calories": 350,
+      "protein": 30,
+      "carbohydrates": 0,
+      "fats": 20,
+      "price": 12.0
+    },
+    {
+      "id": 4,
+      "name": "Fruit Smoothie",
+      "type": "breakfast",
+      "calories": 180,
+      "protein": 3,
+      "carbohydrates": 35,
+      "fats": 2,
+      "price": 4.5
+    },
+    {
+      "id": 5,
+      "name": "Baked Chicken with Vegetables",
+      "type": "lunch",
+      "calories": 400,
+      "protein": 35,
+      "carbohydrates": 30,
+      "fats": 15,
+      "price": 10.0
+    },
+    {
+      "id": 6,
+      "name": "Fish Tacos",
+      "type": "dinner",
+      "calories": 300,
+      "protein": 20,
+      "carbohydrates": 25,
+      "fats": 10,
+      "price": 8.5
+    },
+    {
+      "id": 7,
+      "name": "Chickpea Salad",
+      "type": "lunch",
+      "calories": 320,
+      "protein": 15,
+      "carbohydrates": 50,
+      "fats": 8,
+      "price": 7.0
+    },
+    {
+      "id": 8,
+      "name": "Oatmeal with Berries",
+      "type": "breakfast",
+      "calories": 150,
+      "protein": 5,
+      "carbohydrates": 30,
+      "fats": 3,
+      "price": 4.0
+    },
+    {
+      "id": 9,
+      "name": "Turkey Stir-fry",
+      "type": "dinner",
+      "calories": 380,
+      "protein": 28,
+      "carbohydrates": 20,
+      "fats": 15,
+      "price": 9.5
+    },
+    {
+      "id": 10,
+      "name": "Greek Yogurt Parfait",
+      "type": "breakfast",
+      "calories": 220,
+      "protein": 10,
+      "carbohydrates": 30,
+      "fats": 5,
+      "price": 5.5
+    },
+    {
+      "id": 11,
+      "name": "Avocado Toast",
+      "type": "breakfast",
+      "calories": 300,
+      "protein": 8,
+      "carbohydrates": 30,
+      "fats": 15,
+      "price": 5.0
+    },
+    {
+      "id": 12,
+      "name": "Chicken Caesar Salad",
+      "type": "lunch",
+      "calories": 350,
+      "protein": 30,
+      "carbohydrates": 12,
+      "fats": 20,
+      "price": 9.0
+    },
+    {
+      "id": 13,
+      "name": "Beef Stir-fry",
+      "type": "dinner",
+      "calories": 400,
+      "protein": 35,
+      "carbohydrates": 15,
+      "fats": 18,
+      "price": 11.0
+    },
+    {
+      "id": 14,
+      "name": "Greek Salad",
+      "type": "lunch",
+      "calories": 250,
+      "protein": 10,
+      "carbohydrates": 12,
+      "fats": 15,
+      "price": 7.5
+    },
+    {
+      "id": 15,
+      "name": "Chia Seed Pudding",
+      "type": "breakfast",
+      "calories": 180,
+      "protein": 6,
+      "carbohydrates": 20,
+      "fats": 9,
+      "price": 4.5
+    },
+    {
+      "id": 16,
+      "name": "Shrimp Tacos",
+      "type": "dinner",
+      "calories": 320,
+      "protein": 25,
+      "carbohydrates": 30,
+      "fats": 12,
+      "price": 10.0
+    },
+    {
+      "id": 17,
+      "name": "Sweet Potato Fries",
+      "type": "lunch",
+      "calories": 220,
+      "protein": 3,
+      "carbohydrates": 40,
+      "fats": 8,
+      "price": 5.0
+    },
+    {
+      "id": 18,
+      "name": "Cottage Cheese with Pineapple",
+      "type": "breakfast",
+      "calories": 200,
+      "protein": 14,
+      "carbohydrates": 20,
+      "fats": 5,
+      "price": 3.5
+    },
+    {
+      "id": 19,
+      "name": "Mushroom Risotto",
+      "type": "dinner",
+      "calories": 350,
+      "protein": 12,
+      "carbohydrates": 50,
+      "fats": 10,
+      "price": 9.0
+    },
+    {
+      "id": 20,
+      "name": "Protein Smoothie",
+      "type": "breakfast",
+      "calories": 250,
+      "protein": 20,
+      "carbohydrates": 30,
+      "fats": 4,
+      "price": 5.5
     }
   ]
+
 }
