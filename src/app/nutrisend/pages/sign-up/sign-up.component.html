@@ -1,0 +1,38 @@
+<body>
+<div class="sign-up-container">
+  <div class="main-image">
+    <form class="signup-form" (ngSubmit)="onSignUp()">
+      <h1 mat-typography class="title">{{ title }}</h1>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ nameLabel }}</mat-label>
+        <input matInput type="text" placeholder="Enter your name" [(ngModel)]="name" name="name" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ surnameLabel }}</mat-label>
+        <input matInput type="text" placeholder="Enter your surname" [(ngModel)]="surname" name="surname" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ emailLabel }}</mat-label>
+        <input matInput type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>{{ passwordLabel }}</mat-label>
+        <input matInput type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
+      </mat-form-field>
+
+      <!-- Asegurar que el botón esté en una nueva línea -->
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" class="register-button">Register</button>
+      </div>
+
+      <p class="login-text">{{ loginText }}
+        <a mat-typography routerLink="/sign-in" class="login-link">Log in</a>
+      </p>
+    </form>
+  </div>
+</div>
+</body>

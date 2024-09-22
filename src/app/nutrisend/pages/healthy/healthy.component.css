@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Establece Poppins como la fuente predeterminada */
+}
+
+
+.titulo {
+  display: flex; /* Utiliza flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente (si es necesario) */
+  text-align: center; /* Asegura que el texto esté centrado */
+  color: #FFB282; /* Establece el color del texto */
+  margin: 20px 0; /* Añade márgenes para separar de otros elementos */
+}
+
+
+.healthy-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.meal-type {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.meal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center;
+  text-align: center;
+
+}
+
+.healthy-card {
+  flex: 1 1 300px; /* Establece un tamaño mínimo de 300px */
+  height: 350px; /* Altura fija de 350px */
+  background-color: #FFE9DB; /* Color de fondo de la tarjeta */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s; /* Animación suave al pasar el mouse */
+
+}
+
+.healthy-card:hover {
+  transform: translateY(-5px);
+}
+
+.meal-type h2 {
+  color: #FFA726; /* Color para los encabezados de tipo de comida */
+}
+
+.mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+.mat-card-content p {
+  margin: 5px 0;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.go-button {
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  padding: 10px; /* Espaciado interno */
+  background-color: #fd7e50; /* Color del botón */
+  color: black; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  transition: background-color 0.3s ease; /* Efecto al pasar el ratón */
+  justify-content: center;
+}
+
+.go-button:hover {
+  background-color: #a6d54c; /* Color al pasar el ratón */
+}
+

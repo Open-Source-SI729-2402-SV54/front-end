@@ -1,0 +1,27 @@
+<h1 class="titulo">Healthy</h1>
+
+<div class="healthy-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Calorías deseadas</mat-label>
+    <mat-slider min="0" max="1000" step="10" [(ngModel)]="desiredCalories"></mat-slider>
+    <p>Calorías: {{ desiredCalories }}</p>
+  </mat-form-field>
+
+  <div class="meal-type" *ngFor="let type of ['breakfast', 'lunch', 'dinner']">
+    <h2>{{ type | titlecase }}:</h2>
+    <div class="meal-cards">
+      <mat-card *ngFor="let healthy of getHealthiesByType(type)" class="healthy-card">
+        <mat-card-content>
+          <mat-card-title>{{ healthy.name }}</mat-card-title>
+          <mat-card-subtitle>{{ healthy.type }}</mat-card-subtitle>
+          <p>Calories: {{ healthy.calories }}</p>
+          <p>Protein: {{ healthy.protein }}g</p>
+          <p>Carbohydrates: {{ healthy.carbohydrates }}g</p>
+          <p>Fats: {{ healthy.fats }}g</p>
+          <p>Price: ${{ healthy.price }}</p>
+          <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
