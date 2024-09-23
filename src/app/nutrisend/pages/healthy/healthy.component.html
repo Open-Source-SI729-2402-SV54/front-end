@@ -1,12 +1,6 @@
 <h1 class="titulo">Healthy</h1>
 
 <div class="healthy-container">
-  <mat-form-field appearance="fill">
-    <mat-label>Calorías deseadas</mat-label>
-    <mat-slider min="0" max="1000" step="10" [(ngModel)]="desiredCalories"></mat-slider>
-    <p>Calorías: {{ desiredCalories }}</p>
-  </mat-form-field>
-
   <div class="meal-type" *ngFor="let type of ['breakfast', 'lunch', 'dinner']">
     <h2>{{ type | titlecase }}:</h2>
     <div class="meal-cards">

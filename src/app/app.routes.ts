@@ -9,6 +9,11 @@ import {SignUpComponent} from "./nutrisend/pages/sign-up/sign-up.component";
 import {OrderTypeComponent} from "./nutrisend/pages/order-type/order-type.component";
 import {HealthyComponent} from "./nutrisend/pages/healthy/healthy.component";
 import {AvailabilityComponent} from "./nutrisend/pages/availability/availability.component";
+import {SwimmingComponent} from "./nutrisend/components/swimming/swimming.component";
+import {BasketballComponent} from "./nutrisend/components/basketball/basketball.component";
+import {FootballComponent} from "./nutrisend/components/football/football.component";
+import {PowerliftingComponent} from "./nutrisend/components/powerlifting/powerlifting.component";
+import {SportsComponent} from "./nutrisend/pages/sports/sports.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +25,11 @@ export const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'healthy', component: HealthyComponent },
   { path: 'availability', component: AvailabilityComponent },
+  {path: 'sports', component: SportsComponent},
+  {path: 'powerLifting', component: PowerliftingComponent},
+  {path: 'football', component: FootballComponent},
+  {path: 'basketball', component: BasketballComponent},
+  {path: 'swimming', component: SwimmingComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent}
 ];

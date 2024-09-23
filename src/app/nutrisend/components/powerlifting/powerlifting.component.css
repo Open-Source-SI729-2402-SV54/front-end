@@ -1,0 +1,69 @@
+.powerlifting-container {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+.title{
+  font-size: 36px;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+}
+.meal-title{
+  font-size: 14px;
+  font-style: unset;
+  color: #0A732F;
+  text-align: center;
+}
+.meal-section-title{        //Subtitutulos de las secciones
+margin: 16px 0;
+  font-size: 28px;
+  color: #0A732F;
+  text-align: left;
+  font-family: 'poppins', sans-serif;
+}
+.meal-info{
+
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 13px;
+}
+.add-button {
+  background-color: rgba(128, 204, 40, 0.70);
+  color: white;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+.mat-card-actions {
+  display: flex;
+  justify-content: center;
+}
+.meal-card {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 204, 40, 0.15);
+}
+mat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #FF914D;
+  min-height: 200px;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.mat-grid-list {
+  margin: 0 auto;
+  width: 100%;
+}
+.mat-grid-tile {
+  width: auto;
+  height: auto;
+}
+
+

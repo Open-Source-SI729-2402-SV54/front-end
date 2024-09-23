@@ -33,7 +33,6 @@ import {FormsModule} from "@angular/forms";
 export class HealthyComponent implements OnInit{
   healthilities: Healthy[] = [];
   selectedHealthy: Healthy | null = null;
-  desiredCalories: number = 0;
   constructor(private router: Router, private healthyApi: HealthyService) {}
 
   ngOnInit(): void {
@@ -56,10 +55,6 @@ export class HealthyComponent implements OnInit{
 
   navigateToPay() {
     this.router.navigate(['healthy/payment']);
-  }
-
-  getFilteredHealthiesByType(type: string): Healthy[] {
-    return this.getHealthiesByType(type).filter(h => h.calories <= this.desiredCalories);
   }
 
 }

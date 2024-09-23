@@ -1,0 +1,12 @@
+<div class="sports-container">
+  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px">
+    <mat-grid-tile *ngFor="let sport of sports" [routerLink]="sport.route">
+      <mat-card class="sport-card">
+        <img mat-card-image [src]="sport.image" alt="{{sport.name}}"/>
+        <mat-card-content>
+          <h2>{{sport.name}}</h2>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
