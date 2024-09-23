@@ -1,13 +1,21 @@
 <h1 class="titulo">Healthy</h1>
 
+<div class="calorie-search">
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar por Calorías</mat-label>
+    <input matInput type="number" [(ngModel)]="calorieSearch" placeholder="Ingresa la cantidad de calorías" />
+  </mat-form-field>
+  <button mat-button (click)="filterByCalories()">Buscar</button>
+</div>
+
 <div class="healthy-container">
   <div class="meal-type" *ngFor="let type of ['breakfast', 'lunch', 'dinner']">
     <h2>{{ type | titlecase }}:</h2>
     <div class="meal-cards">
-      <mat-card *ngFor="let healthy of getHealthiesByType(type)" class="healthy-card">
+      <mat-card *ngFor="let healthy of getFilteredHealthiesByType(type)" class="healthy-card">
+        <img mat-card-image [src]="healthy.img" alt="{{ healthy.img }}">
         <mat-card-content>
           <mat-card-title>{{ healthy.name }}</mat-card-title>
-          <mat-card-subtitle>{{ healthy.type }}</mat-card-subtitle>
           <p>Calories: {{ healthy.calories }}</p>
           <p>Protein: {{ healthy.protein }}g</p>
           <p>Carbohydrates: {{ healthy.carbohydrates }}g</p>

@@ -1,6 +1,7 @@
 export class Healthy {
   id: number;
   name: string;
+  img: string;
   type: string;
   calories: number;
   protein: number;
@@ -10,6 +11,7 @@ export class Healthy {
 
   constructor() {
     this.id = 0;
+    this.img = "";
     this.name = "";
     this.type = "";
     this.calories = 0;

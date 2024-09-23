@@ -485,69 +485,70 @@
       "id": 1,
       "name": "rice",
       "provider": "Arroz del Norte",
-      "img-product": "https://www.costenoalimentos.com.pe/media/392/6I3KmKTseD6EFvRGXi8OAmvQwna7SwwYZpOrGIlv.jpeg",
+      "img": "https://www.costenoalimentos.com.pe/media/392/6I3KmKTseD6EFvRGXi8OAmvQwna7SwwYZpOrGIlv.jpeg",
       "description": "A staple food in many cultures, rice is versatile and nutritious."
     },
     {
       "id": 2,
       "name": "quinoa",
       "provider": "Quinoa Real Perú",
-      "img-product": "https://saboresandinos.com/wp-content/uploads/2021/08/quinoa-peru-1.jpg",
+      "img": "https://saboresandinos.com/wp-content/uploads/2021/08/quinoa-peru-1.jpg",
       "description": "Known as a superfood, quinoa is high in protein and gluten-free."
     },
     {
       "id": 3,
       "name": "potatoes",
       "provider": "Papas Andinas SAC",
-      "img-product": "https://plazavea.vteximg.com.br/arquivos/ids/1265149-450-450/107771.jpg?v=637520242241930000",
+      "img": "https://plazavea.vteximg.com.br/arquivos/ids/1265149-450-450/107771.jpg?v=637520242241930000",
       "description": "Potatoes are a versatile ingredient, perfect for various dishes."
     },
     {
       "id": 4,
       "name": "avocado",
       "provider": "Palta Hass Perú",
-      "img-product": "https://peru.info/archivos/publicacion/172-imagen-11535321102020.jpg",
+      "img": "https://peru.info/archivos/publicacion/172-imagen-11535321102020.jpg",
       "description": "Rich in healthy fats, avocados are great for salads and spreads."
     },
     {
       "id": 5,
       "name": "corn",
       "provider": "Maíz Dorado SRL",
-      "img-product": "https://png.pngtree.com/thumb_back/fw800/background/20231226/pngtree-vibrant-golden-corn-a-stunning-background-texture-of-fresh-yellow-corn-image_13874466.png",
+      "img": "https://png.pngtree.com/thumb_back/fw800/background/20231226/pngtree-vibrant-golden-corn-a-stunning-background-texture-of-fresh-yellow-corn-image_13874466.png",
       "description": "Corn is sweet and crunchy, used in many dishes and snacks."
     },
     {
       "id": 6,
       "name": "coffee",
       "provider": "Café de los Andes",
-      "img-product": "https://d2j6dbq0eux0bg.cloudfront.net/images/39631008/1733346063.jpg",
+      "img": "https://d2j6dbq0eux0bg.cloudfront.net/images/39631008/1733346063.jpg",
       "description": "Peruvian coffee is known for its rich flavor and aromatic profile."
     },
     {
       "id": 7,
       "name": "cocoa",
       "provider": "Cacao Perú Exports",
-      "img-product": "https://agraria.pe/imgs/a/lx/exportaciones-peruanas-de-cacao-y-derivados-en-2023-deberia--31962.jpg",
+      "img": "https://agraria.pe/imgs/a/lx/exportaciones-peruanas-de-cacao-y-derivados-en-2023-deberia--31962.jpg",
       "description": "Cocoa from Peru is renowned for its high quality and unique flavor."
     },
     {
       "id": 8,
       "name": "bananas",
       "provider": "Banano Orgánico Piura",
-      "img-product": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2020/10/29/000722015W.jpg",
+      "img": "https://portal.andina.pe/EDPfotografia3/Thumbnail/2020/10/29/000722015W.jpg",
       "description": "Sweet and nutritious, Peruvian bananas are perfect for snacks."
     },
     {
       "id": 9,
       "name": "chicken",
       "provider": "Pollos del Sur SAC",
-      "img-product": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWO5e6eqBSxLIycAcdj0Cr6spiioDAGZX9U_hmr7_4zvmOKx6xcKyGYPOZkghJsfXcIZs&usqp=CAU",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWO5e6eqBSxLIycAcdj0Cr6spiioDAGZX9U_hmr7_4zvmOKx6xcKyGYPOZkghJsfXcIZs&usqp=CAU",
       "description": "Farm-raised chicken from Peru is known for its freshness and flavor."
     }
   ],
   "healthy": [
     {
       "id": 1,
+      "img": "https://cdn.loveandlemons.com/wp-content/uploads/2020/08/quinoa-salad.jpg",
       "name": "Quinoa Salad",
       "type": "lunch",
       "calories": 250,
@@ -558,6 +559,7 @@
     },
     {
       "id": 2,
+      "img": "https://www.seriouseats.com/thmb/qyPKrYgK1E57w73Je6JqMgR2v2E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__06__20200602-florentine-spinach-cheese-omelette-daniel-gritzer-5-31c02922a4c94eff9c44c4c83c7e6635.jpg",
       "name": "Spinach Omelette",
       "type": "breakfast",
       "calories": 200,
@@ -568,6 +570,7 @@
     },
     {
       "id": 3,
+      "img": "https://www.thecookierookie.com/wp-content/uploads/2023/05/featured-grilled-salmon-recipe.jpg",
       "name": "Grilled Salmon",
       "type": "dinner",
       "calories": 350,
@@ -578,6 +581,7 @@
     },
     {
       "id": 4,
+      "img": "https://www.eatingwell.com/thmb/P2QmwvqSalRxUQNG0d9oBL1R3PE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Fruit-Yogurt-Smoothie-beauty-square2-958b203e4c0f4887b0e0efbc28f57222.jpg",
       "name": "Fruit Smoothie",
       "type": "breakfast",
       "calories": 180,
@@ -588,6 +592,7 @@
     },
     {
       "id": 5,
+      "img": "https://www.seriouseats.com/thmb/HCnqq0O2npAXUoH7_1FdgtZQl0M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pan-roasted-chicken-vegetables-dijon-jus-recipe-hero-02_1-c3e427250efe40259dc8fab9ff66ea74.JPG",
       "name": "Baked Chicken with Vegetables",
       "type": "lunch",
       "calories": 400,
@@ -598,6 +603,7 @@
     },
     {
       "id": 6,
+      "img": "https://www.allrecipes.com/thmb/_emMPu4gpcuCOoC0kfjRWIdHlmc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/53729-fish-tacos-DDMFS-4x3-b5547c67c6f0432da06ad8f905e82c1e.jpg",
       "name": "Fish Tacos",
       "type": "dinner",
       "calories": 300,
@@ -608,6 +614,7 @@
     },
     {
       "id": 7,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_sDGsdtZ1YOMYoWKjxD8buOR4qcGqic0ERw&s",
       "name": "Chickpea Salad",
       "type": "lunch",
       "calories": 320,
@@ -618,6 +625,7 @@
     },
     {
       "id": 8,
+      "img": "https://joybauer.com/wp-content/uploads/2017/12/Oatmeal-with-berries2.jpg",
       "name": "Oatmeal with Berries",
       "type": "breakfast",
       "calories": 150,
@@ -628,6 +636,7 @@
     },
     {
       "id": 9,
+      "img": "https://img.hellofresh.com/f_auto,fl_lossy,q_auto,w_1200/hellofresh_s3/image/protein-packed-turkey-stir-fry-9649b091-f4a5de1a.jpg",
       "name": "Turkey Stir-fry",
       "type": "dinner",
       "calories": 380,
@@ -638,6 +647,7 @@
     },
     {
       "id": 10,
+      "img": "https://spicecravings.com/wp-content/uploads/2023/09/Greek-Yogurt-Parfait-Featured.jpg",
       "name": "Greek Yogurt Parfait",
       "type": "breakfast",
       "calories": 220,
@@ -648,6 +658,7 @@
     },
     {
       "id": 11,
+      "img": "https://www.eatingwell.com/thmb/5WPPXV5n1fFOKXSeO8s3D2KXIGM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/EatingWell-April-Avocado-Toast-Directions-03-23712072b7df44b8b3cd87681700e67b.jpg",
       "name": "Avocado Toast",
       "type": "breakfast",
       "calories": 300,
@@ -658,6 +669,7 @@
     },
     {
       "id": 12,
+      "img": "https://www.dontgobaconmyheart.co.uk/wp-content/uploads/2023/01/caesar-salad-crispy-chicken.jpg",
       "name": "Chicken Caesar Salad",
       "type": "lunch",
       "calories": 350,
@@ -668,6 +680,7 @@
     },
     {
       "id": 13,
+      "img": "https://khinskitchen.com/wp-content/uploads/2023/03/beef-stir-fry-01.jpg",
       "name": "Beef Stir-fry",
       "type": "dinner",
       "calories": 400,
@@ -678,6 +691,7 @@
     },
     {
       "id": 14,
+      "img": "https://hips.hearstapps.com/hmg-prod/images/greek-salad-index-642f292397bbf.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*",
       "name": "Greek Salad",
       "type": "lunch",
       "calories": 250,
@@ -688,6 +702,7 @@
     },
     {
       "id": 15,
+      "img": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/01/Chia-Pudding-main.jpg",
       "name": "Chia Seed Pudding",
       "type": "breakfast",
       "calories": 180,
@@ -698,6 +713,7 @@
     },
     {
       "id": 16,
+      "img": "https://therecipecritic.com/wp-content/uploads/2022/12/shrimp_tacos-1.jpg",
       "name": "Shrimp Tacos",
       "type": "dinner",
       "calories": 320,
@@ -708,6 +724,7 @@
     },
     {
       "id": 17,
+      "img": "https://www.thespruceeats.com/thmb/A-huemxQJh41MFe-2YnKDKmodbA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sweet-potato-fries-3061587-hero-01-a8a7c65e49924b9887ab31a78799a43d.jpg",
       "name": "Sweet Potato Fries",
       "type": "lunch",
       "calories": 220,
@@ -718,6 +735,7 @@
     },
     {
       "id": 18,
+      "img": "https://static.toiimg.com/thumb/62885742.cms?imgsize=495709&width=800&height=800",
       "name": "Cottage Cheese with Pineapple",
       "type": "breakfast",
       "calories": 200,
@@ -728,6 +746,7 @@
     },
     {
       "id": 19,
+      "img": "https://www.allrecipes.com/thmb/9d8yV77PRL3wbRwcpAIxtZPdi5Q=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/85389-gourmet-mushroom-risotto-DDMFS-4x3-a8a80a8deb064c6a8f15452b808a0258.jpg",
       "name": "Mushroom Risotto",
       "type": "dinner",
       "calories": 350,
@@ -738,6 +757,7 @@
     },
     {
       "id": 20,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUTGQS2GaTeD-ppy1Zv5uv1NfxaB-CIMSJEg&s",
       "name": "Protein Smoothie",
       "type": "breakfast",
       "calories": 250,
