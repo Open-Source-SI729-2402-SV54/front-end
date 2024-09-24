@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 import {MatCard, MatCardActions, MatCardContent, MatCardTitle} from "@angular/material/card";
 import {MatButton} from "@angular/material/button"; // Importar RouterModule
 
@@ -23,4 +23,39 @@ Permite a los usuarios planificar y pedir alimentos para la semana.`;
 - Ajustes automáticos según las necesidades nutricionales del usuario
 - Menús personalizados que se ajustan dinámicamente según el régimen deportivo, objetivos de salud, y disponibilidad de alimentos
 - Alertas avanzadas que indican el momento óptimo para consumir alimentos, sincronizadas con el horario deportivo y otros hábitos de salud.`;
+
+  constructor(private router: Router) { }
+  onBasicPlanClick(){
+    this.router.navigate(['/order']);
+  }
+  onPremiumPlanClick(){
+    this.router.navigate(['/order-premium']);
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

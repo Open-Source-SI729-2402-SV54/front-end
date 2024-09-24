@@ -6,7 +6,7 @@
       <p class="plan-benefits">{{ basicPlanBenefits }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="accent" class="buy-button basic">Buy</button>
+      <button mat-raised-button color="accent" class="buy-button basic" (click)="onBasicPlanClick()">Buy</button>
     </mat-card-actions>
   </mat-card>
 
@@ -16,7 +16,7 @@
       <p class="plan-benefits">{{ premiumPlanBenefits }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" class="buy-button premium">Buy</button>
+      <button mat-raised-button color="primary" class="buy-button premium" (click)="onPremiumPlanClick()">Buy</button>
     </mat-card-actions>
   </mat-card>
 </div>

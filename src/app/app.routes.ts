@@ -25,11 +25,11 @@ export const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'healthy', component: HealthyComponent },
   { path: 'availability', component: AvailabilityComponent },
-  {path: 'sports', component: SportsComponent},
-  {path: 'powerLifting', component: PowerliftingComponent},
-  {path: 'football', component: FootballComponent},
-  {path: 'basketball', component: BasketballComponent},
-  {path: 'swimming', component: SwimmingComponent},
+  {path: 'sports', component: SportsComponent}, //Renzo
+  {path: 'powerLifting', component: PowerliftingComponent},//Renzo
+  {path: 'football', component: FootballComponent},//Renzo
+  {path: 'basketball', component: BasketballComponent},//Renzo
+  {path: 'swimming', component: SwimmingComponent},//Renzo
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent}
 ];
