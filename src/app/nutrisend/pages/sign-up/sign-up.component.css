@@ -1,3 +1,11 @@
+.background-image {
+  height: 100vh;
+  width: 197vh;
+  display: flex;
+  background-image: url("../../../../../public/assets/imag/fondo.png");
+  background-size: cover;
+  overflow: hidden;
+}
 
 .sign-up-container {
   position: relative;
