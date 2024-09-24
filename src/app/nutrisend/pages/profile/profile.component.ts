@@ -43,14 +43,14 @@ export class ProfileComponent implements OnInit {
   }
 
   navigateToNotifications() {
-    this.router.navigate(['profile/notifications']);
+    this.router.navigate(['notifications']);
   }
 
   navigateToSchedule() {
-    this.router.navigate(['profile/schedule']);
+    this.router.navigate(['schedule']);
   }
 
   navigateToLogOut() {
-    this.router.navigate(['profile/logout']);
+    this.router.navigate(['home']);
   }
 }

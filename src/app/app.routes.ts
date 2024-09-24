@@ -14,6 +14,7 @@ import {BasketballComponent} from "./nutrisend/components/basketball/basketball.
 import {FootballComponent} from "./nutrisend/components/football/football.component";
 import {PowerliftingComponent} from "./nutrisend/components/powerlifting/powerlifting.component";
 import {SportsComponent} from "./nutrisend/pages/sports/sports.component";
+import {ScheduleComponent} from "./nutrisend/components/schedule/schedule.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -30,6 +31,7 @@ export const routes: Routes = [
   {path: 'football', component: FootballComponent},//Renzo
   {path: 'basketball', component: BasketballComponent},//Renzo
   {path: 'swimming', component: SwimmingComponent},//Renzo
+  {path: 'schedule', component: ScheduleComponent},//Renzo
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent}
 ];
