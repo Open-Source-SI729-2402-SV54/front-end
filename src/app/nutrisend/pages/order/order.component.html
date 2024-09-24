@@ -1,1 +1,78 @@
-<p>order works!</p>
+<div class="container">
+  <h2 class="title">Selecciona tu plan</h2>
+
+  <!-- Botones para alternar secciones -->
+  <div class="section-buttons">
+    <button class="section-button fit-food-button" (click)="showSection('fitFood')">Fit Food </button>
+    <div currentSection = 'fitFood' class="section fit-food-section">
+      <div class="food-items">
+        <div class="exercisefit-card" *ngFor="let item of fitExerciseItems">
+          <img class="food-image" [src]="'assets/imagenes/' + item.image" alt="{{item.name}}">
+          <div class="food-info">
+            <h4>{{item.name}}</h4>
+            <p>Calorías: {{item.description}}</p> 
+            <p>Grasas: {{item.quantity}} g</p>
+            <p class="price">S/. {{item.price}}</p>
+            <div class="quantity">
+              <button class="quantity-button" (click)="decreaseQuantity(item.id)">-</button>
+              <span class="quantity-value">{{item.quantity}}</span>
+              <button class="quantity-button" (click)="increaseQuantity(item.id)">+</button>
+            </div>
+            <button class="add-button">Agregar</button>
+          </div>
+        </div>
+    <div currentSection = 'fitFood' class="section fit-food-section">
+      <div class="food-items">
+        <div class="fit_food-card" *ngFor="let item of fitFoodItems">
+          <img class="food-image" [src]="'assets/imagenes/' + item.image" alt="{{item.name}}">
+          <div class="food-info">
+            <h4>{{item.name}}</h4>
+            <p>Calorías: {{item.calories}}</p> 
+            <p>Proteínas: {{item.protein}} g</p>
+            <p>Grasas: {{item.fats}} g</p>
+            <p class="price">S/. {{item.price}}</p>
+            <div class="quantity">
+              <button class="quantity-button" (click)="decreaseQuantity(item.id)">-</button>
+              <span class="quantity-value">{{item.quantity}}</span>
+              <button class="quantity-button" (click)="increaseQuantity(item.id)">+</button>
+            </div>
+            <button class="add-button">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="section-button almuerzo-button" (click)="showSection('almuerzos')">Almuerzos</button>
+    <div currentSection = 'almuerzos' class="section almuerzos-section">
+      <div class="food-items">
+        <div class="food-card" *ngFor="let item of almuerzosItems">
+          <img class="food-image" [src]="'assets/imagenes/' + item.image" alt="{{item.name}}">
+          <div class="food-info">
+            <h4>{{item.name}}</h4>
+            <p>Calorías: {{item.calories}}</p>
+            <p>Proteínas: {{item.protein}} g</p>
+            <p>Grasas: {{item.fats}} g</p>
+            <p class="price">S/. {{item.price}}</p>
+            <div class="quantity">
+              <button class="quantity-button" (click)="decreaseQuantity(item.id)">-</button>
+              <span class="quantity-value">{{item.quantity}}</span>
+              <button class="quantity-button" (click)="increaseQuantity(item.id)">+</button>
+            </div>
+            <button class="add-button">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Total -->
+  <div class="total-section">
+    <h4>Total:</h4>
+    <p class="money">S/. {{ totalAmount }}</p>
+    <button class="pay-button" (click)="payNow()">Pagar</button>
+  </div>
+</div>
+
+<footer>
+    <p>NutriSend Copyright 2024, © Inc All rights reserved</p>
+</footer>
+
