@@ -20,52 +20,51 @@
       "id": 1,
       "name": "",
       "description": "",
-      "price" : ""
+      "price": ""
     },
     {
       "id": 2,
       "name": "",
       "description": "",
-      "price" : ""
+      "price": ""
     }
   ],
   "food-fit": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "carbohydrate" : "6.2 g",
-      "fat" : "18.2 g"
+      "kcal": "215 kcal",
+      "protein": "6.2 g",
+      "carbohydrate": "6.2 g",
+      "fat": "18.2 g"
     },
     {
-      "id" : 2,
+      "id": 2,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "carbohydrate" : "6.2 g",
-      "fat" : "18.2 g"
+      "kcal": "215 kcal",
+      "protein": "6.2 g",
+      "carbohydrate": "6.2 g",
+      "fat": "18.2 g"
     }
   ],
   "food": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "carbohydrate" : "6.2 g",
-      "fat" : "18.2 g"
+      "kcal": "215 kcal",
+      "protein": "6.2 g",
+      "carbohydrate": "6.2 g",
+      "fat": "18.2 g"
     },
     {
-      "id" : 2,
+      "id": 2,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "carbohydrate" : "6.2 g",
-      "fat" : "18.2 g"
+      "kcal": "215 kcal",
+      "protein": "6.2 g",
+      "carbohydrate": "6.2 g",
+      "fat": "18.2 g"
     }
   ],
-
   "users-premium": [
     {
       "id": 1,
@@ -80,18 +79,23 @@
       "surname": "",
       "email": "",
       "password": ""
+    },
+    {
+      "name": "Renzo",
+      "surname": "Araujo",
+      "email": "example69@gmail.com",
+      "password": "123456789",
+      "id": 3
     }
   ],
-
   "powerLifting": [],
   "breakfast-powerLifting": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-
-      "fat" : "18.2 g",
+      "kcal": "215 kcal",
+      "protein": "6.2 g",
+      "fat": "18.2 g",
       "photo": "https://imgur.com/a/p8DWFHk"
     },
     {
@@ -99,7 +103,6 @@
       "name": "Avena with milk, banana and nuts",
       "kcal": "368 kcal",
       "protein": "22.7 g",
-
       "fat": " 6.4 g",
       "photo": "https://ibb.co/Tg8FF8B"
     },
@@ -108,7 +111,6 @@
       "name": "Greek yogurt bowl with granola and nuts",
       "kcal": "514 kcal",
       "protein": "32.0 g",
-
       "fat": "34.0 g",
       "photo": "https://ibb.co/nQrLnyr"
     },
@@ -123,11 +125,11 @@
   ],
   "lunch-powerLifting": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Beef, Bean and Vegetable Burrito",
-      "kcal" : "180 kcal",
-      "protein" : "25.9 g",
-      "fat" : "18.2 g",
+      "kcal": "180 kcal",
+      "protein": "25.9 g",
+      "fat": "18.2 g",
       "photo": "https://ibb.co/qx6CWCD"
     },
     {
@@ -157,11 +159,11 @@
   ],
   "dinner-powerLifting": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Salmon with Asparagus and Potato",
-      "kcal" : "472 kcal",
-      "protein" : "35.0 g",
-      "fat" : "20.1 g",
+      "kcal": "472 kcal",
+      "protein": "35.0 g",
+      "fat": "20.1 g",
       "photo": "https://ibb.co/Zm87kqX"
     },
     {
@@ -189,14 +191,13 @@
       "photo": "https://ibb.co/jH0vZxc"
     }
   ],
-
   "breakfast-football": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Egg with toast and avocado",
-      "kcal" : "359 kcal",
-      "protein" : "19.3 g",
-      "fat" : "20.6 g",
+      "kcal": "359 kcal",
+      "protein": "19.3 g",
+      "fat": "20.6 g",
       "photo": "https://ibb.co/nLw3Lq7"
     },
     {
@@ -204,7 +205,6 @@
       "name": "Oatmeal with Strawberries, Banana, Almonds and Honey",
       "kcal": "389 kcal",
       "protein": "10.6 g",
-
       "fat": "10.6 g",
       "photo": "https://ibb.co/Sm0WKX5"
     },
@@ -213,7 +213,6 @@
       "name": "Egg with toast and avocado",
       "kcal": "39 kcal",
       "protein": "3.6 g",
-
       "fat": " 2.3 g",
       "photo": "https://ibb.co/nLw3Lq7"
     },
@@ -222,18 +221,17 @@
       "name": "Fruit and seed smoothie bowl",
       "kcal": "741 kcal",
       "protein": "45.6 g",
-
       "fat": "19.5 g",
       "photo": "https://ibb.co/s6r1mgg"
     }
   ],
   "lunch-football": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Grilled chicken breast with steamed broccoli",
-      "kcal" : "300 kcal",
-      "protein" : "25 g",
-      "fat" : "10 g",
+      "kcal": "300 kcal",
+      "protein": "25 g",
+      "fat": "10 g",
       "photo": "https://ibb.co/F7LX0j7"
     },
     {
@@ -263,11 +261,11 @@
   ],
   "dinner-football": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Pasta with Chicken in Tomato and Oregano Sauce",
-      "kcal" : "599 kcal",
-      "protein" : "47.4 g",
-      "fat" : "12.9 g",
+      "kcal": "599 kcal",
+      "protein": "47.4 g",
+      "fat": "12.9 g",
       "photo": "https://ibb.co/YbLcbCw"
     },
     {
@@ -295,14 +293,13 @@
       "photo": "https://ibb.co/89gmsDg"
     }
   ],
-
   "breakfast-basketball": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "310 kcal",
-      "protein" : "19.3 g",
-      "fat" : "17.2 g",
+      "kcal": "310 kcal",
+      "protein": "19.3 g",
+      "fat": "17.2 g",
       "photo": "https://ibb.co/TPJ3krp"
     },
     {
@@ -310,7 +307,6 @@
       "name": "Sweet Potato Smoothie with Peanut Butter",
       "kcal": "389 kcal",
       "protein": "10.6 g",
-
       "fat": "10.6 g",
       "photo": "https://ibb.co/Z2rBxQn"
     },
@@ -319,7 +315,6 @@
       "name": "Egg with toast and avocado",
       "kcal": "419 kcal",
       "protein": "11.0 g",
-
       "fat": "18.0 g",
       "photo": "https://ibb.co/Sv4stw5"
     },
@@ -328,18 +323,17 @@
       "name": "Fruit and seed smoothie bowl",
       "kcal": "741 kcal",
       "protein": "45.6 g",
-
       "fat": "19.5 g",
       "photo": "https://ibb.co/s6r1mgg"
     }
   ],
   "lunch-basketball": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Whole wheat pasta with chicken breast and tomato sauce",
-      "kcal" : "599 kcal",
-      "protein" : "47.4 g",
-      "fat" : "12.9 g",
+      "kcal": "599 kcal",
+      "protein": "47.4 g",
+      "fat": "12.9 g",
       "photo": "https://ibb.co/94qwsYK"
     },
     {
@@ -361,9 +355,9 @@
     {
       "id": 4,
       "name": "Beef, Bean and Vegetable Burrito",
-      "kcal" : "180 kcal",
-      "protein" : "25.9 g",
-      "fat" : "18.2 g",
+      "kcal": "180 kcal",
+      "protein": "25.9 g",
+      "fat": "18.2 g",
       "photo": "https://ibb.co/P4wB8jC"
     }
   ],
@@ -371,9 +365,9 @@
     {
       "id": 1,
       "name": "Beef, Bean and Vegetable Burrito",
-      "kcal" : "384 kcal",
-      "protein" : "9.3 g",
-      "fat" : "27.8 g",
+      "kcal": "384 kcal",
+      "protein": "9.3 g",
+      "fat": "27.8 g",
       "photo": "https://ibb.co/P4wB8jC"
     },
     {
@@ -401,14 +395,13 @@
       "photo": "https://ibb.co/W507Bzv"
     }
   ],
-
   "breakfast-swimming": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Oatmeal Waffles with Strawberries and Honey",
-      "kcal" : "410 kcal",
-      "protein" : "17.2 g",
-      "fat" : "11.0 g",
+      "kcal": "410 kcal",
+      "protein": "17.2 g",
+      "fat": "11.0 g",
       "photo": "https://ibb.co/wWBxxD2"
     },
     {
@@ -456,30 +449,29 @@
     {
       "id": 3,
       "name": "Toast with Cheese and Spinach",
-      "kcal" : "310 kcal",
-      "protein" : "19.3 g",
-      "fat" : "17.2 g",
+      "kcal": "310 kcal",
+      "protein": "19.3 g",
+      "fat": "17.2 g",
       "photo": "https://ibb.co/TPJ3krp"
     },
     {
       "id": 4,
       "name": "Beef, Bean and Vegetable Burrito",
-      "kcal" : "384 kcal",
-      "protein" : "9.3 g",
-      "fat" : "27.8 g",
+      "kcal": "384 kcal",
+      "protein": "9.3 g",
+      "fat": "27.8 g",
       "photo": "https://ibb.co/P4wB8jC"
     }
   ],
   "dinner-swimming": [
     {
-      "id" : 1,
+      "id": 1,
       "name": "Spinach Crepe with Turkey Ham",
-      "kcal" : "215 kcal",
-      "protein" : "6.2 g",
-      "fat" : "14 g"
+      "kcal": "215 kcal",
+      "protein": "6.2 g",
+      "fat": "14 g"
     }
   ],
-
   "availability": [
     {
       "id": 1,
@@ -566,7 +558,7 @@
       "protein": 15,
       "carbohydrates": 10,
       "fats": 12,
-      "price": 6.0
+      "price": 6
     },
     {
       "id": 3,
@@ -577,7 +569,7 @@
       "protein": 30,
       "carbohydrates": 0,
       "fats": 20,
-      "price": 12.0
+      "price": 12
     },
     {
       "id": 4,
@@ -599,7 +591,7 @@
       "protein": 35,
       "carbohydrates": 30,
       "fats": 15,
-      "price": 10.0
+      "price": 10
     },
     {
       "id": 6,
@@ -621,7 +613,7 @@
       "protein": 15,
       "carbohydrates": 50,
       "fats": 8,
-      "price": 7.0
+      "price": 7
     },
     {
       "id": 8,
@@ -632,7 +624,7 @@
       "protein": 5,
       "carbohydrates": 30,
       "fats": 3,
-      "price": 4.0
+      "price": 4
     },
     {
       "id": 9,
@@ -665,7 +657,7 @@
       "protein": 8,
       "carbohydrates": 30,
       "fats": 15,
-      "price": 5.0
+      "price": 5
     },
     {
       "id": 12,
@@ -676,7 +668,7 @@
       "protein": 30,
       "carbohydrates": 12,
       "fats": 20,
-      "price": 9.0
+      "price": 9
     },
     {
       "id": 13,
@@ -687,7 +679,7 @@
       "protein": 35,
       "carbohydrates": 15,
       "fats": 18,
-      "price": 11.0
+      "price": 11
     },
     {
       "id": 14,
@@ -720,7 +712,7 @@
       "protein": 25,
       "carbohydrates": 30,
       "fats": 12,
-      "price": 10.0
+      "price": 10
     },
     {
       "id": 17,
@@ -731,7 +723,7 @@
       "protein": 3,
       "carbohydrates": 40,
       "fats": 8,
-      "price": 5.0
+      "price": 5
     },
     {
       "id": 18,
@@ -753,7 +745,7 @@
       "protein": 12,
       "carbohydrates": 50,
       "fats": 10,
-      "price": 9.0
+      "price": 9
     },
     {
       "id": 20,
@@ -767,5 +759,4 @@
       "price": 5.5
     }
   ]
-
 }

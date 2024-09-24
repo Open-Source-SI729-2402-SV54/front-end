@@ -1,59 +1,58 @@
 <body>
-<div class="sign-in-container">
-  <div class="main-image">
-    <form class="signin-form" (ngSubmit)="onSubmit()">
-      <h1 mat-typography class="title">Sign In</h1>
+  <div class="background-image">
+    <div class="sign-in-container">
+      <div class="main-image">
+        <form class="signin-form" (ngSubmit)="onSubmit()">
+          <h1 mat-typography class="title">Sign In</h1>
+          <!-- Campo de Email -->
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="email"
+              placeholder="Enter your email"
+              [(ngModel)]="email"
+              name="email"
+              required
+              autocomplete="email">
+          </mat-form-field>
+          <!-- Campo de Contraseña -->
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              placeholder="Enter your password"
+              [(ngModel)]="password"
+              name="password"
+              required
+              autocomplete="current-password">
+          </mat-form-field>
+          <!-- Botón de Ingreso -->
+          <div class="button-container">
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              class="enter-button">
+              Enter
+            </button>
+          </div>
 
-      <!-- Campo de Email -->
-      <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Email</mat-label>
-        <input
-          matInput
-          type="email"
-          placeholder="Enter your email"
-          [(ngModel)]="email"
-          name="email"
-          required
-          autocomplete="email">
-      </mat-form-field>
+          <!-- Texto para Registro -->
+          <p class="register-text">
+            Don't have an account?
+            <a mat-typography routerLink="/sign-up" class="register-link">
+              Register here
+            </a>
+          </p>
 
-      <!-- Campo de Contraseña -->
-      <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Password</mat-label>
-        <input
-          matInput
-          type="password"
-          placeholder="Enter your password"
-          [(ngModel)]="password"
-          name="password"
-          required
-          autocomplete="current-password">
-      </mat-form-field>
-
-      <!-- Botón de Ingreso -->
-      <div class="button-container">
-        <button
-          mat-raised-button
-          color="primary"
-          type="submit"
-          class="enter-button">
-          Enter
-        </button>
+          <!-- Mensaje de Error -->
+          <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+          </div>
+        </form>
       </div>
-
-      <!-- Texto para Registro -->
-      <p class="register-text">
-        Don't have an account?
-        <a mat-typography routerLink="/sign-up" class="register-link">
-          Register here
-        </a>
-      </p>
-
-      <!-- Mensaje de Error -->
-      <div *ngIf="errorMessage" class="error-message">
-        {{ errorMessage }}
-      </div>
-    </form>
+    </div>
   </div>
-</div>
 </body>
