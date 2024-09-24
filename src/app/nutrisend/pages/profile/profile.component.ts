@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
   }
 
   navigateToSupport() {
-    this.router.navigate(['profile/support']);
+    this.router.navigate(['support']);
   }
 
   navigateToNotifications() {
