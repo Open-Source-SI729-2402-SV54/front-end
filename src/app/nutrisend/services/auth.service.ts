@@ -1,19 +1,33 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+/*import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, map, switchMap, tap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';*/
+import {BaseService} from "../../shared/services/base.service";
+import {User} from "../model/user.entity";
+import {catchError, Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService {
-  private isLoggedIn = false;
+export class AuthService extends BaseService<User>{
+  constructor(){
+    super();
+    this.resourceEndPoint = '/users-premium';
+  }
+  /*private isLoggedIn = false;
   private apiUrl = 'http://localhost:3000'; // Cambia según tu API base
-  private userType: string = ''; // Variable para almacenar el tipo de usuario
+  private userType: string = ''; // Variable para almacenar el tipo de usuario*/
 
-  constructor(private http: HttpClient) {}
+  signUp(user: User): Observable<User>{
+    return this.create(user);
+  }
 
-  // Método de inicio de sesión que determina si es usuario free o premium
+  signIn(email: string, password: string): Observable<User[]>{
+    const filter = `?email=${email}&password=${password}`;
+    return this.http.get<User[]>(`${this.resourcePath()}${filter}`, this.httpOptions)
+      .pipe(catchError(this.handleError))
+  }
+  /*// Método de inicio de sesión que determina si es usuario free o premium
   signIn(email: string, password: string): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}/users-free?email=${email}&password=${password}`).pipe(
       switchMap((freeUsers) => {
@@ -59,5 +73,5 @@ export class AuthService {
   signOut(): void {
     this.isLoggedIn = false;
     this.userType = ''; // Limpiamos el tipo de usuario
-  }
+  }*/
 }
