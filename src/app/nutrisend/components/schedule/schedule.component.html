@@ -1,1 +1,31 @@
-<p>schedule works!</p>
+<mat-card-header class="mat-card-content">
+  <div class="schedule-container">
+    <h1 class="schedule-title">Schedule</h1>
+
+    <div class="schedule-grid">
+      <!-- Cabecera con los días de la semana -->
+      <div class="schedule-header"></div>
+      <div *ngFor="let day of daysOfWeek" class="schedule-day">
+        <h3>{{ day }}</h3>
+      </div>
+
+      <!-- Fila para desayuno -->
+      <div class="meal-type">Breakfast</div>
+      <div *ngFor="let breakfast of schedule.Breakfast" class="meal-item">
+        <mat-card>{{ breakfast }}</mat-card>
+      </div>
+
+      <!-- Fila para almuerzo -->
+      <div class="meal-type">Lunch</div>
+      <div *ngFor="let lunch of schedule.Lunch" class="meal-item">
+        <mat-card>{{ lunch }}</mat-card>
+      </div>
+
+      <!-- Fila para cena -->
+      <div class="meal-type">Dinner</div>
+      <div *ngFor="let dinner of schedule.Dinner" class="meal-item">
+        <mat-card>{{ dinner }}</mat-card>
+      </div>
+    </div>
+  </div>
+</mat-card-header>
