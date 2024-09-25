@@ -1,1 +1,36 @@
-<p>exercise.component works!</p>
+<div class="container">
+    <h2 class="title">Selecciona tu plan</h2>
+
+    <div class="section-buttons">
+        <button class="section-button fit-food-button" (click)="showSection('fitFood')">Fit Food </button>
+        <button class="section-button almuerzo-button" (click)="showSection('almuerzos')">Almuerzos</button>      
+    </div>
+
+    <div class="food-items">
+        <div class="exercisefit-card" *ngFor="let item of fitExerciseItems">
+          <img class="food-image" [src]="'assets/imagenes/' + item.image" alt="{{item.name}}">
+          <div class="food-info">
+            <h4>{{item.name}}</h4>
+            <p>Calorías: {{item.description}}</p> 
+            <p>Grasas: {{item.quantity}} g</p>
+            <p class="price">S/. {{item.price}}</p>
+            <div class="quantity">
+              <button class="quantity-button" (click)="decreaseQuantity(item.id)">-</button>
+              <span class="quantity-value">{{item.quantity}}</span>
+              <button class="quantity-button" (click)="increaseQuantity(item.id)">+</button>
+            </div>
+          <button class="add-button">Agregar</button>
+        </div>
+      </div>
+    
+      <div class="total-section"></div>
+        <h4>Total:</h4>
+        <p class="money">S/. {{ totalAmount }}</p>
+        <button class="pay-button" (click)="payNow()">Pagar</button>
+      </div>
+  </div>
+
+
+  <footer>
+    <p>NutriSend Copyright 2024, © Inc All rights reserved</p>
+</footer>

@@ -1,8 +1,0 @@
-<mat-toolbar class="nav">
-  <h1>NutriSend</h1>
-  <div class="mat-spacer"></div>
-  @for (option of options; track option.title) {
-    <a mat-button [routerLink]="option.path">{{ option.title }}</a>
-  }
-</mat-toolbar>
-<router-outlet />

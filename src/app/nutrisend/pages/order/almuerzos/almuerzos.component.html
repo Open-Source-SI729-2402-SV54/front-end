@@ -1,1 +1,32 @@
-<p>almuerzos works!</p>
+<div class="container">
+    <h2 class="title">Selecciona tu plan</h2>
+    <div class="section-buttons">
+        <button class="section-button fit-food-button" (click)="showSection('fitFood')">Fit Food </button>
+        <button class="section-button almuerzo-button" (click)="showSection('almuerzos')">Almuerzos</button>      
+    </div>
+    <div currentSection = 'almuerzos' class="section almuerzos-section">
+        <div class="food-items">
+          <div class="food-card" *ngFor="let item of almuerzosItems">
+            <img class="food-image" [src]="'assets/imagenes/' + item.image" alt="{{item.name}}">
+            <div class="food-info">
+              <h4>{{item.name}}</h4>
+              <p>Calorías: {{item.calories}}</p>
+              <p>Proteínas: {{item.protein}} g</p>
+              <p>Grasas: {{item.fats}} g</p>
+              <p class="price">S/. {{item.price}}</p>
+              <div class="quantity">
+                <button class="quantity-button" (click)="decreaseQuantity(item.id)">-</button>
+                <span class="quantity-value">{{item.quantity}}</span>
+                <button class="quantity-button" (click)="increaseQuantity(item.id)">+</button>
+              </div>
+              <button class="add-button">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+    <footer>
+        <p>NutriSend Copyright 2024, © Inc All rights reserved</p>
+    </footer>
