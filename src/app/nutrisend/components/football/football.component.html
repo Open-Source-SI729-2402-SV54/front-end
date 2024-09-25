@@ -1,3 +1,4 @@
+
 <div class="football-container">
   <h1 class="title">Football Meals</h1>
 
@@ -5,7 +6,7 @@
   <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="breakfast-section">
     <mat-grid-tile *ngFor="let meal of breakfast">
       <mat-card class="meal-card breakfast-card">
-        <img mat-card-image [src]="meal.photo" alt="{{ meal.name }}" class="meal-photo" />
+        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
         <mat-card-header>
           <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
         </mat-card-header>
@@ -25,7 +26,7 @@
   <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="lunch-section">
     <mat-grid-tile *ngFor="let meal of lunch">
       <mat-card class="meal-card lunch-card">
-        <img mat-card-image [src]="meal.photo" alt="{{ meal.name }}" class="meal-photo" />
+        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
         <mat-card-header>
           <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
         </mat-card-header>
@@ -45,7 +46,7 @@
   <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="dinner-section">
     <mat-grid-tile *ngFor="let meal of dinner">
       <mat-card class="meal-card dinner-card">
-        <img mat-card-image [src]="meal.photo" alt="{{ meal.name }}" class="meal-photo" />
+        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
         <mat-card-header>
           <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
         </mat-card-header>

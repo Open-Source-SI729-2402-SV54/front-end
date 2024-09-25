@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { Meal } from "../../model/meal.entity";
 import { BasketballService } from "../../services/basketball.service";

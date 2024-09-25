@@ -1,12 +1,13 @@
+
 import { Component } from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {
-    MatCard,
-    MatCardActions,
-    MatCardContent,
-    MatCardHeader,
-    MatCardImage,
-    MatCardTitle
+  MatCard,
+  MatCardActions,
+  MatCardContent,
+  MatCardHeader,
+  MatCardImage,
+  MatCardTitle
 } from "@angular/material/card";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {NgForOf} from "@angular/common";
@@ -16,18 +17,18 @@ import {FootballService} from "../../services/football.service";
 @Component({
   selector: 'app-football',
   standalone: true,
-    imports: [
-        MatButton,
-        MatCard,
-        MatCardActions,
-        MatCardContent,
-        MatCardHeader,
-        MatCardImage,
-        MatCardTitle,
-        MatGridList,
-        MatGridTile,
-        NgForOf
-    ],
+  imports: [
+    MatButton,
+    MatCard,
+    MatCardActions,
+    MatCardContent,
+    MatCardHeader,
+    MatCardImage,
+    MatCardTitle,
+    MatGridList,
+    MatGridTile,
+    NgForOf
+  ],
   templateUrl: './football.component.html',
   styleUrl: './football.component.css'
 })

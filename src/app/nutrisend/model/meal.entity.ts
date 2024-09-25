@@ -1,10 +1,11 @@
+
 export class Meal {
   id: number;
   name: string;
   kcal: string;
   protein: string;
   fat: string ;
-  photo: string;
+  img: string;
 
   constructor(meal: {id?: number, name?: string, kcal?: string,
     protein?: string, fat?: string, photo?: string}) {
@@ -14,7 +15,6 @@ export class Meal {
     this.kcal = meal.kcal || '';
     this.protein = meal.protein || '';
     this.fat = meal.fat || '';
-    this.photo = meal.photo || '';
+    this.img = meal.photo || '';
   }
 }
-
