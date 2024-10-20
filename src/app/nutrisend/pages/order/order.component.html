@@ -70,6 +70,26 @@
     </div>
   </div>
 
+  <!-- Sección de Horario de Entrega -->
+  <div class="section">
+    <h1 class="section-title">
+      <mat-icon>access_time</mat-icon> Delivery Time
+    </h1>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Select Delivery Time</mat-label>
+      <mat-select [(value)]="selectedTime">
+        <mat-option *ngFor="let time of availableTimes" [value]="time">
+          {{ time }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <button mat-button color="accent" routerLink="/schedule">
+    <mat-icon>event</mat-icon> Schedule
+  </button>
+
+  <!-- Total y botón de pago -->
   <div class="total-section">
     <h2>Total to Pay: ${{ getTotal() }}</h2>
     <button mat-button color="primary" (click)="pay()">

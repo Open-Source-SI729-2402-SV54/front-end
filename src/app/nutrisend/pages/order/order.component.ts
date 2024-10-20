@@ -9,6 +9,7 @@ import {MatToolbar} from "@angular/material/toolbar";
 import {MatInput} from "@angular/material/input";
 import {MatButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-order',
@@ -24,7 +25,8 @@ import {MatIcon} from "@angular/material/icon";
     MatLabel,
     MatInput,
     MatButton,
-    MatIcon
+    MatIcon,
+    RouterLink
   ],
   templateUrl: './order.component.html',
   styleUrl: './order.component.css'
@@ -39,6 +41,13 @@ export class OrderComponent implements OnInit {
   breakfastCount: number = 1;
   lunchCount: number = 1;
   dinnerCount: number = 1;
+  selectedTime: string = '15:00 - 16:00';
+  availableTimes: string[] = [
+    '08:00 - 09:00', '09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00', '12:00 - 13:00',
+    '13:00 - 14:00', '14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00',
+    '18:00 - 19:00', '19:00 - 20:00',
+  ];
+
   constructor(private orderService: OrderService) {}
 
   ngOnInit(): void {
