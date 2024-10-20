@@ -18,51 +18,180 @@
   "exercise-fit": [
     {
       "id": 1,
-      "name": "",
-      "description": "",
-      "price": ""
+      "name": "Pack ejercicio de fuerza en barra",
+      "description": "Ejercicios en barra trabajando fuerza y resistencia de los brazos.",
+      "price": 5.90,
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTEWROnoj1R7A5E6SnU5nu2dVvILjJ30HuXZ56RYKY4Sn8SaC1U"
     },
     {
       "id": 2,
-      "name": "",
-      "description": "",
-      "price": ""
+      "name": "Pack ejercicio 'burpees'",
+      "description": "Conjunto de ejercicios combinados de sentadillas, push-up y salto.",
+      "price": 5.90,
+      "img": "https://static.wixstatic.com/media/d1331a_27097b5e55a8419cbb7565c2bf9c7e94~mv2.jpg/v1/fill/w_568,h_378,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/d1331a_27097b5e55a8419cbb7565c2bf9c7e94~mv2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pack ejercicio 'side plank'",
+      "description": "Conjunto de ejercicios de fortalecimiento de los músculos del core, hombros y piernas.",
+      "price": 5.90,
+      "img": "https://t2.uc.ltmcdn.com/es/posts/0/6/8/ejercicio_de_la_plancha_lateral_como_se_hace_y_para_que_sirve_51860_orig.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Pack ejercicios tren inferior",
+      "description": "Conjunto de ejercicios pensados en el fortalecimiento del tren inferior como piernas, glúteos y core.",
+      "price": 5.90,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUlDJkfy30GFKtaZZBLhHbBR2OANL1mdawQ&s"
     }
   ],
   "food-fit": [
     {
       "id": 1,
-      "name": "Toast with Cheese and Spinach",
-      "kcal": "215 kcal",
-      "protein": "6.2 g",
-      "carbohydrate": "6.2 g",
-      "fat": "18.2 g"
+      "name": "Ensalada de quinua y vegetales",
+      "kcal": "300 kcal",
+      "protein": "10 g",
+      "carbohydrate": "N/A",
+      "fat": "12 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRAEx8mywrnM4pfUVAd86YYK3i889M7JxoAKnSOjDsUetRKRb49"
     },
     {
       "id": 2,
-      "name": "Toast with Cheese and Spinach",
-      "kcal": "215 kcal",
-      "protein": "6.2 g",
-      "carbohydrate": "6.2 g",
-      "fat": "18.2 g"
+      "name": "Salmón a la plancha con espárragos al vapor",
+      "kcal": "350 kcal",
+      "protein": "30 g",
+      "carbohydrate": "N/A",
+      "fat": "20 g",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEHbWVODyDQh5WKfd-2yceEiPBIKFkQfstONOTXuPG1rVACIQg"
+    },
+    {
+      "id": 3,
+      "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+      "kcal": "400 kcal",
+      "protein": "25 g",
+      "carbohydrate": "N/A",
+      "fat": "18 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSFVt6HkHpJGVDOkF-cZ5wP-oF5U6MWsYp8GE9RKqGqi6fhFSuP"
+    },
+    {
+      "id": 4,
+      "name": "Bowl de yogur griego con frutas y granola",
+      "kcal": "250 kcal",
+      "protein": "15 g",
+      "carbohydrate": "N/A",
+      "fat": "8 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRjjzyYBzW3aGGwrywRoz3j36C7gKnxw5ygBwzyylCtWKFejkS4"
+    },
+    {
+      "id": 5,
+      "name": "Tortilla de claras de huevo con espinacas y champiñones",
+      "kcal": "200 kcal",
+      "protein": "20 g",
+      "carbohydrate": "N/A",
+      "fat": "10 g",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4WTT6a0yg4U8q2fuAcUKHrWr5aDBINb1LZo4IDOy9pwlFKqIV"
+    },
+    {
+      "id": 6,
+      "name": "Pechuga de pollo a la plancha con brócoli al vapor",
+      "kcal": "300 kcal",
+      "protein": "25 g",
+      "carbohydrate": "N/A",
+      "fat": "10 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSGjD8zUyxeRv4HCod1F4JlcgNQrp7nnUnfcvN-rL7w-Qxlq3bQ"
     }
+
   ],
   "food": [
     {
       "id": 1,
-      "name": "Toast with Cheese and Spinach",
-      "kcal": "215 kcal",
-      "protein": "6.2 g",
-      "carbohydrate": "6.2 g",
-      "fat": "18.2 g"
+      "name": "Puré con Asado",
+      "kcal": "379.9 kcal",
+      "protein": "29.9 g",
+      "carbohydrate": "32.0 g",
+      "fat": "19.9 g",
+      "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS7gfgaj3sRLHM32ryFfyWuDX6_FRGL7x0tlVnDfy7vt0lz8tDI"
     },
     {
       "id": 2,
-      "name": "Toast with Cheese and Spinach",
-      "kcal": "215 kcal",
-      "protein": "6.2 g",
-      "carbohydrate": "6.2 g",
-      "fat": "18.2 g"
+      "name": "Lomo Saltado",
+      "kcal": "883 kcal",
+      "protein": "47.9 g",
+      "carbohydrate": "60.9 g",
+      "fat": "48.9 g",
+      "img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRlYK0ver_JmzQS4lSiRca4hEybxGH98UXba9RC73HJR-YyB63N"
+    },
+    {
+      "id": 3,
+      "name": "Arroz con Pollo",
+      "kcal": "742 kcal",
+      "protein": "40.2 g",
+      "carbohydrate": "101.9 g",
+      "fat": "22.9 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSBA-tTIleLFLyazgDYaRMFRHk0O4gWK40xZQbyPwxQoz3No5bR"
+    },
+    {
+      "id": 4,
+      "name": "Estofado",
+      "kcal": "617.8 kcal",
+      "protein": "32.9 g",
+      "carbohydrate": "62.9 g",
+      "fat": "27.0 g",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHZJw2JQzk_hbxbup7jjoPyGqgcccR_iYE6-BgrQqgv0PU1iL"
+    },
+    {
+      "id": 5,
+      "name": "Locro",
+      "kcal": "346 kcal",
+      "protein": "12.9 g",
+      "carbohydrate": "53.9 g",
+      "fat": "8.9 g",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScY2q7z68brzoJ3W1nGng3Q7MMXLog-CcyqgVCbtjgEjyC5X9-"
+    },
+    {
+      "id": 6,
+      "name": "Ají de Gallina",
+      "kcal": "890 kcal",
+      "protein": "30.9 g",
+      "carbohydrate": "80.0 g",
+      "fat": "50.9 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgigl-0KBsIZdepP14ggNvQDIS5vCdGdi7QFCIAmtZmmHvJRqo"
+    },
+    {
+      "id": 7,
+      "name": "Seco de Pollo",
+      "kcal": "823 kcal",
+      "protein": "31.9 g",
+      "carbohydrate": "72.9 g",
+      "fat": "42.9 g",
+      "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRgigl-0KBsIZdepP14ggNvQDIS5vCdGdi7QFCIAmtZmmHvJRqo"
+    },
+    {
+      "id": 8,
+      "name": "Pollo con Brócoli y Champiñones",
+      "kcal": "532.9 kcal",
+      "protein": "34.9 g",
+      "carbohydrate": "18.9 g",
+      "fat": "35.9 g",
+      "img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRBbikXoLl-nSJP9plvrkHUrGW8HfeBCHCUuxpFfOThtSERo7ZV"
+    },
+    {
+      "id": 9,
+      "name": "Tiradito de Pescado",
+      "kcal": "820 kcal",
+      "protein": "60.9 g",
+      "carbohydrate": "15.9 g",
+      "fat": "52.9 g",
+      "img": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRh-Fl2U4h6FvKQZRmbElDRxtGi0eQkfMHpbyHyZVkQJB0IranX"
+    },
+    {
+      "id": 10,
+      "name": "Pescado al Ajo",
+      "kcal": "281 kcal",
+      "protein": "37.9 g",
+      "carbohydrate": "9.0 g",
+      "fat": "9.9 g",
+      "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTlBavahIBl2hqIZuhObWFgRrPTcwEc7uJHgklwZPaVwDv_abQ2"
     }
   ],
   "users-premium": [
