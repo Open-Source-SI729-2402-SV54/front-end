@@ -1,91 +1,80 @@
 <div class="container">
-  <h2>Tu pedido</h2>
 
-  <!-- Desayuno Section -->
-  <mat-card class="section">
-    <mat-card-header>
-      <mat-card-title>Desayuno</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="item">
-        <mat-icon>fastfood</mat-icon>
-        <span>Avena con Arándanos y Almendras</span>
-        <div class="quantity">
-          <button mat-button (click)="decreaseQuantity('desayuno')">-</button>
-          <span>{{ desayunoQuantity }}</span>
-          <button mat-button (click)="increaseQuantity('desayuno')">+</button>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+  <mat-toolbar color="primary">
+    <span class="main-title">Food Orders</span>
+  </mat-toolbar>
 
-  <!-- Almuerzo Section -->
-  <mat-card class="section">
-    <mat-card-header>
-      <mat-card-title>Almuerzo</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="item">
-        <mat-icon>lunch_dining</mat-icon>
-        <span>Lomo Saltado</span>
-        <div class="quantity">
-          <button mat-button (click)="decreaseQuantity('almuerzo')">-</button>
-          <span>{{ almuerzoQuantity }}</span>
-          <button mat-button (click)="increaseQuantity('almuerzo')">+</button>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-  <!-- Cena Section -->
-  <mat-card class="section">
-    <mat-card-header>
-      <mat-card-title>Cena</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="item">
-        <mat-icon>dinner_dining</mat-icon>
-        <span>Salmón al grill con puré de batata y espárragos</span>
-        <div class="quantity">
-          <button mat-button (click)="decreaseQuantity('cena')">-</button>
-          <span>{{ cenaQuantity }}</span>
-          <button mat-button (click)="increaseQuantity('cena')">+</button>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-  <!-- Dirección -->
   <div class="section">
-    <div class="item-estimate">
-      <mat-icon>location_on</mat-icon>
-      <span>Dirección:</span>
-      <p>Av. Carlos Villarán 285</p>
-    </div>
-  </div>
+    <h1 class="section-title">
+      <mat-icon>fastfood</mat-icon> Breakfast
+    </h1>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Select an option</mat-label>
+      <mat-select #breakfastSelect (selectionChange)="onBreakfastSelect(breakfastSelect.value)">
+        <mat-option value="">-- Select a breakfast --</mat-option>
+        <mat-option *ngFor="let breakfast of breakfasts" [value]="breakfast.id">
+          {{ breakfast.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
 
-  <!-- Estimación -->
-  <div class="section">
-    <div class="item-estimate">
-      <mat-icon>access_time</mat-icon>
-      <span>Estimación de Llegada:</span>
+    <div *ngIf="selectedBreakfast" class="item">
+      <p><strong>Price:</strong> ${{ selectedBreakfast.price }}</p>
       <div class="quantity">
-        <button mat-button (click)="goToSchedule()">Horario</button>
-        <mat-form-field appearance="fill">
-          <mat-label>Selecciona Hora</mat-label>
-          <mat-select [(ngModel)]="selectedTime">
-            <mat-option *ngFor="let time of availableTimes" [value]="time">{{ time }}</mat-option>
-          </mat-select>
-        </mat-form-field>
+        <input matInput type="number" [(ngModel)]="breakfastCount" min="1" class="quantity-input" />
       </div>
     </div>
   </div>
 
-  <!-- Total Section -->
+  <div class="section">
+    <h1 class="section-title">
+      <mat-icon>lunch_dining</mat-icon> Lunch
+    </h1>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Select an option</mat-label>
+      <mat-select #lunchSelect (selectionChange)="onLunchSelect(lunchSelect.value)">
+        <mat-option value="">-- Select a lunch --</mat-option>
+        <mat-option *ngFor="let lunch of lunches" [value]="lunch.id">
+          {{ lunch.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="selectedLunch" class="item">
+      <p><strong>Price:</strong> ${{ selectedLunch.price }}</p>
+      <div class="quantity">
+        <input matInput type="number" [(ngModel)]="lunchCount" min="1" class="quantity-input" />
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h1 class="section-title">
+      <mat-icon>dinner_dining</mat-icon> Dinner
+    </h1>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Select an option</mat-label>
+      <mat-select #dinnerSelect (selectionChange)="onDinnerSelect(dinnerSelect.value)">
+        <mat-option value="">-- Select a dinner --</mat-option>
+        <mat-option *ngFor="let dinner of dinners" [value]="dinner.id">
+          {{ dinner.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div *ngIf="selectedDinner" class="item">
+      <p><strong>Price:</strong> ${{ selectedDinner.price }}</p>
+      <div class="quantity">
+        <input matInput type="number" [(ngModel)]="dinnerCount" min="1" class="quantity-input" />
+      </div>
+    </div>
+  </div>
+
   <div class="total-section">
-    <h4>Total:</h4>
-    <p class="money">S/. {{ totalAmount }}</p>
-    <button mat-raised-button color="primary" (click)="payNow()">Pagar</button>
+    <h2>Total to Pay: ${{ getTotal() }}</h2>
+    <button mat-button color="primary" (click)="pay()">
+      <mat-icon>payment</mat-icon> Pay
+    </button>
   </div>
 
 </div>

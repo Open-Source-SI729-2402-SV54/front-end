@@ -1,0 +1,46 @@
+.plans-container {
+  display: flex;
+  justify-content: space-around; /* Distribuye las tarjetas */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.plan-card {
+  width: 390px; /* Ancho de las tarjetas */
+  border-radius: 16px; /* Esquinas redondeadas */
+  padding: 20px; /* Espaciado interno */
+  display: flex; /* Flexbox para alinear contenido */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.orange {
+  background-color: #F4B289; /* Color de fondo para el plan básico */
+}
+
+.green {
+  background-color: #C4F888; /* Color de fondo para el plan premium */
+}
+
+.plan-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px; /* Ajustado para que se adapte mejor a Material Design */
+  color: #000000;
+  margin: 10px 0; /* Ajustar margen */
+}
+
+.plan-benefits {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px; /* Tamaño de fuente adecuado */
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.mat-card-actions {
+  justify-content: center; /* Centra el botón en la tarjeta */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.buy-button {
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+}

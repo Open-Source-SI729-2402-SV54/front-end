@@ -1,0 +1,64 @@
+
+<div class="powerlifting-container">
+  <h1 class="title">PowerLifting Meals</h1>
+
+  <h2 class="meal-section-title">Breakfast</h2>
+  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="breakfast-section">
+    <mat-grid-tile *ngFor="let meal of breakfast">
+      <mat-card class="meal-card breakfast-card">
+        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
+        <mat-card-header>
+          <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="meal-info">Kcal: {{ meal.kcal }}</p>
+          <p class="meal-info">Protein: {{ meal.protein }}</p>
+          <p class="meal-info">Fat: {{ meal.fat }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" class="add-button">Add</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <h2 class="meal-section-title">Lunch</h2>
+  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="lunch-section">
+    <mat-grid-tile *ngFor="let meal of lunch">
+      <mat-card class="meal-card lunch-card">
+        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
+        <mat-card-header>
+          <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="meal-info">Kcal: {{ meal.kcal }}</p>
+          <p class="meal-info">Protein: {{ meal.protein }}</p>
+          <p class="meal-info">Fat: {{ meal.fat }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" class="add-button">Add</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <h2 class="meal-section-title">Dinner</h2>
+  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="dinner-section">
+    <mat-grid-tile *ngFor="let meal of dinner">
+      <mat-card class="meal-card dinner-card">
+        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
+        <mat-card-header>
+          <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="meal-info">Kcal: {{ meal.kcal }}</p>
+          <p class="meal-info">Protein: {{ meal.protein }}</p>
+          <p class="meal-info">Fat: {{ meal.fat }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" class="add-button">Add</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

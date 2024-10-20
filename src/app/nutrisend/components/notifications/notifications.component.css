@@ -1,0 +1,39 @@
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.alarm-card, .notification-list {
+  padding: 20px;
+  background-color: #FFAC72;
+  border-radius: 15px;
+}
+
+.alarm-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alarm-text h3, .alarm-text p {
+  margin: 0;
+}
+
+.notification-list {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+mat-slide-toggle {
+  margin-right: 10px;
+}

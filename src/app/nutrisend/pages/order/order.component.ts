@@ -1,117 +1,188 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
-import { FormsModule } from "@angular/forms";
-import { NgForOf } from "@angular/common";
-import { MatOption } from "@angular/material/core";
-import { MatFormField, MatLabel, MatSelect } from "@angular/material/select";
-import { MatButton } from "@angular/material/button";
-import { MatCardContent, MatCardHeader, MatCardModule } from "@angular/material/card";
-import { MatIconModule } from "@angular/material/icon";
-import { HttpClient } from '@angular/common/http';
-import {Order} from "../../model/order.entity";
-import {environment} from "../../../../environments/environment.development";
-interface OrderData {
-  order: {
-    breakfast: Array<{ name: string; price: number }>;
-    lunch: Array<{ name: string; price: number }>;
-    dinner: Array<{ name: string; price: number }>;
-    address: string;
-  };
-}
+import {Component, OnInit} from '@angular/core';
+import {OrderItem} from "../../model/order.entity";
+import {OrderService} from "../../services/order.service";
+import {NgForOf, NgIf} from "@angular/common";
+import {FormsModule} from "@angular/forms";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
+import {MatOption, MatSelect} from "@angular/material/select";
+import {MatToolbar} from "@angular/material/toolbar";
+import {MatInput} from "@angular/material/input";
+import {MatButton} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon";
 
 @Component({
   selector: 'app-order',
   standalone: true,
   imports: [
-    FormsModule,
     NgForOf,
-    MatOption,
-    MatSelect,
-    MatLabel,
-    MatButton,
-    MatCardHeader,
-    MatCardContent,
+    NgIf,
+    FormsModule,
     MatFormField,
-    MatIconModule,
-    MatCardModule
+    MatSelect,
+    MatOption,
+    MatToolbar,
+    MatLabel,
+    MatInput,
+    MatButton,
+    MatIcon
   ],
   templateUrl: './order.component.html',
-  styleUrls: ['./order.component.css']
+  styleUrl: './order.component.css'
 })
 export class OrderComponent implements OnInit {
-  desayunoQuantity: number = 0;
-  almuerzoQuantity: number = 0;
-  cenaQuantity: number = 0;
-  totalAmount: number = 0.00;
-  selectedTime: string = '15:00 - 16:00';
-  availableTimes: string[] = [
-    '08:00 - 09:00', '09:00 - 10:00', '10:00 - 11:00', '11:00 - 12:00', '12:00 - 13:00',
-    '13:00 - 14:00', '14:00 - 15:00', '15:00 - 16:00', '16:00 - 17:00', '17:00 - 18:00',
-    '18:00 - 19:00', '19:00 - 20:00'
-  ];
+  breakfasts: any[] = [];
+  lunches: any[] = [];
+  dinners: any[] = [];
+  selectedBreakfast: any;
+  selectedLunch: any;
+  selectedDinner: any;
+  breakfastCount: number = 1;
+  lunchCount: number = 1;
+  dinnerCount: number = 1;
+  constructor(private orderService: OrderService) {}
 
-  orderData!: Order; // Propiedad para almacenar los datos del pedido
-
-  constructor(private router: Router, private http: HttpClient) { }
-
-  ngOnInit() {
-    this.loadOrderData(); // Cargar los datos al iniciar
+  ngOnInit(): void {
+    this.loadBreakfasts();
+    this.loadLunches();
+    this.loadDinners();
   }
 
-  loadOrderData() {
-    this.http.get<Order>(`${environment.serverBasePath}/db.json`).subscribe(
-      data => {
-        console.log('Datos recibidos:', data);
-        if (data) {
-          this.orderData = data; // Asegúrate de que esto esté bien
-          this.calculateTotal(); // Calcular el total inicial si es necesario
-        }
+  loadBreakfasts(): void {
+    this.orderService.getBreakfasts().subscribe(
+      (data) => {
+        this.breakfasts = data;
+        console.log(this.breakfasts);
       },
-      error => {
-        console.error('Error al cargar los datos:', error);
+      (error) => {
+        console.error('Error fetching breakfasts', error);
       }
     );
   }
 
-  increaseQuantity(type: string) {
-    if (type === 'desayuno') this.desayunoQuantity++;
-    if (type === 'almuerzo') this.almuerzoQuantity++;
-    if (type === 'cena') this.cenaQuantity++;
-    this.calculateTotal();
+  loadLunches(): void {
+    this.orderService.getLunches().subscribe(
+      (data) => {
+        this.lunches = data;
+        console.log(this.lunches);
+      },
+      (error) => {
+        console.error('Error fetching lunches', error);
+      }
+    );
   }
 
-  decreaseQuantity(type: string) {
-    if (type === 'desayuno' && this.desayunoQuantity > 0) this.desayunoQuantity--;
-    if (type === 'almuerzo' && this.almuerzoQuantity > 0) this.almuerzoQuantity--;
-    if (type === 'cena' && this.cenaQuantity > 0) this.cenaQuantity--;
-    this.calculateTotal();
+  loadDinners(): void {
+    this.orderService.getDinners().subscribe(
+      (data) => {
+        this.dinners = data;
+        console.log(this.dinners);
+      },
+      (error) => {
+        console.error('Error fetching dinners', error);
+      }
+    );
   }
 
-  calculateTotal() {
-    let desayunoPrice = 0;
-    let almuerzoPrice = 0;
-    let cenaPrice = 0;
-
-    if (this.orderData.breakfast.length > 0) {
-      desayunoPrice = parseFloat(String(this.orderData.breakfast[0].price)) * this.desayunoQuantity;
+  onBreakfastSelect(id: string): void {
+    if (id) {
+      this.orderService.getBreakfastById(+id).subscribe(
+        (data) => {
+          this.selectedBreakfast = data;
+        },
+        (error) => {
+          console.error('Error fetching breakfast by ID', error);
+        }
+      );
+    } else {
+      this.selectedBreakfast = null;
     }
-
-    if (this.orderData.lunch.length > 0) {
-      almuerzoPrice = parseFloat(String(this.orderData.lunch[0].price)) * this.almuerzoQuantity;
-    }
-
-    if (this.orderData.dinner.length > 0) {
-      cenaPrice = parseFloat(String(this.orderData.dinner[0].price)) * this.cenaQuantity;
-    }
-
-    this.totalAmount = desayunoPrice + almuerzoPrice + cenaPrice;
   }
 
-  payNow() {
-    this.router.navigate(['/pay']);
+  onLunchSelect(id: string): void {
+    if (id) {
+      this.orderService.getLunchById(+id).subscribe(
+        (data) => {
+          this.selectedLunch = data;
+        },
+        (error) => {
+          console.error('Error fetching lunch by ID', error);
+        }
+      );
+    } else {
+      this.selectedLunch = null;
+    }
   }
 
-  goToSchedule() {
-    this.router.navigate(['/schedule']);
+  onDinnerSelect(id: string): void {
+    if (id) {
+      this.orderService.getDinnerById(+id).subscribe(
+        (data) => {
+          this.selectedDinner = data;
+        },
+        (error) => {
+          console.error('Error fetching dinner by ID', error);
+        }
+      );
+    } else {
+      this.selectedDinner = null;
+    }
+  }
+
+  incrementBreakfastCount(): void {
+    this.breakfastCount++;
+  }
+
+  decrementBreakfastCount(): void {
+    if (this.breakfastCount > 1) {
+      this.breakfastCount--;
+    }
+  }
+
+  incrementLunchCount(): void {
+    this.lunchCount++;
+  }
+
+  decrementLunchCount(): void {
+    if (this.lunchCount > 1) {
+      this.lunchCount--;
+    }
+  }
+
+  incrementDinnerCount(): void {
+    this.dinnerCount++;
+  }
+
+  decrementDinnerCount(): void {
+    if (this.dinnerCount > 1) {
+      this.dinnerCount--;
+    }
+  }
+
+  getTotal(): number {
+    const breakfastTotal = this.selectedBreakfast ? this.selectedBreakfast.price * this.breakfastCount : 0;
+    const lunchTotal = this.selectedLunch ? this.selectedLunch.price * this.lunchCount : 0;
+    const dinnerTotal = this.selectedDinner ? this.selectedDinner.price * this.dinnerCount : 0;
+
+    return breakfastTotal + lunchTotal + dinnerTotal;
+  }
+  pay(): void {
+    const totalAmount = this.getTotal();
+
+    if (totalAmount > 0) {
+      console.log(`Payment processed for total amount: $${totalAmount}`);
+
+      this.selectedBreakfast = null;
+      this.selectedLunch = null;
+      this.selectedDinner = null;
+
+      this.breakfastCount = 1;
+      this.lunchCount = 1;
+      this.dinnerCount = 1;
+      window.location.reload();
+
+      alert(`Payment of $${totalAmount} has been processed!`);
+    } else {
+      alert('Please select at least one item to pay.');
+    }
   }
 }

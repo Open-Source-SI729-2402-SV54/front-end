@@ -1,0 +1,18 @@
+.footer-container {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #E08E36;
+  margin: 0;
+}
+
+.footer {
+  margin: 25px 0;
+  font-size: 14px;
+  color: #E08E36;
+}

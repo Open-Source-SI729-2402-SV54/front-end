@@ -1,18 +1,23 @@
-export class Order {
-  breakfast: Array<{ name: string; price: number }>;
-  lunch: Array<{ name: string; price: number }>;
-  dinner: Array<{ name: string; price: number }>;
-  address: string;
+export class OrderItem {
+  name: string;
+  quantity: number;
+  price: number;
 
-  constructor(
-    breakfast: Array<{ name: string; price: number }> = [],
-    lunch: Array<{ name: string; price: number }> = [],
-    dinner: Array<{ name: string; price: number }> = [],
-    address: string = ''
-  ) {
-    this.breakfast = breakfast;
-    this.lunch = lunch;
-    this.dinner = dinner;
-    this.address = address;
+  constructor(name: string, price: number) {
+    this.name = name;
+    this.quantity = 0;
+    this.price = price;
+  }
+}
+
+export class Order {
+  id: number;
+  items: OrderItem[];
+  total: number;
+
+  constructor() {
+    this.id = 0;
+    this.items = [];
+    this.total = 0;
   }
 }

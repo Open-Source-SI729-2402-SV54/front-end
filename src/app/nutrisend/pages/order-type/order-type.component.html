@@ -1,0 +1,22 @@
+<body>
+<div class="cards-container">
+  <div class="card sports-card">
+    <h2 class="card-title">{{ sportsTitle }}</h2>
+    <p class="card-description">{{ sportsDescription }}</p>
+    <button class="go-button" (click)="navigateToSports()">Go</button>
+  </div>
+
+  <div class="card healthy-card">
+    <h2 class="card-title">{{ healthyTitle }}</h2>
+    <p class="card-description">{{ healthyDescription }}</p>
+    <button class="go-button" (click)="navigateToHealthy()">Go</button>
+  </div>
+
+  <div class="card availability-card">
+    <h2 class="card-title">{{ availabilityTitle }}</h2>
+    <p class="card-description">{{ availabilityDescription }}</p>
+    <button class="go-button" (click)="navigateToAvailability()">Go</button>
+  </div>
+</div>
+</body>
+

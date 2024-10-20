@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif; /* Establece Poppins como la fuente predeterminada */
+  margin: 0; /* Elimina márgenes predeterminados */
+  padding: 0; /* Elimina relleno predeterminado */
+  background-color: #f8f8f8; /* Color de fondo general */
+}
+
+.titulo {
+  display: flex; /* Utiliza flexbox para centrar */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center; /* Asegura que el texto esté centrado */
+  color: #FFB282; /* Color del texto */
+  margin: 20px 0; /* Añade márgenes para separar de otros elementos */
+  font-size: 32px; /* Tamaño de fuente para el título */
+}
+
+.calorie-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.calorie-search mat-form-field {
+  margin-right: 10px;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+}
+
+.healthy-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-type {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.meal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centrar el contenido */
+  text-align: center;
+}
+
+.healthy-card {
+  flex: 0 0 220px; /* Ancho flexible de 220px */
+  height: 450px; /* Altura fija de 350px */
+  background-color: #FFE9DB; /* Color de fondo de la tarjeta */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s; /* Animación suave al pasar el mouse */
+  display: flex;
+  flex-direction: column; /* Alinear el contenido verticalmente */
+  justify-content: space-between; /* Espacio entre elementos */
+}
+
+.healthy-card img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: 150px; /* Altura fija de 150px */
+  object-fit: cover; /* Mantiene la relación de aspecto y recorta si es necesario */
+  border-top-left-radius: 8px; /* Bordes redondeados en la parte superior */
+  border-top-right-radius: 8px; /* Bordes redondeados en la parte superior */
+}
+
+.healthy-card:hover {
+  transform: translateY(-5px);
+}
+
+.meal-type h2 {
+  color: #FFA726; /* Color para los encabezados de tipo de comida */
+}
+
+.mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #777;
+}
+
+.mat-card-content p {
+  margin: 5px 0;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.go-button {
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  padding: 10px; /* Espaciado interno */
+  background-color: #fd7e50; /* Color del botón */
+  color: black; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  transition: background-color 0.3s ease; /* Efecto al pasar el ratón */
+  justify-content: center;
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.go-button:hover {
+  background-color: #a6d54c; /* Color al pasar el ratón */
+}

@@ -1,0 +1,27 @@
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../../public/assets/imag/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  text-align: center;
+  color: white;
+  text-shadow:
+    2px 2px 0px #000000, /* Sombra en la esquina inferior derecha */
+    -2px 2px 0px #000000, /* Sombra en la esquina inferior izquierda */
+    2px -2px 0px #000000, /* Sombra en la esquina superior derecha */
+    -2px -2px 0px #000000;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
