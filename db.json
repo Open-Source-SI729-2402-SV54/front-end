@@ -243,5 +243,116 @@
       "name": "rice",
       "provider": "Arroz La Fama"
     }
+  ],
+    "order-breakfasts": [
+    {
+      "id": 1,
+      "name": "Oatmeal with Milk, Egg Whites and Banana",
+      "price": 5
+    },
+    {
+      "id": 2,
+      "name": "Greek Yogurt Bowl with Granola and Nuts",
+      "price": 6
+    },
+    {
+      "id": 3,
+      "name": "Peanut Butter and Banana Toast",
+      "price": 4
+    },
+    {
+      "id": 4,
+      "name": "Toast with Cheese and Spinach",
+      "price": 5
+    },
+    {
+      "id": 5,
+      "name": "Egg with Toast and Avocado",
+      "price": 7
+    },
+    {
+      "id": 6,
+      "name": "Toast with Scrambled Eggs and Spinach",
+      "price": 6
+    },
+    {
+      "id": 7,
+      "name": "Oatmeal with Blueberries and Almonds",
+      "price": 5
+    }
+  ],
+  "order-lunches": [
+    {
+      "id": 1,
+      "name": "Chicken Rice Bowl",
+      "price": 8
+    },
+    {
+      "id": 2,
+      "name": "Pork with Mash and Green Salad",
+      "price": 9
+    },
+    {
+      "id": 3,
+      "name": "Caesar Salad with Chicken",
+      "price": 7
+    },
+    {
+      "id": 4,
+      "name": "Meat, Beans and Vegetables Burrito",
+      "price": 10
+    },
+    {
+      "id": 5,
+      "name": "Grilled Salmon with Steamed Asparagus",
+      "price": 12
+    },
+    {
+      "id": 6,
+      "name": "Fresh Chickpea Salad with Tuna",
+      "price": 8
+    },
+    {
+      "id": 7,
+      "name": "Meat Stew with Potato and Carrot",
+      "price": 10
+    }
+  ],
+  "order-dinners": [
+    {
+      "id": 1,
+      "name": "Salmon with Asparagus and Potato",
+      "price": 11
+    },
+    {
+      "id": 2,
+      "name": "Grilled Salmon with Mashed Sweet Potato and Asparagus",
+      "price": 12
+    },
+    {
+      "id": 3,
+      "name": "Meal Stew with Potato and Carrot",
+      "price": 9
+    },
+    {
+      "id": 4,
+      "name": "Meat Stew with Potato and Carrot",
+      "price": 10
+    },
+    {
+      "id": 5,
+      "name": "Spinach Crepe with Turkey Ham",
+      "price": 8
+    },
+    {
+      "id": 6,
+      "name": "Chicken Curry with Basmati Rice and Carrots",
+      "price": 10
+    },
+    {
+      "id": 7,
+      "name": "Meat Stew with Potato and Carrot",
+      "price": 10
+    }
   ]
 }
