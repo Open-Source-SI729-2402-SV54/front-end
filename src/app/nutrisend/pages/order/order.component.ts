@@ -18,9 +18,9 @@ export class OrderComponent {
   }
 
   navigateToFood(): void {
-    this.router.navigate(['/food']);
+    this.router.navigate(['/food']).then(r => console.log('navigated to food'));
   }
   navigateToFitFood(): void {
-    this.router.navigate(['/food-fit']);
+    this.router.navigate(['/food-fit']).then(r => console.log('navigated to food-fit'));
   }
 }
