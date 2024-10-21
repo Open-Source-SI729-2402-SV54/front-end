@@ -1,0 +1,42 @@
+<div class="icon-row">
+  <div class="icon-container" (click)="navigateToFitFood()" >
+    <fa-icon [icon]="'apple-alt'" class="icon"></fa-icon>
+    <span class="icon-text">Fit Food</span>
+  </div>
+
+  <div class="icon-container" (click)="navigateToFood()" >
+    <fa-icon [icon]="'utensils'" class="icon"></fa-icon>
+    <span class="icon-text">Almuerzos</span>
+  </div>
+</div>
+<div class="container">
+  <div class="food-items" >
+<div class="exercisefit-card" *ngFor="let item of exercisefities">
+  <img class="food-image" [src]="item.img" alt="{{item.name}}">
+  <div class="food-info">
+    <h4>{{item.name}}</h4>
+    <p>Description: {{item.description}}</p>
+    <p class="price">S/. {{item.price}}</p>
+    <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+  </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="food-items" >
+
+    <mat-card *ngFor="let food of foodfities" class="food-card">
+      <img class="food-image" mat-card-image [src]="food.img"  alt="{{ food.img }}">
+      <mat-card-header>
+        <h4>{{ food.name }}</h4>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Calories: {{ food.kcal }}</p>
+        <p>Protein: {{food.protein}}</p>
+        <p>Carbohydrate: {{food.carbohydrate}}</p>
+        <p>Grass: {{food.fat}}</p>
+        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

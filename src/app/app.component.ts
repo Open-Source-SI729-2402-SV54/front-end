@@ -17,7 +17,7 @@ export class AppComponent {
   options = [
     { path: '/home', title: 'Home'},
     { path: '/plans', title: 'Plans'},
-    { path: '/order', title: 'Order-Free'},
+    { path: '/food-fit', title: 'Order-Free'},
     { path: '/order-premium', title: 'Order-Premium'},
     { path: '/profile', title: 'Profile'},
     { path: '/sign-in', title: 'Sign In'},

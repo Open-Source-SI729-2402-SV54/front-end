@@ -1,0 +1,122 @@
+/* General container and title styles */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.title {
+  color: #6dc257;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Card and section layout */
+.section {
+  padding: 40px;
+}
+
+.food-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.food-card {
+  width: 220px;
+  background-color: #f7f7f7;
+  border-radius: 50px;
+  margin: 29px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+  padding-top: 55px;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.food-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px; /* Half of the image height */
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.food-info {
+  padding: 10px;
+}
+
+.food-info h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.food-info p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+/* Alinea los contenedores en una fila, centrados horizontalmente */
+.icon-row {
+  display: flex;
+  justify-content: center; /* Alinea horizontalmente al centro */
+  align-items: center; /* Alinea verticalmente */
+  gap: 100px; /* Mantén espacio entre los contenedores */
+  width: 100%; /* Usa todo el ancho disponible */
+  margin: 0; /* Sin margen entre la fila y los bordes */
+  padding-top: 20PX; /* Elimina cualquier padding superior */
+}
+
+/* Contenedor de cada ícono y su texto */
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0; /* Elimina márgenes superiores/inferiores */
+  padding: 0; /* Sin padding adicional */
+}
+
+/* Ícono: Tamaño y color */
+.icon {
+  font-size: 32px;
+  color: #3B82B1;
+  margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Texto del ícono */
+.icon-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #A3D69D;
+  margin: 20px; /* Sin margen adicional */
+  line-height: 1; /* Ajusta el espaciado interno del texto */
+}
+
+.go-button {
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  padding: 10px; /* Espaciado interno */
+  background-color: #fd7e50; /* Color del botón */
+  color: black; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor en forma de mano */
+  transition: background-color 0.3s ease; /* Efecto al pasar el ratón */
+  justify-content: center;
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+.go-button:hover {
+  background-color: #a6d54c; /* Color al pasar el ratón */
+}
