@@ -6,6 +6,7 @@ import { MatButton } from "@angular/material/button";
 import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle } from "@angular/material/card";
 import { MatGridList, MatGridTile } from "@angular/material/grid-list";
 import {NgForOf, NgOptimizedImage} from "@angular/common";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-basketball',
@@ -22,6 +23,7 @@ import {NgForOf, NgOptimizedImage} from "@angular/common";
     MatGridTile,
     NgForOf,
     NgOptimizedImage,
+    RouterLink,
   ],
   templateUrl: './basketball.component.html',
   styleUrls: ['./basketball.component.css']
@@ -59,4 +61,5 @@ export class BasketballComponent {
       this.dinner = data;
     });
   }
+
 }
