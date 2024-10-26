@@ -12,22 +12,24 @@ import {
 } from "@angular/material/card";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {NgForOf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-swimming',
   standalone: true,
-  imports: [
-    MatButton,
-    MatCard,
-    MatCardActions,
-    MatCardContent,
-    MatCardHeader,
-    MatCardImage,
-    MatCardTitle,
-    MatGridList,
-    MatGridTile,
-    NgForOf
-  ],
+    imports: [
+        MatButton,
+        MatCard,
+        MatCardActions,
+        MatCardContent,
+        MatCardHeader,
+        MatCardImage,
+        MatCardTitle,
+        MatGridList,
+        MatGridTile,
+        NgForOf,
+        RouterLink
+    ],
   templateUrl: './swimming.component.html',
   styleUrl: './swimming.component.css'
 })
