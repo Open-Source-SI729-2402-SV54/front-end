@@ -6,25 +6,26 @@ import { MatCardModule } from '@angular/material/card';
 import {MatButton} from "@angular/material/button";
 import {Meal} from "../../model/meal.entity";
 import {PowerLiftingService} from "../../services/power-lifting.service";
-import {withDisabledInitialNavigation} from "@angular/router";
+import {RouterLink, withDisabledInitialNavigation} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 
 @Component({
   selector: 'app-powerlifting',
   standalone: true,
-  imports: [
-    NgForOf,
-    MatCard,
-    MatCardImage,
-    MatCardHeader,
-    MatCardContent,
-    MatCardModule,
-    NgIf,
-    MatCardActions,
-    MatButton,
-    MatGridTile,
-    MatGridList
-  ],
+    imports: [
+        NgForOf,
+        MatCard,
+        MatCardImage,
+        MatCardHeader,
+        MatCardContent,
+        MatCardModule,
+        NgIf,
+        MatCardActions,
+        MatButton,
+        MatGridTile,
+        MatGridList,
+        RouterLink
+    ],
   templateUrl: './powerlifting.component.html',
   styleUrl: './powerlifting.component.css'
 })
