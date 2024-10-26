@@ -1,77 +1,57 @@
+// auth.service.ts
 import { Injectable } from '@angular/core';
-/*import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { catchError, map, switchMap, tap } from 'rxjs/operators';*/
-import {BaseService} from "../../shared/services/base.service";
-import {User} from "../model/user.entity";
-import {catchError, Observable} from "rxjs";
+import { BaseService } from "../../shared/services/base.service";
+import { User } from "../model/user.entity";
+import { catchError, Observable, tap } from "rxjs";
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService extends BaseService<User>{
-  constructor(){
+export class AuthService extends BaseService<User> {
+  constructor() {
     super();
-    this.resourceEndPoint = '/users-premium';
+    this.resourceEndPoint = '/users';
   }
-  /*private isLoggedIn = false;
-  private apiUrl = 'http://localhost:3000'; // Cambia según tu API base
-  private userType: string = ''; // Variable para almacenar el tipo de usuario*/
 
-  signUp(user: User): Observable<User>{
+  signUp(user: User): Observable<User> {
     return this.create(user);
   }
 
-  signIn(email: string, password: string): Observable<User[]>{
+  signIn(email: string, password: string): Observable<User[]> {
     const filter = `?email=${email}&password=${password}`;
     return this.http.get<User[]>(`${this.resourcePath()}${filter}`, this.httpOptions)
-      .pipe(catchError(this.handleError))
-  }
-  /*// Método de inicio de sesión que determina si es usuario free o premium
-  signIn(email: string, password: string): Observable<any> {
-    return this.http.get<any[]>(`${this.apiUrl}/users-free?email=${email}&password=${password}`).pipe(
-      switchMap((freeUsers) => {
-        if (freeUsers.length > 0) {
-          this.isLoggedIn = true;
-          this.userType = 'free'; // Usuario free encontrado
-          return of(freeUsers); // Devolver los datos de usuarios free
-        } else {
-          // Si no es usuario free, buscar en los usuarios premium
-          return this.http.get<any[]>(`${this.apiUrl}/users-premium?email=${email}&password=${password}`).pipe(
-            tap((premiumUsers) => {
-              if (premiumUsers.length > 0) {
-                this.isLoggedIn = true;
-                this.userType = 'premium'; // Usuario premium encontrado
-              }
-            })
-          );
-        }
-      }),
-      tap((users) => {
-        if (users.length === 0) {
-          console.log('Credenciales inválidas');
-        }
-      }),
-      catchError((error) => {
-        console.error('Error al iniciar sesión', error);
-        return of([]); // Devuelve un array vacío en caso de error
-      })
-    );
+      .pipe(
+        catchError(this.handleError),
+        tap(users => {
+          if (users.length > 0) {
+            const loggedUser = users[0];
+            if (loggedUser.id !== undefined) {
+              localStorage.setItem('userId', loggedUser.id.toString());
+
+              // Verifica que loggedUser.plan no sea undefined antes de almacenarlo
+              const userPlan = loggedUser.plan ?? 'basic'; // Asigna 'basic' si es undefined
+              localStorage.setItem('userPlan', userPlan); // Almacena el plan
+              console.log(`User logged in with ID: ${loggedUser.id}, Plan: ${userPlan}`);
+            } else {
+              console.error('Error: User ID is undefined.');
+            }
+          } else {
+            console.warn('No user was found with the provided credentials.');
+          }
+        })
+      );
   }
 
-  // Método para obtener el tipo de usuario
-  getUserType(): string {
-    return this.userType;
+  getUserId(): string | null {
+    return localStorage.getItem('userId');
   }
 
-  // Verificar si el usuario está autenticado
-  isAuthenticated(): boolean {
-    return this.isLoggedIn;
+  getUserPlan(): string | null {
+    return localStorage.getItem('userPlan');
   }
 
-  // Método para cerrar sesión
-  signOut(): void {
-    this.isLoggedIn = false;
-    this.userType = ''; // Limpiamos el tipo de usuario
-  }*/
+  logOut(): void {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userPlan'); // Limpiar el plan al cerrar sesión
+  }
 }

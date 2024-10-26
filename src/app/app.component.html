@@ -1,12 +1,10 @@
+<!-- app.component.html -->
 <mat-toolbar class="nav">
   <h1>NutriSend</h1>
   <div class="mat-spacer"></div>
-  @for (option of options; track option.title) {
+  <ng-container *ngFor="let option of navOptions">
     <a mat-button [routerLink]="option.path">{{ option.title }}</a>
-  }
+  </ng-container>
 </mat-toolbar>
-<router-outlet />
-<app-footer/>
-
-
-
+<router-outlet></router-outlet>
+<app-footer></app-footer>
