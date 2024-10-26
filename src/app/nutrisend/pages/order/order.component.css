@@ -1,35 +1,65 @@
-/* Alinea los contenedores en una fila, centrados horizontalmente */
-.icon-row {
-  display: flex;
-  justify-content: center; /* Alinea horizontalmente al centro */
-  align-items: center; /* Alinea verticalmente */
-  gap: 100px; /* Mantén espacio entre los contenedores */
-  width: 100%; /* Usa todo el ancho disponible */
-  margin: 0; /* Sin margen entre la fila y los bordes */
-  padding-top: 20PX; /* Elimina cualquier padding superior */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Contenedor de cada ícono y su texto */
-.icon-container {
+.main-title {
+  font-size: 34px;
+  font-family: Arial, sans-serif;
+  color: #FF914D;
+  text-align: center;
+  width: 100%;
+}
+
+.section {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #FF914D;
+  margin-top: 20px;
+}
+
+.item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin: 0; /* Elimina márgenes superiores/inferiores */
-  padding: 0; /* Sin padding adicional */
 }
 
-/* Ícono: Tamaño y color */
-.icon {
-  font-size: 32px;
-  color: #3B82B1;
-  margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+.quantity {
+  display: flex;
+  align-items: center;
 }
 
-/* Texto del ícono */
-.icon-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: #A3D69D;
-  margin: 0; /* Sin margen adicional */
-  line-height: 1; /* Ajusta el espaciado interno del texto */
+.quantity-input {
+  width: 60px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.total-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: #ffa500;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: #FF914D;
 }
