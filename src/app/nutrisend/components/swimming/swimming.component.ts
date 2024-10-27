@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import {Meal} from "../../model/meal.entity";
-import {SwimmingService} from "../../services/swimming.service";
+import {Component, OnInit} from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {
   MatCard,
@@ -11,7 +9,10 @@ import {
   MatCardTitle
 } from "@angular/material/card";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
-import {NgForOf} from "@angular/common";
+import {NgForOf, TitleCasePipe} from "@angular/common";
+import {Router} from "@angular/router";
+import {Meals} from "../../model/meals.entity";
+import {SwimmingService} from "../../services/swimming.service";
 
 @Component({
   selector: 'app-swimming',
@@ -26,39 +27,45 @@ import {NgForOf} from "@angular/common";
     MatCardTitle,
     MatGridList,
     MatGridTile,
-    NgForOf
+    NgForOf,
+    TitleCasePipe
   ],
   templateUrl: './swimming.component.html',
   styleUrl: './swimming.component.css'
 })
-export class SwimmingComponent {
-  breakfast: Meal[] = [];
-  lunch: Meal[] = [];
-  dinner: Meal[] = [];
-  constructor(private swimmingServices: SwimmingService) {  }
+export class SwimmingComponent implements OnInit {
+  swimming: Meals[] = [];
+  selectedSwimming: any;
+  breakfastMeals: Meals[] = [];
+  lunchMeals: Meals[] = [];
+  dinnerMeals: Meals[] = [];
 
-  ngOnInit(): void{
-    this.loadBreakfast();
-    this.loadLunch();
-    this.loadDinner();
-  }
+  constructor(private router: Router, private swimmingApi: SwimmingService) {}
 
-  loadBreakfast(): void{
-    this.swimmingServices.getBreakfast().subscribe((data: Meal[]) => {
-      this.breakfast = data;
+  ngOnInit(): void {
+    this.swimmingApi.getAllSwimming().subscribe({
+      next: (data) => {
+        console.log('Datos de la API Swimming:', data);
+
+        if (Array.isArray(data)) {
+          this.swimming = data;
+          this.selectedSwimming = this.swimming.length > 0 ? this.swimming[0] : null;
+
+          this.breakfastMeals = this.swimming.filter(meal => meal.categoryID === 7 && meal.typeID === 2);
+          this.lunchMeals = this.swimming.filter(meal => meal.categoryID === 7 && meal.typeID === 1);
+          this.dinnerMeals = this.swimming.filter(meal => meal.categoryID === 7 && meal.typeID === 3);
+
+          console.log('Comidas saludables:', this.swimming);
+          console.log('Desayunos:', this.breakfastMeals);
+          console.log('Almuerzos:', this.lunchMeals);
+          console.log('Cenas:', this.dinnerMeals);
+        } else {
+          console.error('Datos de la API no válidos:', data);
+        }
+      },
+      error: (err) => {
+        console.error('Error al obtener disponibilidades', err);
+      }
     });
-    console.log(this.breakfast);
-  }
-  loadLunch(): void{
-    this.swimmingServices.getLunch().subscribe((data: Meal[]) => {
-      this.lunch = data;
-    });
-    console.log(this.lunch);
-  }
-  loadDinner(): void {
-    this.swimmingServices.getDinner().subscribe((data: Meal[]) =>{
-      this.dinner = data;
-    });
-    console.log(this.dinner);
   }
 }

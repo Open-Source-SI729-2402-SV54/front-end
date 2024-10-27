@@ -1,10 +1,10 @@
 export class User {
-  id?: number;
+  id: number;
   name: string;
   surname: string;
   email: string;
   password: string;
-  plan?: 'basic' | 'premium'; // Agrega la propiedad 'plan'
+  plan?: 'basic' | 'premium';
 
   constructor() {
     this.id = 0;
@@ -12,6 +12,6 @@ export class User {
     this.surname = "";
     this.email = "";
     this.password = "";
-    this.plan = undefined; // Inicializa el plan como undefined
+    this.plan = undefined;
   }
 }

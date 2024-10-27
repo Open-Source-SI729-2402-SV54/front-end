@@ -1,22 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Meal} from "../model/meal.entity";
 import {BaseService} from "../../shared/services/base.service";
 import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {Meals} from "../model/meals.entity";
 @Injectable({
   providedIn: 'root'
 })
-export class SwimmingService{
-  private apiUrl= 'http://localhost:3000';
-  constructor( private http: HttpClient) { }
+export class SwimmingService extends BaseService<Meals> {
+  constructor() {
+    super();
+    this.resourceEndPoint = '/meals';
+  }
 
-  getBreakfast(): Observable<Meal[]>{
-    return this.http.get<Meal[]>(`${this.apiUrl}/breakfast-swimming`);
-  }
-  getLunch(): Observable<Meal[]>{
-    return this.http.get<Meal[]>(`${this.apiUrl}/lunch-swimming`);
-  }
-  getDinner(): Observable<Meal[]>{
-    return this.http.get<Meal[]>(`${this.apiUrl}/dinner-swimming`);
+  public getAllSwimming(): Observable<Meals[]> {
+    return this.http.get<Meals[]>(this.resourcePath(), this.httpOptions);
   }
 }
