@@ -1,79 +1,60 @@
-
-.meal-photo {
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-  margin: 0 auto;
-  display: block;
-  border-radius: 8px;
-}
-.swimming-container {
+h1 {
   text-align: center;
-  padding: 10px;
-  background-color: white;
+  font-size: 50px;
+  margin: 50px auto;
 }
-.title{
-  font-size: 36px;
-  font-family: 'poppins', sans-serif;
-  font-weight: bold;
-}
-.meal-title{
-  font-size: 14px;
-  font-style: unset;
-  color: #0A732F;
-  text-align: center;
-}
-.meal-section-title{        //Subtitutulos de las secciones
-margin: 16px 0;
-  font-size: 28px;
-  color: #0A732F;
-  text-align: left;
-  font-family: 'poppins', sans-serif;
-}
-.meal-info{
 
-  justify-content: space-between;
-  align-items: center;
-  margin: 5px 0;
-  font-size: 13px;
+div {
+  padding: 20px;
 }
-.add-button {
-  background-color: rgba(128, 204, 40, 0.70);
-  color: white;
-  font-size: 11px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  border-radius: 50px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-}
-.mat-card-actions {
-  display: flex;
-  justify-content: center;
-}
-.meal-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgba(128, 204, 40, 0.15);
-  max-width: 250px;
 
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
 }
+
+.meal-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
 mat-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  color: #FF914D;
-  min-height: 200px;
-  max-width: 250px;
-  margin: 0 auto;
+  align-items: center;
+  margin: 10px;
+  padding: 15px;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
-.mat-grid-list {
-  margin: 0 auto;
-  width: 100%;
+
+
+mat-card img {
+  max-width: 100%;
+  border-radius: 5px;
 }
-.mat-grid-tile {
-  width: auto;
-  height: auto;
+
+mat-card:hover {
+  transform: scale(1.05);
+}
+
+p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+p:last-child {
+  font-weight: bold;
+  color: #000;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
 }
