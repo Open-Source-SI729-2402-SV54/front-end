@@ -1,13 +1,12 @@
-
 import {Component, OnInit} from '@angular/core';
-import {NgForOf, NgIf} from "@angular/common";
+import {NgForOf, NgIf, TitleCasePipe} from "@angular/common";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardImage} from "@angular/material/card";
 import { MatCardModule } from '@angular/material/card';
 import {MatButton} from "@angular/material/button";
-import {Meal} from "../../model/meal.entity";
-import {PowerLiftingService} from "../../services/power-lifting.service";
-import {withDisabledInitialNavigation} from "@angular/router";
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import {Router} from "@angular/router";
+import {Meals} from "../../model/meals.entity";
+import {PowerLiftingService} from "../../services/power-lifting.service";
 
 @Component({
   selector: 'app-powerlifting',
@@ -23,40 +22,46 @@ import {MatGridList, MatGridTile} from "@angular/material/grid-list";
     MatCardActions,
     MatButton,
     MatGridTile,
-    MatGridList
+    MatGridList,
+    TitleCasePipe
   ],
   templateUrl: './powerlifting.component.html',
   styleUrl: './powerlifting.component.css'
 })
 export class PowerliftingComponent implements OnInit {
-  breakfast: Meal[] = [];
-  lunch: Meal[] = [];
-  dinner: Meal[] = [];
+  powerlifting: Meals[] = [];
+  selectedPowerlifting: any;
+  breakfastMeals: Meals[] = [];
+  lunchMeals: Meals[] = [];
+  dinnerMeals: Meals[] = [];
 
-  constructor(private powerLiftingServices: PowerLiftingService) {  }
+  constructor(private router: Router, private powerliftingApi: PowerLiftingService) {}
 
-  ngOnInit(): void{
-    this.loadBreakfast();
-    this.loadLunch();
-    this.loadDinner();
-  }
+  ngOnInit(): void {
+    this.powerliftingApi.getAllPowerLifting().subscribe({
+      next: (data) => {
+        console.log('Datos de la API Powerlifting:', data);
 
-  loadBreakfast(): void{
-    this.powerLiftingServices.getBreakfast().subscribe((data: Meal[]) => {
-      this.breakfast = data;
+
+        if (Array.isArray(data)) {
+          this.powerlifting = data;
+          this.selectedPowerlifting = this.powerlifting.length > 0 ? this.powerlifting[0] : null;
+
+          this.breakfastMeals = this.powerlifting.filter(meal => meal.categoryID === 3 && meal.typeID === 2);
+          this.lunchMeals = this.powerlifting.filter(meal => meal.categoryID === 3 && meal.typeID === 1);
+          this.dinnerMeals = this.powerlifting.filter(meal => meal.categoryID === 3 && meal.typeID === 3);
+
+          console.log('Comidas saludables:', this.powerlifting);
+          console.log('Desayunos:', this.breakfastMeals);
+          console.log('Almuerzos:', this.lunchMeals);
+          console.log('Cenas:', this.dinnerMeals);
+        } else {
+          console.error('Datos de la API no válidos:', data);
+        }
+      },
+      error: (err) => {
+        console.error('Error al obtener disponibilidades', err);
+      }
     });
-    console.log(this.breakfast);
-  }
-  loadLunch(): void{
-    this.powerLiftingServices.getLunch().subscribe((data: Meal[]) => {
-      this.lunch = data;
-    });
-    console.log(this.lunch);
-  }
-  loadDinner(): void {
-    this.powerLiftingServices.getDinner().subscribe((data: Meal[]) =>{
-      this.dinner = data;
-    });
-    console.log(this.dinner);
   }
 }
