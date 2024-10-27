@@ -1,11 +1,11 @@
-
-import { Component } from '@angular/core';
-import { Meal } from "../../model/meal.entity";
+import {Component, OnInit} from '@angular/core';
 import { BasketballService } from "../../services/basketball.service";
 import { MatButton } from "@angular/material/button";
 import { MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardImage, MatCardTitle } from "@angular/material/card";
 import { MatGridList, MatGridTile } from "@angular/material/grid-list";
-import {NgForOf, NgOptimizedImage} from "@angular/common";
+import {NgForOf, NgOptimizedImage, TitleCasePipe} from "@angular/common";
+import {Router} from "@angular/router";
+import {Meals} from "../../model/meals.entity";
 
 @Component({
   selector: 'app-basketball',
@@ -22,41 +22,46 @@ import {NgForOf, NgOptimizedImage} from "@angular/common";
     MatGridTile,
     NgForOf,
     NgOptimizedImage,
+    TitleCasePipe,
   ],
   templateUrl: './basketball.component.html',
   styleUrls: ['./basketball.component.css']
 })
-export class BasketballComponent {
-  breakfast: Meal[] = [];
-  lunch: Meal[] = [];
-  dinner: Meal[] = [];
+export class BasketballComponent implements OnInit {
+  basketball: Meals[] = [];
+  selectedBasketball: any;
+  breakfastMeals: Meals[] = [];
+  lunchMeals: Meals[] = [];
+  dinnerMeals: Meals[] = [];
 
-  constructor(private basketballService: BasketballService) { }
+  constructor(private router: Router, private basketballApi: BasketballService) {}
 
   ngOnInit(): void {
-    this.loadBreakfast();
-    this.loadLunch();
-    this.loadDinner();
-  }
+    this.basketballApi.getAllBasketball().subscribe({
+      next: (data) => {
+        console.log('Datos de la API Powerlifting:', data);
 
-  loadBreakfast(): void {
-    this.basketballService.getBreakfast().subscribe((data: Meal[]) => {
-      console.log("Breakfast data received:", data);
-      this.breakfast = data;
-    });
-  }
+        // Verifica si los datos son válidos
+        if (Array.isArray(data)) {
+          this.basketball = data; // Asignar los datos directamente
+          this.selectedBasketball = this.basketball.length > 0 ? this.basketball[0] : null; // Selecciona el primer elemento o null
 
-  loadLunch(): void {
-    this.basketballService.getLunch().subscribe((data: Meal[]) => {
-      console.log("Lunch data received:", data);
-      this.lunch = data;
-    });
-  }
+          // Filtrar las comidas por categoría y tipo
+          this.breakfastMeals = this.basketball.filter(meal => meal.categoryID === 1 && meal.typeID === 2); // Desayuno
+          this.lunchMeals = this.basketball.filter(meal => meal.categoryID === 1 && meal.typeID === 1); // Almuerzo
+          this.dinnerMeals = this.basketball.filter(meal => meal.categoryID === 1 && meal.typeID === 3); // Cena
 
-  loadDinner(): void {
-    this.basketballService.getDinner().subscribe((data: Meal[]) => {
-      console.log("Lunch data received:", data);
-      this.dinner = data;
+          console.log('Comidas saludables:', this.basketball);
+          console.log('Desayunos:', this.breakfastMeals);
+          console.log('Almuerzos:', this.lunchMeals);
+          console.log('Cenas:', this.dinnerMeals);
+        } else {
+          console.error('Datos de la API no válidos:', data);
+        }
+      },
+      error: (err) => {
+        console.error('Error al obtener disponibilidades', err);
+      }
     });
   }
 }
