@@ -11,19 +11,58 @@
 </div>
 
 <div class="container">
-<div class="food-items" >
-  <mat-card *ngFor="let food of foodies" class="food-card">
-    <img class="food-image" mat-card-image [src]="food.img" alt="{{ food.img }}">
-    <mat-card-header>
-      <h4>{{ food.name }}</h4>
-    </mat-card-header>
-    <mat-card-content>
-      <p>Calories: {{ food.kcal }}</p>
-      <p>Protein: {{food.protein}}</p>
-      <p>Carbohydrate: {{food.carbohydrate}}</p>
-      <p>Grass: {{food.fat}}</p>
-      <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
-    </mat-card-content>
-  </mat-card>
-</div>
+  <h2>Breakfast</h2>
+
+  <div class="food-items">
+    <mat-card *ngFor="let meal of breakfastMeals" class="food-card">
+      <img class="food-image" mat-card-image [src]="meal.img" alt="{{ meal.name }}">
+      <mat-card-header>
+        <h3>{{ meal.name }}</h3>
+      </mat-card-header>
+      <mat-card-content>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <h2>Lunch</h2>
+  <div class="food-items">
+    <mat-card *ngFor="let meal of lunchMeals" class="food-card">
+      <img class="food-image" mat-card-image [src]="meal.img" alt="{{ meal.name }}">
+      <mat-card-header>
+        <h3>{{ meal.name }}</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Calories: {{ meal.calories }} kcal</p>
+        <p>Protein: {{ meal.protein }}</p>
+        <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+        <p>Fats: {{ meal.fats }}</p>
+        <p>Price: ${{ meal.price }}</p>
+        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <h2>Dinner</h2>
+  <div class="food-items">
+    <mat-card *ngFor="let meal of dinnerMeals" class="food-card">
+      <img class="food-image" mat-card-image [src]="meal.img" alt="{{ meal.name }}">
+      <mat-card-header>
+        <h3>{{ meal.name }}</h3>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Calories: {{ meal.calories }} kcal</p>
+        <p>Protein: {{ meal.protein }}</p>
+        <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+        <p>Fats: {{ meal.fats }}</p>
+        <p>Price: ${{ meal.price }}</p>
+        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
