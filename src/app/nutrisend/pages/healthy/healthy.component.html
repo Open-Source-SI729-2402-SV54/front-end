@@ -1,29 +1,42 @@
-<h1 class="titulo">Healthy</h1>
+<h1>Healthy Meals</h1>
 
-<div class="calorie-search">
-  <mat-form-field appearance="fill">
-    <mat-label>Buscar por Calorías</mat-label>
-    <input matInput type="number" [(ngModel)]="calorieSearch" placeholder="Ingresa la cantidad de calorías" />
-  </mat-form-field>
-  <button mat-button (click)="filterByCalories()">Buscar</button>
-</div>
+<div>
+  <h2>Breakfast</h2>
+  <div class="meal-container">
+    <mat-card *ngFor="let meal of breakfastMeals">
+      <img [src]="meal.img" alt="{{ meal.name }}">
+      <h3>{{ meal.name }}</h3>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+    </mat-card>
+  </div>
 
-<div class="healthy-container">
-  <div class="meal-type" *ngFor="let type of ['breakfast', 'lunch', 'dinner']">
-    <h2>{{ type | titlecase }}:</h2>
-    <div class="meal-cards">
-      <mat-card *ngFor="let healthy of getFilteredHealthiesByType(type)" class="healthy-card">
-        <img mat-card-image [src]="healthy.img" alt="{{ healthy.img }}">
-        <mat-card-content>
-          <mat-card-title>{{ healthy.name }}</mat-card-title>
-          <p>Calories: {{ healthy.calories }}</p>
-          <p>Protein: {{ healthy.protein }}g</p>
-          <p>Carbohydrates: {{ healthy.carbohydrates }}g</p>
-          <p>Fats: {{ healthy.fats }}g</p>
-          <p>Price: ${{ healthy.price }}</p>
-          <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
-        </mat-card-content>
-      </mat-card>
-    </div>
+  <h2>Lunch</h2>
+  <div class="meal-container">
+    <mat-card *ngFor="let meal of lunchMeals">
+      <img [src]="meal.img" alt="{{ meal.name }}">
+      <h3>{{ meal.name }}</h3>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+    </mat-card>
+  </div>
+
+  <h2>Dinner</h2>
+  <div class="meal-container">
+    <mat-card *ngFor="let meal of dinnerMeals">
+      <img [src]="meal.img" alt="{{ meal.name }}">
+      <h3>{{ meal.name }}</h3>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+    </mat-card>
   </div>
 </div>

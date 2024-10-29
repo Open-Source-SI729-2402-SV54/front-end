@@ -1,70 +1,98 @@
+<h1>Power Lifting Meals</h1>
 
-<div class="powerlifting-container">
-  <h1 class="title">PowerLifting Meals</h1>
+<div>
+  <h2>Breakfast</h2>
+  <div class="meal-container">
+    <mat-card *ngFor="let meal of breakfastMeals">
+      <img [src]="meal.img" alt="{{ meal.name }}">
+      <h3>{{ meal.name }}</h3>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+      <button mat-button color="primary" (click)="addToOrder(meal)">Add</button>
 
-  <h2 class="meal-section-title">Breakfast</h2>
-  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="breakfast-section">
-    <mat-grid-tile *ngFor="let meal of breakfast">
-      <mat-card class="meal-card breakfast-card">
-        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
-        <mat-card-header>
-          <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="meal-info">Kcal: {{ meal.kcal }}</p>
-          <p class="meal-info">Protein: {{ meal.protein }}</p>
-          <p class="meal-info">Fat: {{ meal.fat }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button color="primary" class="add-button" routerLink="/order">
-            Add
-          </button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      <div *ngIf="selectedBreakfast === meal">
+        <p>Selected!</p>
+      </div>
+    </mat-card>
+  </div>
 
-  <h2 class="meal-section-title">Lunch</h2>
-  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="lunch-section">
-    <mat-grid-tile *ngFor="let meal of lunch">
-      <mat-card class="meal-card lunch-card">
-        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
-        <mat-card-header>
-          <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="meal-info">Kcal: {{ meal.kcal }}</p>
-          <p class="meal-info">Protein: {{ meal.protein }}</p>
-          <p class="meal-info">Fat: {{ meal.fat }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button color="primary" class="add-button" routerLink="/order">
-            Add
-          </button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <h2>Lunch</h2>
+  <div class="meal-container">
+    <mat-card *ngFor="let meal of lunchMeals">
+      <img [src]="meal.img" alt="{{ meal.name }}">
+      <h3>{{ meal.name }}</h3>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+      <button mat-button color="primary" (click)="addToOrder(meal)">Add</button>
 
-  <h2 class="meal-section-title">Dinner</h2>
-  <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px" class="dinner-section">
-    <mat-grid-tile *ngFor="let meal of dinner">
-      <mat-card class="meal-card dinner-card">
-        <img mat-card-image [src]="meal.img" alt="{{ meal.name }}" class="meal-photo" />
-        <mat-card-header>
-          <mat-card-title class="meal-title">{{ meal.name }}</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p class="meal-info">Kcal: {{ meal.kcal }}</p>
-          <p class="meal-info">Protein: {{ meal.protein }}</p>
-          <p class="meal-info">Fat: {{ meal.fat }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button color="primary" class="add-button" routerLink="/order">
-            Add
-          </button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      <div *ngIf="selectedLunch === meal">
+        <p>Selected!</p>
+      </div>
+    </mat-card>
+  </div>
+
+  <h2>Dinner</h2>
+  <div class="meal-container">
+    <mat-card *ngFor="let meal of dinnerMeals">
+      <img [src]="meal.img" alt="{{ meal.name }}">
+      <h3>{{ meal.name }}</h3>
+      <p>Calories: {{ meal.calories }} kcal</p>
+      <p>Protein: {{ meal.protein }}</p>
+      <p>Carbohydrates: {{ meal.carbohydrates }}</p>
+      <p>Fats: {{ meal.fats }}</p>
+      <p>Price: ${{ meal.price }}</p>
+      <button mat-button color="primary" (click)="addToOrder(meal)">Add</button>
+
+      <div *ngIf="selectedDinner === meal">
+        <p>Selected!</p>
+      </div>
+    </mat-card>
+  </div>
+
+</div>
+
+<!-- Carrito -->
+<div class="food-orders-container">
+  <mat-toolbar color="primary">
+    <span class="main-title">Food Orders</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="toggleCart()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div *ngIf="showCart" class="cart">
+    <h2>Selected Items</h2>
+
+    <div *ngFor="let item of currentOrder.items">
+      <!-- Mostrar selección actual -->
+      <div *ngIf="item.category === 'Breakfast' && selectedBreakfast?.name === item.name">
+        <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
+        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
+      </div>
+      <div *ngIf="item.category === 'Lunch' && selectedLunch?.name === item.name">
+        <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
+        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
+      </div>
+      <div *ngIf="item.category === 'Dinner' && selectedDinner?.name === item.name">
+        <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
+        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
+      </div>
+    </div>
+
+    <!-- Botón para continuar -->
+    <button mat-button color="accent" [routerLink]="['/order']" (click)="saveOrder()">
+      Continue to Order
+    </button>
+
+    <!-- Botón para cerrar el carrito -->
+    <button mat-button (click)="showCart = false">Close Cart</button>
+  </div>
+
 </div>

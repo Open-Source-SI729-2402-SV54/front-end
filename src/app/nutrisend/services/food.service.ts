@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Food } from '../model/food.entity';
 import { BaseService } from '../../shared/services/base.service';
 import { Observable } from 'rxjs';
+import {Meals} from "../model/meals.entity";
 
 @Injectable({
   providedIn: 'root'
 })
-export class FoodService extends BaseService<Food> {
+export class FoodService extends BaseService<Meals> {
   constructor() {
     super();
-    this.resourceEndPoint = '/food';
+    this.resourceEndPoint = '/meals';
   }
 
-  public getAllFoodies(): Observable<Food[]> {
-    return this.http.get<Food[]>(this.resourcePath(), this.httpOptions);
+  public getAllFoodies(): Observable<Meals[]> {
+    return this.http.get<Meals[]>(this.resourcePath(), this.httpOptions);
   }
 }

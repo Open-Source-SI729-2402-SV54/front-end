@@ -63,3 +63,33 @@ h2 {
   text-align: center;
   color: #FF914D;
 }
+.current-order-section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.current-order-title {
+  font-size: 24px;
+  color: #FF914D;
+  margin-bottom: 10px;
+}
+
+.current-order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.current-order-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+}

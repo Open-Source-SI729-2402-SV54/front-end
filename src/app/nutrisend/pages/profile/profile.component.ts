@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import { Profile } from "../../model/profile.entity";
 import { ProfileService } from "../../services/profile.service";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from "@angular/material/card";
@@ -15,7 +15,8 @@ import {AuthService} from "../../services/auth.service";
     MatCardContent,
     MatCard,
     MatCardHeader,
-    MatButton
+    MatButton,
+    RouterLink
   ],
   styleUrls: ['./profile.component.css']
 })

@@ -4,97 +4,135 @@
     <span class="main-title">Food Orders</span>
   </mat-toolbar>
 
-  <div class="section">
-    <h1 class="section-title">
-      <mat-icon>fastfood</mat-icon> Breakfast
-    </h1>
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Select an option</mat-label>
-      <mat-select #breakfastSelect (selectionChange)="onBreakfastSelect(breakfastSelect.value)">
-        <mat-option value="">-- Select a breakfast --</mat-option>
-        <mat-option *ngFor="let breakfast of breakfasts" [value]="breakfast.id">
-          {{ breakfast.name }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+  <div *ngIf="!showOrderForm" class="current-order-section">
+    <h2 class="current-order-title">Your Current Order</h2>
 
-    <div *ngIf="selectedBreakfast" class="item">
-      <p><strong>Price:</strong> ${{ selectedBreakfast.price }}</p>
-      <div class="quantity">
-        <input matInput type="number" [(ngModel)]="breakfastCount" min="1" class="quantity-input" />
+    <div *ngIf="currentOrder.items.length > 0">
+      <h3>Your Current Order:</h3>
+      <div *ngFor="let item of currentOrder.items">
+        <p>{{ item.category | titlecase }}: {{ item.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.price }}</p>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h1 class="section-title">
-      <mat-icon>lunch_dining</mat-icon> Lunch
-    </h1>
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Select an option</mat-label>
-      <mat-select #lunchSelect (selectionChange)="onLunchSelect(lunchSelect.value)">
-        <mat-option value="">-- Select a lunch --</mat-option>
-        <mat-option *ngFor="let lunch of lunches" [value]="lunch.id">
-          {{ lunch.name }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-
-    <div *ngIf="selectedLunch" class="item">
-      <p><strong>Price:</strong> ${{ selectedLunch.price }}</p>
-      <div class="quantity">
-        <input matInput type="number" [(ngModel)]="lunchCount" min="1" class="quantity-input" />
-      </div>
+    <div class="section">
+      <h1 class="section-title">
+        <mat-icon>access_time</mat-icon> Delivery Time
+      </h1>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select Delivery Time</mat-label>
+        <mat-select [(value)]="selectedTime">
+          <mat-option *ngFor="let time of availableTimes" [value]="time">
+            {{ time }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-  </div>
 
-  <div class="section">
-    <h1 class="section-title">
-      <mat-icon>dinner_dining</mat-icon> Dinner
-    </h1>
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Select an option</mat-label>
-      <mat-select #dinnerSelect (selectionChange)="onDinnerSelect(dinnerSelect.value)">
-        <mat-option value="">-- Select a dinner --</mat-option>
-        <mat-option *ngFor="let dinner of dinners" [value]="dinner.id">
-          {{ dinner.name }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    <h3 class="current-order-total">Total Amount Due: ${{ currentOrder.total }}</h3>
 
-    <div *ngIf="selectedDinner" class="item">
-      <p><strong>Price:</strong> ${{ selectedDinner.price }}</p>
-      <div class="quantity">
-        <input matInput type="number" [(ngModel)]="dinnerCount" min="1" class="quantity-input" />
-      </div>
-    </div>
-  </div>
-
-  <!-- Sección de Horario de Entrega -->
-  <div class="section">
-    <h1 class="section-title">
-      <mat-icon>access_time</mat-icon> Delivery Time
-    </h1>
-    <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Select Delivery Time</mat-label>
-      <mat-select [(value)]="selectedTime">
-        <mat-option *ngFor="let time of availableTimes" [value]="time">
-          {{ time }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-
-  <button mat-button color="accent" routerLink="/schedule">
-    <mat-icon>event</mat-icon> Schedule
-  </button>
-
-  <!-- Total y botón de pago -->
-  <div class="total-section">
-    <h2>Total to Pay: ${{ getTotal() }}</h2>
     <button mat-button color="primary" (click)="pay()">
       <mat-icon>payment</mat-icon> Pay
     </button>
+
+    <button mat-button color="accent" (click)="newOrder()">
+      <mat-icon>add_circle</mat-icon> New Order
+    </button>
+  </div>
+
+  <div *ngIf="showOrderForm">
+    <div class="section">
+      <h1 class="section-title">
+        <mat-icon>fastfood</mat-icon> Breakfast
+      </h1>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select an option</mat-label>
+        <mat-select #breakfastSelect (selectionChange)="onBreakfastSelect(breakfastSelect.value)">
+          <mat-option value="">-- Select a breakfast --</mat-option>
+          <mat-option *ngFor="let breakfast of breakfasts" [value]="breakfast.id">
+            {{ breakfast.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div *ngIf="selectedBreakfast" class="item">
+        <p><strong>Price:</strong> ${{ selectedBreakfast.price }}</p>
+        <div class="quantity">
+          <input matInput type="number" [(ngModel)]="breakfastCount" min="1" class="quantity-input" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h1 class="section-title">
+        <mat-icon>lunch_dining</mat-icon> Lunch
+      </h1>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select an option</mat-label>
+        <mat-select #lunchSelect (selectionChange)="onLunchSelect(lunchSelect.value)">
+          <mat-option value="">-- Select a lunch --</mat-option>
+          <mat-option *ngFor="let lunch of lunches" [value]="lunch.id">
+            {{ lunch.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div *ngIf="selectedLunch" class="item">
+        <p><strong>Price:</strong> ${{ selectedLunch.price }}</p>
+        <div class="quantity">
+          <input matInput type="number" [(ngModel)]="lunchCount" min="1" class="quantity-input" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h1 class="section-title">
+        <mat-icon>dinner_dining</mat-icon> Dinner
+      </h1>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select an option</mat-label>
+        <mat-select #dinnerSelect (selectionChange)="onDinnerSelect(dinnerSelect.value)">
+          <mat-option value="">-- Select a dinner --</mat-option>
+          <mat-option *ngFor="let dinner of dinners" [value]="dinner.id">
+            {{ dinner.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div *ngIf="selectedDinner" class="item">
+        <p><strong>Price:</strong> ${{ selectedDinner.price }}</p>
+        <div class="quantity">
+          <input matInput type="number" [(ngModel)]="dinnerCount" min="1" class="quantity-input" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de Horario de Entrega -->
+    <div class="section">
+      <h1 class="section-title">
+        <mat-icon>access_time</mat-icon> Delivery Time
+      </h1>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Select Delivery Time</mat-label>
+        <mat-select [(value)]="selectedTime">
+          <mat-option *ngFor="let time of availableTimes" [value]="time">
+            {{ time }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Total y botón de pago -->
+    <div class="total-section">
+      <h2>Total to Pay: ${{ getTotal() }}</h2>
+
+
+      <!-- Botón de pago -->
+      <button mat-button color="primary" (click)="pay()">
+        <mat-icon>payment</mat-icon> Pay
+      </button>
+
+    </div>
+
   </div>
 
 </div>
