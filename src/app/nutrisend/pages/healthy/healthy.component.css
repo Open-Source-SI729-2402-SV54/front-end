@@ -58,3 +58,25 @@ h3 {
   font-size: 20px;
   text-align: center;
 }
+
+#calorieInput {
+  margin-top: 20px;
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#calorieInput:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.calorie-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
