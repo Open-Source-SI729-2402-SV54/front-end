@@ -33,7 +33,6 @@
       "plan": "premium"
     }
   ],
-
   "schedule": [
     {
       "userId": 1,
@@ -76,8 +75,6 @@
       }
     }
   ],
-
-
   "type-meals": [
     {
       "id": 1,
@@ -1113,7 +1110,6 @@
       "description": "Farm-raised chicken from Peru is known for its freshness and flavor."
     }
   ],
-
   "order-breakfasts": [
     {
       "id": 1,
