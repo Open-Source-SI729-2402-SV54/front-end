@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {OrderItem} from "../model/order.entity";
+import { OrderItem } from "../model/order.entity";
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +33,9 @@ export class OrderService {
 
   getDinnerById(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/order-dinners/${id}`);
+  }
+
+  saveOrder(order: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/food-orders`, order);
   }
 }
