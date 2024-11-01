@@ -36,7 +36,7 @@ export class HealthyComponent implements OnInit {
   breakfastMeals: Meals[] = [];
   lunchMeals: Meals[] = [];
   dinnerMeals: Meals[] = [];
-
+  calorieLimit: number = 0;
   constructor(private router: Router, private healthyApi: HealthyService) {}
 
   ngOnInit(): void {
@@ -47,12 +47,11 @@ export class HealthyComponent implements OnInit {
         // Verifica si los datos son válidos
         if (Array.isArray(data)) {
           this.healthiness = data; // Asignar los datos directamente
-          this.selectedHealthy = this.healthiness.length > 0 ? this.healthiness[0] : null; // Selecciona el primer elemento o null
+          this.selectedHealthy = this.healthiness.length > 0 ? this.healthiness[0] : null;
 
-          // Filtrar las comidas por categoría y tipo
-          this.breakfastMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 2); // Desayuno
-          this.lunchMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 1); // Almuerzo
-          this.dinnerMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 3); // Cena
+          this.breakfastMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 2);
+          this.lunchMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 1);
+          this.dinnerMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 3);
 
           console.log('Comidas saludables:', this.healthiness);
           console.log('Desayunos:', this.breakfastMeals);
@@ -68,5 +67,16 @@ export class HealthyComponent implements OnInit {
     });
   }
 
+  applyCalorieFilter(): void {
+    this.breakfastMeals = this.healthiness.filter(
+      meal => meal.categoryID === 4 && meal.typeID === 2 && meal.calories <= this.calorieLimit
+    );
+    this.lunchMeals = this.healthiness.filter(
+      meal => meal.categoryID === 4 && meal.typeID === 1 && meal.calories <= this.calorieLimit
+    );
+    this.dinnerMeals = this.healthiness.filter(
+      meal => meal.categoryID === 4 && meal.typeID === 3 && meal.calories <= this.calorieLimit
+    );
+  }
 
 }

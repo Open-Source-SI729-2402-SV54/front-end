@@ -1,5 +1,10 @@
 <h1>Healthy Meals</h1>
 
+<div class="calorie-search-container">
+  <label for="calorieInput">Max Calories:</label>
+  <input id="calorieInput" type="number" [(ngModel)]="calorieLimit" (input)="applyCalorieFilter()" placeholder="Enter calorie limit">
+</div>
+
 <div>
   <h2>Breakfast</h2>
   <div class="meal-container">
@@ -11,6 +16,7 @@
       <p>Carbohydrates: {{ meal.carbohydrates }}</p>
       <p>Fats: {{ meal.fats }}</p>
       <p>Price: ${{ meal.price }}</p>
+      <button mat-button color="primary">Add</button>
     </mat-card>
   </div>
 
@@ -24,6 +30,7 @@
       <p>Carbohydrates: {{ meal.carbohydrates }}</p>
       <p>Fats: {{ meal.fats }}</p>
       <p>Price: ${{ meal.price }}</p>
+      <button mat-button color="primary">Add</button>
     </mat-card>
   </div>
 
@@ -37,6 +44,7 @@
       <p>Carbohydrates: {{ meal.carbohydrates }}</p>
       <p>Fats: {{ meal.fats }}</p>
       <p>Price: ${{ meal.price }}</p>
+      <button mat-button color="primary">Add</button>
     </mat-card>
   </div>
 </div>
