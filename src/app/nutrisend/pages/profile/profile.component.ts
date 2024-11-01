@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import { Profile } from "../../model/profile.entity";
 import { ProfileService } from "../../services/profile.service";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader} from "@angular/material/card";
 import {MatButton} from "@angular/material/button";
 import {AuthService} from "../../services/auth.service";
+import {MatDialog} from "@angular/material/dialog";
+import {EditProfileDialogComponent} from "../../components/edit-profile-dialog/edit-profile-dialog.component";
 
 @Component({
   selector: 'app-profile',
@@ -15,7 +17,8 @@ import {AuthService} from "../../services/auth.service";
     MatCardContent,
     MatCard,
     MatCardHeader,
-    MatButton
+    MatButton,
+    RouterLink
   ],
   styleUrls: ['./profile.component.css']
 })
@@ -23,7 +26,7 @@ export class ProfileComponent implements OnInit {
   profile: Profile | null = null; // Inicializa como null o como un nuevo objeto de tipo Profile
   profileId = '';
 
-  constructor(private router: Router, private profileApi: ProfileService, private authService: AuthService) {}
+  constructor(private router: Router, private profileApi: ProfileService, private authService: AuthService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     const userId = this.authService.getUserId(); // Asegúrate de que esta línea esté correcta.
@@ -66,4 +69,18 @@ export class ProfileComponent implements OnInit {
     this.authService.logOut();
     this.router.navigate(['sign-in']);
   }
+
+  openEditDialog(): void {
+    const dialogRef = this.dialog.open(EditProfileDialogComponent, {
+      width: '400px',
+      data: this.profile
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.profile = result;
+      }
+    });
+  }
+
 }
