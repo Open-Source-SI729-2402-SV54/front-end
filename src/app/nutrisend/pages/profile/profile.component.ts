@@ -52,11 +52,6 @@ export class ProfileComponent implements OnInit {
       this.router.navigate(['sign-in']); // Redirige si no hay ID de usuario
     }
   }
-
-  navigateToSupport() {
-    this.router.navigate(['support']);
-  }
-
   navigateToNotifications() {
     this.router.navigate(['notifications']);
   }
