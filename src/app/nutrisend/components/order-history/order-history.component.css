@@ -1,0 +1,75 @@
+.order-history-container {
+  max-width: 600px; /* Ancho máximo para la contenedor */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f9f9f9; /* Color de fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+h2 {
+  font-size: 34px; /* Tamaño de fuente para el título principal */
+  font-family: Arial, sans-serif; /* Fuente */
+  color: #FF914D; /* Color del texto */
+  text-align: center; /* Centrar texto */
+  width: 100%; /* Ancho completo */
+}
+
+.error-message {
+  color: #d32f2f; /* Color rojo para mensajes de error */
+}
+
+.no-orders-message {
+  color: #ffa000; /* Color ámbar para mensajes sin pedidos */
+}
+
+.order-item {
+  margin-bottom: 15px; /* Espaciado entre pedidos */
+}
+
+.order-card {
+  background-color: #fff; /* Fondo blanco para cada pedido */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.mat-card-title {
+  font-size: 20px; /* Tamaño de fuente para el ID del pedido */
+  color: #FF914D; /* Color del título del pedido */
+}
+
+.mat-card-subtitle {
+  font-size: 16px; /* Tamaño de fuente para el total */
+}
+
+ul {
+  list-style-type: none; /* Sin viñetas en la lista */
+  padding-left: 0; /* Sin padding a la izquierda */
+}
+
+li {
+  padding: 5px 0; /* Espaciado interno para cada ítem */
+}
+
+/* Estilos adicionales para mejorar la visualización */
+
+.current-order-section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.current-order-title {
+  font-size: 24px;
+}
+.button-container {
+  display: flex; /* Usar flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+button {
+  background-color: #FF914D; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+}
