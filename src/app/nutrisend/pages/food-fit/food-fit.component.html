@@ -1,30 +1,29 @@
 <div class="icon-row">
-  <div class="icon-container" (click)="navigateToFitFood()" >
+  <div class="icon-container" (click)="navigateToFitFood()">
     <fa-icon [icon]="'apple-alt'" class="icon"></fa-icon>
     <span class="icon-text">Fit Food</span>
   </div>
 
-  <div class="icon-container" (click)="navigateToFood()" >
+  <div class="icon-container" (click)="navigateToFood()">
     <fa-icon [icon]="'utensils'" class="icon"></fa-icon>
     <span class="icon-text">Almuerzos</span>
   </div>
 </div>
+
 <div class="container">
-  <div class="food-items" >
-<div class="exercisefit-card" *ngFor="let item of exerciseFit">
-  <img class="food-image" [src]="item.img" alt="{{item.name}}">
-  <div class="food-info">
-    <h4>{{item.name}}</h4>
-    <p>Description: {{item.description}}</p>
-    <p class="price">S/. {{item.price}}</p>
-    <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+  <div class="food-items">
+    <div class="exercisefit-card" *ngFor="let item of exerciseFit">
+      <img class="food-image" [src]="item.img" alt="{{item.name}}">
+      <div class="food-info">
+        <h4>{{item.name}}</h4>
+        <p>Description: {{item.description}}</p>
+        <p class="price">S/. {{item.price}}</p>
+        <button mat-button class="go-button" (click)="addToOrder(item)">Add</button>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 
-<div class="container">
   <h2>Breakfast</h2>
-
   <div class="food-items">
     <mat-card *ngFor="let meal of breakfastMeals" class="food-card">
       <img class="food-image" mat-card-image [src]="meal.img" alt="{{ meal.name }}">
@@ -37,7 +36,7 @@
         <p>Carbohydrates: {{ meal.carbohydrates }}</p>
         <p>Fats: {{ meal.fats }}</p>
         <p>Price: ${{ meal.price }}</p>
-        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+        <button mat-button class="go-button" (click)="addToOrder(meal)">Add</button>
       </mat-card-content>
     </mat-card>
   </div>
@@ -55,7 +54,7 @@
         <p>Carbohydrates: {{ meal.carbohydrates }}</p>
         <p>Fats: {{ meal.fats }}</p>
         <p>Price: ${{ meal.price }}</p>
-        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+        <button mat-button class="go-button" (click)="addToOrder(meal)">Add</button>
       </mat-card-content>
     </mat-card>
   </div>
@@ -73,8 +72,24 @@
         <p>Carbohydrates: {{ meal.carbohydrates }}</p>
         <p>Fats: {{ meal.fats }}</p>
         <p>Price: ${{ meal.price }}</p>
-        <button mat-button class="go-button" (click)="navigateToPay()">Add</button>
+        <button mat-button class="go-button" (click)="addToOrder(meal)">Add</button>
       </mat-card-content>
     </mat-card>
+  </div>
+  <!-- Carrito de Compras -->
+  <div *ngIf="currentOrder.items.length > 0" class="cart-container">
+    <h2>
+      <mat-icon>shopping_cart</mat-icon>
+      Your Cart
+    </h2>
+    <div *ngFor="let item of currentOrder.items">
+      <p>
+        {{ item.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.price * item.quantity }}
+        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button> <!-- Botón para eliminar -->
+      </p>
+    </div>
+
+    <h3>Total Amount Due: ${{ currentOrder.total }}</h3>
+    <button mat-button color="primary" (click)="navigateToPay()">Proceed to Payment</button>
   </div>
 </div>
