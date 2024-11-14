@@ -38,4 +38,7 @@ export class OrderService {
   saveOrder(order: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/food-orders`, order);
   }
+  saveOrderToHistory(order: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/order-history`, order);
+  }
 }
