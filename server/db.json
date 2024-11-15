@@ -1293,5 +1293,29 @@
       "name": "Meat Stew with Potato and Carrot",
       "price": 10
     }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "userId": 4,
+      "email": "example@gmail.com",
+      "schedule": [
+        {
+          "typeMealId": 1,
+          "hour": "13:01",
+          "status": "inactive"
+        },
+        {
+          "typeMealId": 2,
+          "hour": "23:23",
+          "status": "inactive"
+        },
+        {
+          "typeMealId": 3,
+          "hour": "21:02",
+          "status": "inactive"
+        }
+      ]
+    }
   ]
 }
