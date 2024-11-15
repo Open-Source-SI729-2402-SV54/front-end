@@ -13,7 +13,7 @@
       "id": 2,
       "name": "Renzo",
       "surname": "Araujo",
-      "email": "example69@gmail.com",
+      "email": "camila@gmail.com",
       "password": "123456789",
       "phone": "987654321",
       "plan": "premium"
@@ -35,6 +35,21 @@
       "password": "12345",
       "phone": "123456789",
       "plan": "premium"
+    },
+    {
+      "name": "Camilla",
+      "surname": "ES",
+      "email": "example69@gmail.com",
+      "password": "123456789",
+      "id": 5
+    },
+    {
+      "name": "Camilla",
+      "surname": "ES",
+      "email": "camillaES@gmail.com",
+      "password": "12345",
+      "id": 6,
+      "phone": "12345566645656564"
     }
   ],
   "schedule": [
@@ -1297,25 +1312,30 @@
   "notifications": [
     {
       "id": 1,
-      "userId": 4,
-      "email": "example@gmail.com",
-      "schedule": [
-        {
-          "typeMealId": 1,
-          "hour": "13:01",
-          "status": "inactive"
-        },
-        {
-          "typeMealId": 2,
-          "hour": "23:23",
-          "status": "inactive"
-        },
-        {
-          "typeMealId": 3,
-          "hour": "21:02",
-          "status": "inactive"
-        }
-      ]
+      "userId": 6,
+      "email": "camillaES@gmail.com",
+      "message": "It's time for your breakfast! Don't forget to check your meal plan.",
+      "timestamp": "08:00:00",
+      "typeID": 2,
+      "active": false
+    },
+    {
+      "id": 2,
+      "userId": 6,
+      "email": "camillaES@gmail.com",
+      "message": "It's time for your lunch. Enjoy your meal!",
+      "timestamp": "12:00:00",
+      "typeID": 1,
+      "active": true
+    },
+    {
+      "id": 3,
+      "userId": 6,
+      "email": "camillaES@gmail.com",
+      "message": "Don't forget your healthy dinner to finish the day.",
+      "timestamp": "19:00:00",
+      "typeID": 3,
+      "active": true
     }
   ]
 }

@@ -50,8 +50,15 @@ export class AuthService extends BaseService<User> {
     return localStorage.getItem('userPlan');
   }
 
+  getUserEmail(): string {
+    // Este es un ejemplo; adapta según cómo almacenes los datos del usuario.
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    return user.email || '';
+  }
+
+
   logOut(): void {
     localStorage.removeItem('userId');
-    localStorage.removeItem('userPlan'); // Limpiar el plan al cerrar sesión
+    localStorage.removeItem('userPlan');
   }
 }
