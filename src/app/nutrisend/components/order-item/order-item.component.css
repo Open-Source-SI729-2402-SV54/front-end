@@ -1,0 +1,95 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-title {
+  font-size: 34px;
+  font-family: Arial, sans-serif;
+  color: #FF914D;
+  text-align: center;
+  width: 100%;
+}
+
+.section {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #FF914D;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-input {
+  width: 60px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.total-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: #ffa500;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: #FF914D;
+}
+.current-order-section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.current-order-title {
+  font-size: 24px;
+  color: #FF914D;
+  margin-bottom: 10px;
+}
+
+.current-order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.current-order-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
