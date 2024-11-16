@@ -1,0 +1,38 @@
+.schedule-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e08e36; /* Angular Material Primary Color */
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell {
+  text-transform: uppercase;
+  color: #616161; /* Angular Material Secondary Color */
+  font-weight: 600;
+  text-align: left;
+}
+
+td.mat-cell {
+  font-size: 1rem;
+  color: #424242;
+  text-align: left;
+}
+
+.mat-elevation-z4 {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+}
