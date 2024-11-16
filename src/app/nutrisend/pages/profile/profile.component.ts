@@ -30,11 +30,11 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     const userId = this.authService.getUserId(); // Asegúrate de que esta línea esté correcta.
-    if (userId) { // Verifica que el userId no sea null
+    if (userId) { // Verifica que el id no sea null
       this.profileApi.getAllProfiles().subscribe({
         next: (data) => {
           console.log('Datos de la API:', data);
-          // Asegúrate de convertir userId a número para la comparación
+          // Asegúrate de convertir id a número para la comparación
           this.profile = data.find(user => user.id === Number(userId)) || null;
           console.log(this.profile);
           if (!this.profile) {

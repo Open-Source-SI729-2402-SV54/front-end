@@ -1,6 +1,7 @@
 export class Schedule {
+  scheduleId: number;
   id: number;
-  userId: number;
+  mealid: number;
   monday: DailyMeals;
   tuesday: DailyMeals;
   wednesday: DailyMeals;
@@ -10,8 +11,9 @@ export class Schedule {
   sunday: DailyMeals;
 
   constructor() {
+    this.scheduleId = 0;
     this.id = 0;
-    this.userId = 0;
+    this.mealid = 0;
     this.monday = new DailyMeals();
     this.tuesday = new DailyMeals();
     this.wednesday = new DailyMeals();

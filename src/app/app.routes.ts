@@ -14,11 +14,10 @@ import {BasketballComponent} from "./nutrisend/components/basketball/basketball.
 import {FootballComponent} from "./nutrisend/components/football/football.component";
 import {PowerliftingComponent} from "./nutrisend/components/powerlifting/powerlifting.component";
 import {SportsComponent} from "./nutrisend/pages/sports/sports.component";
-import {ScheduleComponent} from "./nutrisend/components/schedule/schedule.component";
 import {NotificationsComponent} from "./nutrisend/components/notifications/notifications.component";
 import {FoodComponent} from "./nutrisend/pages/food/food.component";
 import {FoodFitComponent} from "./nutrisend/pages/food-fit/food-fit.component";
-import {OrderItemComponent} from "./nutrisend/components/order-item/order-item.component";
+import {ScheduleComponent} from "./nutrisend/components/schedule/schedule.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -39,7 +38,7 @@ export const routes: Routes = [
   {path: 'swimming', component: SwimmingComponent},//Renzo
   {path: 'schedule', component: ScheduleComponent},//Renzo
   {path: 'notifications', component: NotificationsComponent},//Renzo
-  {path: 'order-item', component: OrderItemComponent},
+  {path: 'order-item', component: OrderComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent}
 ];

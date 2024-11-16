@@ -15,4 +15,7 @@ export class HealthyService extends BaseService<Meals> {
   public getAllHealthies(): Observable<Meals[]> {
     return this.http.get<Meals[]>(this.resourcePath(), this.httpOptions);
   }
+  public getById(id: number): Observable<Meals[]> {
+    return this.http.get<Meals[]>(`${this.resourcePath()}/${id}`, this.httpOptions);
+  }
 }
