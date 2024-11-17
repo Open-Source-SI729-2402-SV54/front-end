@@ -2,22 +2,39 @@
   <h1>Horario de Comidas</h1>
   <p *ngIf="!schedule">Cargando horario...</p>
 
-  <table *ngIf="schedule" class="schedule-table">
-    <thead>
-    <tr>
-      <th>Día</th>
-      <th>Desayuno</th>
-      <th>Almuerzo</th>
-      <th>Cena</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let day of days">
-      <td>{{ day.name }}</td>
-      <td>{{ schedule.week[day.key].breakfast || 'No asignado' }}</td>
-      <td>{{ schedule.week[day.key].lunch || 'No asignado' }}</td>
-      <td>{{ schedule.week[day.key].dinner || 'No asignado' }}</td>
-    </tr>
-    </tbody>
-  </table>
+  <mat-table *ngIf="schedule" [dataSource]="days" class="mat-elevation-z8">
+    <!-- Columna Día -->
+    <ng-container matColumnDef="day">
+      <mat-header-cell *matHeaderCellDef> Día </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+    </ng-container>
+
+    <!-- Columna Desayuno -->
+    <ng-container matColumnDef="breakfast">
+      <mat-header-cell *matHeaderCellDef> Desayuno </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ schedule?.week[element.key]?.breakfast || 'No asignado' }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Columna Almuerzo -->
+    <ng-container matColumnDef="lunch">
+      <mat-header-cell *matHeaderCellDef> Almuerzo </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ schedule?.week[element.key]?.lunch || 'No asignado' }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Columna Cena -->
+    <ng-container matColumnDef="dinner">
+      <mat-header-cell *matHeaderCellDef> Cena </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        {{ schedule?.week[element.key]?.dinner || 'No asignado' }}
+      </mat-cell>
+    </ng-container>
+
+    <!-- Header y Filas -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
 </div>

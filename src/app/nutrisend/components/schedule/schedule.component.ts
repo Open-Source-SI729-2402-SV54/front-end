@@ -5,13 +5,31 @@ import {AuthService} from "../../services/auth.service";
 import {ScheduleService} from "../../services/schedule.service";
 import {HealthyService} from "../../services/healthy.service";
 import {NgForOf, NgIf} from "@angular/common";
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef, MatHeaderRow,
+  MatHeaderRowDef, MatRow, MatRowDef, MatTable
+} from "@angular/material/table";
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
   imports: [
     NgIf,
-    NgForOf
+    NgForOf,
+    MatHeaderCell,
+    MatCell,
+    MatCellDef,
+    MatColumnDef,
+    MatHeaderCellDef,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatHeaderRow,
+    MatRow,
+    MatTable
   ],
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css'
@@ -21,7 +39,15 @@ export class ScheduleComponent implements OnInit {
   userName: string = '';
   schedule: Schedule | null = null;
   meals: Meals[] = [];
-  days: any[] = [];
+  days = [
+    { name: 'Lunes', key: 'monday' },
+    { name: 'Martes', key: 'tuesday' },
+    { name: 'Miércoles', key: 'wednesday' },
+    { name: 'Jueves', key: 'thursday' },
+    { name: 'Viernes', key: 'friday' },
+    { name: 'Sábado', key: 'saturday' },
+    { name: 'Domingo', key: 'sunday' },
+  ];
   displayedColumns: string[] = ['day', 'breakfast', 'lunch', 'dinner'];
   constructor(    private authService: AuthService,
                   private scheduleService : ScheduleService,
