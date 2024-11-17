@@ -1,109 +1,102 @@
 import {Component, OnInit} from '@angular/core';
-import {DailyMeals, Schedule} from "../../model/schedule.entity";
+import {Schedule} from "../../model/schedule.entity";
+import {Meals} from "../../model/meals.entity";
+import {AuthService} from "../../services/auth.service";
 import {ScheduleService} from "../../services/schedule.service";
 import {HealthyService} from "../../services/healthy.service";
-import {Meals} from "../../model/meals.entity";
-import {
-  MatCell,
-  MatCellDef,
-  MatColumnDef,
-  MatHeaderCell,
-  MatHeaderCellDef,
-  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
-  MatTable
-} from "@angular/material/table";
-import {MatSort} from "@angular/material/sort";
-import {NgIf, NgOptimizedImage} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-schedule',
   standalone: true,
   imports: [
-    MatTable,
-    MatColumnDef,
-    MatHeaderCell,
-    MatHeaderCellDef,
-    MatCellDef,
-    MatCell,
-    MatSort,
     NgIf,
-    NgOptimizedImage,
-    MatHeaderRow,
-    MatRow,
-    MatRowDef,
-    MatHeaderRowDef
+    NgForOf
   ],
   templateUrl: './schedule.component.html',
   styleUrl: './schedule.component.css'
 })
-export class ScheduleComponent implements OnInit{
-  scheduleTable: any[] = [];
+export class ScheduleComponent implements OnInit {
+  userId: number | null = null;
+  userName: string = '';
+  schedule: Schedule | null = null;
+  meals: Meals[] = [];
+  days: any[] = [];
   displayedColumns: string[] = ['day', 'breakfast', 'lunch', 'dinner'];
-  userId: number = Number(localStorage.getItem('userId'));
-  mealsMap: Map<number, Meals>  = new Map();
+  constructor(    private authService: AuthService,
+                  private scheduleService : ScheduleService,
+                  private healthyService : HealthyService) {
 
-  constructor(
-    private scheduleService: ScheduleService,
-    private healthyService: HealthyService
-  ){}
-
-  ngOnInit(): void{
-    this.loadAllMeals();
   }
 
-  private loadAllMeals(): void{
-    this.healthyService.getAllHealthies().subscribe(
-      (meals) =>{
-        this.mealsMap = new Map(meals.map((meal) => [meal.id, meal]));
-        this.loadSchedule();
-      },
-      (error) => console.error('error al cargar los alimentos', error)
-    );
+  ngOnInit(): void {
+    this.userId = Number(this.authService.getUserId());
+
+    if(this.userId){
+      this.loadUserData();
+      this.loadSchedule();
+      this.loadMeals();
+    }
   }
-
-
-  private loadSchedule(): void{
-    this.scheduleService.getScheduleByUserId(this.userId).subscribe(
-      (schedules) =>{
-        if(schedules.length > 0){
-          const schedule = schedules[0];
-          this.prepareTableData(schedule);
+  loadUserData() {
+    this.userId = this.authService.getUserId();
+  }
+  loadSchedule(): void {
+    if (this.userId !== null) {
+      this.scheduleService.getByUserId(this.userId).subscribe(
+        (scheduleData) => {
+          this.schedule = scheduleData.length > 0 ? scheduleData[0] : null;
+          this.loadMeals();  // Llamamos a loadMeals después de cargar el horario
+        },
+        (error) => {
+          console.error('Error al obtener el horario:', error);
         }
-      },
-      (error) => console.error('error al cargar el calendario', error)
-    );
+      );
+    }
   }
+  loadMeals(): void {
+    if (this.schedule?.week) { // Usamos encadenamiento opcional para validar que schedule y week existen
+      const weekDays: (keyof Schedule['week'])[] = [
+        'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'
+      ];
 
-  private prepareTableData(schedule: Schedule): void {
-    const days = [
-      { key: 'monday', label: 'Monday' },
-      { key: 'tuesday', label: 'Tuesday' },
-      { key: 'wednesday', label: 'Wednesday' },
-      { key: 'thursday', label: 'Thursday' },
-      { key: 'friday', label: 'Friday' },
-      { key: 'saturday', label: 'Saturday' },
-      { key: 'sunday', label: 'Sunday' },
-    ];
-    days.forEach((day) => {
-      const dailyMeals = schedule[day.key as keyof Schedule] as DailyMeals;
+      weekDays.forEach((day) => {
+        const daySchedule = this.schedule!.week[day]; // Accedemos a week con certeza porque pasó la validación
 
-      this.scheduleTable.push({
-        day: day.label,
-        breakfast: this.mealsMap.get(dailyMeals.breakfast) || { name: 'No disponible', img: '' },
-        lunch: this.mealsMap.get(dailyMeals.lunch) || { name: 'No disponible', img: '' },
-        dinner: this.mealsMap.get(dailyMeals.dinner) || { name: 'No disponible', img: '' },
+        if (daySchedule) { // Validamos que daySchedule no sea nulo
+          // Cargar cada comida usando los IDs de desayuno, almuerzo y cena
+          this.loadMealForDay(day, 'breakfast', daySchedule.breakfast);
+          this.loadMealForDay(day, 'lunch', daySchedule.lunch);
+          this.loadMealForDay(day, 'dinner', daySchedule.dinner);
+        } else {
+          console.warn(`No hay datos para el día: ${day}`);
+        }
       });
-    });
+    } else {
+      console.error('El horario no está disponible o no es válido');
+    }
   }
 
 
-  private capitalize(word: string): string {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  }
+  loadMealForDay(day: keyof Schedule['week'], mealType: 'breakfast' | 'lunch' | 'dinner', mealId: number): void {
+    if (mealId > 0) {
+      this.healthyService.getById(mealId).subscribe(
+        (mealData) => {
+          const meal = mealData[0]; // Asumiendo que la respuesta será un array de comidas
 
+          // Asignar solo el nombre de la comida al día y tipo correspondiente en el Schedule
+          if (this.schedule) {
+            // Aseguramos que el tipo de día y comida se asigna correctamente
+            (this.schedule.week[day] as any)[mealType] = meal.name; // Solo guardamos el nombre
+          }
+        },
+        (error) => {
+          console.error(`Error al obtener la comida para ${mealType} en ${day}:`, error);
+        }
+      );
+    }
+  }
 }
-
-
 
 
 

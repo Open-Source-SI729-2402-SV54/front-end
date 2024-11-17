@@ -1,37 +1,25 @@
 export class Schedule {
-  scheduleId: number;
-  id: number;
-  mealid: number;
-  monday: DailyMeals;
-  tuesday: DailyMeals;
-  wednesday: DailyMeals;
-  thursday: DailyMeals;
-  friday: DailyMeals;
-  saturday: DailyMeals;
-  sunday: DailyMeals;
+  id: number; // ID único del schedule
+  userId: number; // ID del usuario asociado
+  week: {
+    [day: string]: {
+      breakfast: number; // ID de la comida para desayuno
+      lunch: number; // ID de la comida para almuerzo
+      dinner: number; // ID de la comida para cena
+    };
+  };
 
   constructor() {
-    this.scheduleId = 0;
     this.id = 0;
-    this.mealid = 0;
-    this.monday = new DailyMeals();
-    this.tuesday = new DailyMeals();
-    this.wednesday = new DailyMeals();
-    this.thursday = new DailyMeals();
-    this.friday = new DailyMeals();
-    this.saturday = new DailyMeals();
-    this.sunday = new DailyMeals();
-  }
-}
-
-export class DailyMeals {
-  breakfast: number;
-  lunch: number;
-  dinner: number;
-
-  constructor() {
-    this.breakfast = 0;
-    this.lunch = 0;
-    this.dinner = 0;
+    this.userId = 0;
+    this.week = {
+      monday: { breakfast: 0, lunch: 0, dinner: 0 },
+      tuesday: { breakfast: 0, lunch: 0, dinner: 0 },
+      wednesday: { breakfast: 0, lunch: 0, dinner: 0 },
+      thursday: { breakfast: 0, lunch: 0, dinner: 0 },
+      friday: { breakfast: 0, lunch: 0, dinner: 0 },
+      saturday: { breakfast: 0, lunch: 0, dinner: 0 },
+      sunday: { breakfast: 0, lunch: 0, dinner: 0 },
+    };
   }
 }

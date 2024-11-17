@@ -9,15 +9,23 @@ import {Observable} from "rxjs";
 export class ScheduleService extends BaseService<Schedule> {
   constructor() {
     super();
-    this.resourceEndPoint = '/schedule';
+    this.resourceEndPoint = '/schedules';
   }
 
-  getScheduleByUserId(userId: number) : Observable<Schedule[]>{
-    const filter = `?id=${userId}`;
+  public getByUserId(userId: number): Observable<Schedule[]> {
+    const filter = `?userId=${userId}`;
     return this.http.get<Schedule[]>(`${this.resourcePath()}${filter}`, this.httpOptions);
   }
 
-  updateSchedule(schedule: Schedule): Observable<Schedule>{
-    return this.update(schedule.scheduleId, schedule);
+  public createSchedule(schedule: Schedule): Observable<Schedule> {
+    return this.create(schedule);
+  }
+
+  public updateSchedule(id: number, schedule: Schedule): Observable<Schedule> {
+    return this.update(id, schedule);
+  }
+
+  public deleteSchedule(id: number): Observable<any> {
+    return this.delete(id, null);
   }
 }

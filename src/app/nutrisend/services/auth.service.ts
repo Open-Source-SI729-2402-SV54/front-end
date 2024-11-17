@@ -42,8 +42,12 @@ export class AuthService extends BaseService<User> {
       );
   }
 
-  getUserId(): string | null {
-    return localStorage.getItem('userId');
+  getUserId(): number | null {
+    const userId = localStorage.getItem('userId');
+    return userId ? Number(userId) : null;
+  }
+  getById(userId: number): Observable<User> {
+    return this.http.get<User>(`${this.resourcePath()}/${userId}`, this.httpOptions);
   }
 
   getUserPlan(): string | null {
@@ -52,6 +56,6 @@ export class AuthService extends BaseService<User> {
 
   logOut(): void {
     localStorage.removeItem('userId');
-    localStorage.removeItem('userPlan'); // Limpiar el plan al cerrar sesión
+    localStorage.removeItem('userPlan');
   }
 }

@@ -44,85 +44,18 @@
       "id": 5
     }
   ],
-  "schedule": [
+  "schedules": [
     {
-      "scheduleId": 1,
       "id": 1,
-      "mealId": 1,
-      "monday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 1 },
-        "dinner": { "id": 3 }
-      },
-      "tuesday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 3 },
-        "dinner": { "id": 1 }
-      },
-      "wednesday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 1 },
-        "dinner": { "id": 3 }
-      },
-      "thursday":{
-        "breakfast": { "id": 1 },
-        "lunch": { "id": 2 },
-        "dinner": { "id": 3 }
-      },
-      "friday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 3 },
-        "dinner": { "id": 1 }
-      },
-      "saturday":{
-        "breakfast": { "id": 3 },
-        "lunch": { "id": 1 },
-        "dinner": { "id": 2 }
-      },
-      "sunday":{
-        "breakfast": { "id": 1 },
-        "lunch": { "id": 3 },
-        "dinner": { "id": 2 }
-      }
-    },
-    {
-      "scheduleId": 2,
-      "id": 2,
-      "mealId": 2,
-      "monday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 1 },
-        "dinner": { "id": 3 }
-      },
-      "tuesday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 3 },
-        "dinner": { "id": 1 }
-      },
-      "wednesday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 1 },
-        "dinner": { "id": 3 }
-      },
-      "thursday":{
-        "breakfast": { "id": 1 },
-        "lunch": { "id": 2 },
-        "dinner": { "id": 3 }
-      },
-      "friday":{
-        "breakfast": { "id": 2 },
-        "lunch": { "id": 3 },
-        "dinner": { "id": 1 }
-      },
-      "saturday":{
-        "breakfast": { "id": 3 },
-        "lunch": { "id": 1 },
-        "dinner": { "id": 2 }
-      },
-      "sunday":{
-        "breakfast": { "id": 1 },
-        "lunch": { "id": 3 },
-        "dinner": { "id": 2 }
+      "userId": 1,
+      "week": {
+        "monday": { "breakfast": 2, "lunch": 1, "dinner": 2 },
+        "tuesday": { "breakfast": 2, "lunch": 1, "dinner": 2 },
+        "wednesday": { "breakfast": 2, "lunch": 1, "dinner": 2 },
+        "thursday": { "breakfast": 2, "lunch": 1, "dinner": 2 },
+        "friday": { "breakfast": 2, "lunch": 1, "dinner": 2 },
+        "saturday": { "breakfast": 2, "lunch": 1, "dinner": 2 },
+        "sunday": { "breakfast": 2, "lunch": 1, "dinner": 2 }
       }
     }
   ],
