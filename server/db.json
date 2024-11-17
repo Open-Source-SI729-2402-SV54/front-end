@@ -909,7 +909,7 @@
     },
     {
       "id": 62,
-      "name": "Ensalada de quinua y vegetales",
+      "name": "Quinoa and vegetable salad",
       "categoryID": 6,
       "typeID": 1,
       "calories": 300,
@@ -921,7 +921,7 @@
     },
     {
       "id": 63,
-      "name": "Salmón a la plancha con espárragos al vapor",
+      "name": "Grilled salmon with steamed asparagus",
       "categoryID": 6,
       "typeID": 1,
       "calories": 350,
@@ -933,7 +933,7 @@
     },
     {
       "id": 64,
-      "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+      "name": "Grilled Chicken Wrap with Avocado and Vegetables",
       "categoryID": 6,
       "typeID": 2,
       "calories": 400,
@@ -945,7 +945,7 @@
     },
     {
       "id": 65,
-      "name": "Bowl de yogur griego con frutas y granola",
+      "name": "Greek yogurt bowl with fruit and granola",
       "categoryID": 6,
       "typeID": 2,
       "calories": 250,
@@ -957,7 +957,7 @@
     },
     {
       "id": 66,
-      "name": "Tortilla de claras de huevo con espinacas y champiñones",
+      "name": "Egg white omelette with spinach and mushrooms",
       "categoryID": 6,
       "typeID": 3,
       "calories": 200,
@@ -969,7 +969,7 @@
     },
     {
       "id": 67,
-      "name": "Pechuga de pollo a la plancha con brócoli al vapor",
+      "name": "Grilled chicken breast with steamed broccoli",
       "categoryID": 6,
       "typeID": 3,
       "calories": 300,
@@ -981,7 +981,7 @@
     },
     {
       "id": 68,
-      "name": "Puré con Asado",
+      "name": "Mashed potatoes with roast",
       "categoryID": 5,
       "typeID": 1,
       "kcal": 379.9,
@@ -993,7 +993,7 @@
     },
     {
       "id": 69,
-      "name": "Lomo Saltado",
+      "name": "Stir-fried loin",
       "categoryID": 5,
       "typeID": 1,
       "kcal": 883,
@@ -1005,7 +1005,7 @@
     },
     {
       "id": 70,
-      "name": "Arroz con Pollo",
+      "name": "Rice with Chicken",
       "categoryID": 5,
       "typeID": 1,
       "kcal": 742,
@@ -1017,7 +1017,7 @@
     },
     {
       "id": 71,
-      "name": "Estofado",
+      "name": "Stew",
       "categoryID": 5,
       "typeID": 2,
       "kcal": 617.8,
@@ -1041,7 +1041,7 @@
     },
     {
       "id": 73,
-      "name": "Ají de Gallina",
+      "name": "Chicken Chili",
       "categoryID": 5,
       "typeID": 2,
       "kcal": 890,
@@ -1053,7 +1053,7 @@
     },
     {
       "id": 74,
-      "name": "Seco de Pollo",
+      "name": "Dried Chicken",
       "categoryID": 5,
       "typeID": 3,
       "kcal": 823,
@@ -1065,7 +1065,7 @@
     },
     {
       "id": 75,
-      "name": "Pollo con Brócoli y Champiñones",
+      "name": "Chicken with Broccoli and Mushrooms",
       "categoryID": 5,
       "typeID": 3,
       "kcal": 532.9,
@@ -1077,7 +1077,7 @@
     },
     {
       "id": 76,
-      "name": "Tiradito de Pescado",
+      "name": "Fish Tiradito",
       "categoryID": 5,
       "typeID": 3,
       "kcal": 820,
@@ -1089,7 +1089,7 @@
     },
     {
       "id": 77,
-      "name": "Pescado al Ajo",
+      "name": "Garlic Fish",
       "categoryID": 5,
       "typeID": 3,
       "kcal": 281,

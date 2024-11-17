@@ -51,11 +51,13 @@ export class AppComponent implements OnInit {
       if (userPlan === 'premium') {
         additionalOptions.push(
           { path: '/order-premium', title: 'Order' },
+          { path: '/plans', title: 'Plans' },
           { path: '/profile', title: 'Profile' }
         );
       } else if (userPlan === 'basic') {
         additionalOptions.push(
           { path: '/food-fit', title: 'Order' },
+          { path: '/plans', title: 'Plans' },
           { path: '/profile', title: 'Profile' }
         );
       }
