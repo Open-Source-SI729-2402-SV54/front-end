@@ -1,18 +1,24 @@
+/* Estilos generales */
 h1 {
   text-align: center;
-  font-size: 50px;
-  margin: 50px auto;
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #4caf50;
 }
 
-div {
-  padding: 20px;
+.calorie-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-h2 {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  color: #333;
+#calorieInput {
+  margin-left: 10px;
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .meal-container {
@@ -25,14 +31,11 @@ mat-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
   padding: 15px;
-  max-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
 }
-
 
 mat-card img {
   max-width: 100%;
@@ -43,40 +46,44 @@ mat-card:hover {
   transform: scale(1.05);
 }
 
-p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #666;
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
 }
 
-p:last-child {
-  font-weight: bold;
-  color: #000;
+p {
+  margin: 5px 0;
+}
+
+.cart-container {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e0f7fa; /* Cambiar el color de fondo */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.cart-container mat-card {
+  margin-bottom: 15px; /* Aumentar la separación entre los items del carrito */
+}
+
+button {
+  margin-top: auto;
+}
+
+button[color="warn"] {
+  background-color: #f44336;
+  color: white;
 }
 
 h3 {
-  font-size: 20px;
-  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
 }
-
-#calorieInput {
-  margin-top: 20px;
-  padding: 8px;
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-#calorieInput:focus {
-  outline: none;
-  border-color: #4caf50;
-}
-
-.calorie-search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  gap: 10px;
+.checkout-summary {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Colocar en columna */
+  align-items: center; /* Centrar horizontalmente */
+  margin-top: 20px; /* Espacio superior */
 }
