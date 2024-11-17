@@ -13,7 +13,7 @@
       "id": 2,
       "name": "Renzo",
       "surname": "Araujo",
-      "email": "camila@gmail.com",
+      "email": "example69@gmail.com",
       "password": "123456789",
       "phone": "987654321",
       "plan": "premium"
@@ -37,19 +37,13 @@
       "plan": "premium"
     },
     {
-      "name": "Camilla",
-      "surname": "ES",
-      "email": "example69@gmail.com",
-      "password": "123456789",
-      "id": 5
-    },
-    {
-      "name": "Camilla",
-      "surname": "ES",
-      "email": "camillaES@gmail.com",
-      "password": "12345",
-      "id": 6,
-      "phone": "12345566645656564"
+      "id": 5,
+      "name": "luis",
+      "surname": "villegas",
+      "email": "luis@gmail.com",
+      "password": "1234",
+      "phone": "123456789",
+      "plan": "premium"
     }
   ],
   "schedule": [
@@ -1196,6 +1190,443 @@
         }
       ],
       "total": 22.5
+    },
+    {
+      "id": 27,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Pechuga de pollo a la plancha con brócoli al vapor",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 15,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 28,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Oatmeal with Milk, Egg Whites and Banana",
+          "price": 5,
+          "category": "breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Caesar Salad with Chicken",
+          "price": 7,
+          "category": "lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Meal Stew with Potato and Carrot",
+          "price": 9,
+          "category": "dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 21,
+      "deliveryTime": "18:00 - 19:00"
+    },
+    {
+      "id": 30,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Greek Yogurt Bowl with Granola and Nuts",
+          "price": 6,
+          "category": "breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Meat, Beans and Vegetables Burrito",
+          "price": 10,
+          "category": "lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Salmon with Asparagus and Potato",
+          "price": 11,
+          "category": "dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 27,
+      "deliveryTime": "10:00 - 11:00"
+    },
+    {
+      "id": 42,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Ensalada de quinua y vegetales",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Tortilla de claras de huevo con espinacas y champiñones",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5
+    },
+    {
+      "id": 46,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Locro",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Lomo Saltado",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Tiradito de Pescado",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 53,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Bowl de yogur griego con frutas y granola",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Ensalada de quinua y vegetales",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pechuga de pollo a la plancha con brócoli al vapor",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "09:00 - 10:00"
+    },
+    {
+      "id": 56,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Salmón a la plancha con espárragos al vapor",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Tortilla de claras de huevo con espinacas y champiñones",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 61,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Locro",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Puré con Asado",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pollo con Brócoli y Champiñones",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "11:00 - 12:00"
+    },
+    {
+      "id": 67,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Ají de Gallina",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Lomo Saltado",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pollo con Brócoli y Champiñones",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 71,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Bowl de yogur griego con frutas y granola",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Ensalada de quinua y vegetales",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pechuga de pollo a la plancha con brócoli al vapor",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 79,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Locro",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Lomo Saltado",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pescado al Ajo",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 84,
+      "userId": 2,
+      "items": [
+        {
+          "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Salmón a la plancha con espárragos al vapor",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Tortilla de claras de huevo con espinacas y champiñones",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "15:00 - 16:00"
+    },
+    {
+      "id": 75,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Beef Stir-fry",
+          "price": 11,
+          "category": "Dinner",
+          "quantity": 1
+        },
+        {
+          "name": "Baked Chicken with Vegetables",
+          "price": 10,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Protein Smoothie",
+          "price": 5.5,
+          "category": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 26.5,
+      "deliveryTime": "09:00 - 10:00"
+    }
+  ],
+  "order-history": [
+    {
+      "id": 71,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Bowl de yogur griego con frutas y granola",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Ensalada de quinua y vegetales",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pechuga de pollo a la plancha con brócoli al vapor",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 79,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Locro",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Lomo Saltado",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Pescado al Ajo",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "12:00 - 13:00"
+    },
+    {
+      "id": 84,
+      "userId": 2,
+      "items": [
+        {
+          "name": "Wrap de pollo a la parrilla con aguacate y vegetales",
+          "price": 7.5,
+          "category": "Breakfast",
+          "quantity": 1
+        },
+        {
+          "name": "Salmón a la plancha con espárragos al vapor",
+          "price": 7.5,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Tortilla de claras de huevo con espinacas y champiñones",
+          "price": 7.5,
+          "category": "Dinner",
+          "quantity": 1
+        }
+      ],
+      "total": 22.5,
+      "deliveryTime": "15:00 - 16:00"
+    },
+    {
+      "id": 75,
+      "userId": 1,
+      "items": [
+        {
+          "name": "Beef Stir-fry",
+          "price": 11,
+          "category": "Dinner",
+          "quantity": 1
+        },
+        {
+          "name": "Baked Chicken with Vegetables",
+          "price": 10,
+          "category": "Lunch",
+          "quantity": 1
+        },
+        {
+          "name": "Protein Smoothie",
+          "price": 5.5,
+          "category": "Breakfast",
+          "quantity": 1
+        }
+      ],
+      "total": 26.5,
+      "deliveryTime": "09:00 - 10:00"
     }
   ],
   "order-breakfasts": [
@@ -1307,35 +1738,6 @@
       "id": 7,
       "name": "Meat Stew with Potato and Carrot",
       "price": 10
-    }
-  ],
-  "notifications": [
-    {
-      "id": 1,
-      "userId": 6,
-      "email": "camillaES@gmail.com",
-      "message": "It's time for your breakfast! Don't forget to check your meal plan.",
-      "timestamp": "08:00:00",
-      "typeID": 2,
-      "active": false
-    },
-    {
-      "id": 2,
-      "userId": 6,
-      "email": "camillaES@gmail.com",
-      "message": "It's time for your lunch. Enjoy your meal!",
-      "timestamp": "12:00:00",
-      "typeID": 1,
-      "active": true
-    },
-    {
-      "id": 3,
-      "userId": 6,
-      "email": "camillaES@gmail.com",
-      "message": "Don't forget your healthy dinner to finish the day.",
-      "timestamp": "19:00:00",
-      "typeID": 3,
-      "active": true
     }
   ]
 }
