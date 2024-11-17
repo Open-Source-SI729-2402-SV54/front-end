@@ -7,7 +7,8 @@ import { MatButton } from "@angular/material/button";
 import { CommonModule } from '@angular/common';
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
-import {MatInput} from "@angular/material/input"; // Asegúrate de importar esto
+import {MatInput} from "@angular/material/input";
+import {MatIcon} from "@angular/material/icon"; // Asegúrate de importar esto
 
 @Component({
   selector: 'app-availability',
@@ -24,7 +25,8 @@ import {MatInput} from "@angular/material/input"; // Asegúrate de importar esto
     MatFormField,
     FormsModule,
     MatInput,
-    MatLabel
+    MatLabel,
+    MatIcon
   ],
   styleUrls: ['./availability.component.css']
 })

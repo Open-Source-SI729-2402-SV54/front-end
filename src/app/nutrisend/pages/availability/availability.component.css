@@ -1,58 +1,122 @@
+/* General Styles */
+body {
+  background-color: #f4f4f9; /* Fondo suave */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+}
+
+/* Estilo para el título principal */
+.titulo {
+  color: #4caf50; /* Color juvenil y llamativo */
+  font-size: 2.5rem;
+  margin: 30px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Contenedor principal */
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  margin: 16px; /* Espaciado alrededor de la sección */
-  background-color: #f9f9f9; /* Fondo suave para contrastar con las tarjetas */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Estilo de las tarjetas de disponibilidad */
+.availability-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .availability-card {
-  margin: 16px;
-  transition: transform 0.3s, box-shadow 0.3s; /* Añadir animación de sombra */
-  max-width: 300px; /* Ancho máximo para las tarjetas */
-  background-color: rgba(128, 204, 40, 0.15); /* Color de fondo suave */
-  border-radius: 8px; /* Bordes redondeados */
-  overflow: hidden; /* Para que la imagen y el contenido no se salgan */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  max-width: 350px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .availability-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa al hacer hover */
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más intensa al hacer hover */
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.card-header h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+}
+
+.card-header p {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Imagen de la tarjeta */
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Estilo para el campo de búsqueda */
 .mat-form-field {
   width: 100%;
-  max-width: 400px; /* Limita el ancho máximo del campo de búsqueda */
-  margin: 16px 0;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.mat-form-field mat-label {
+  color: #444;
 }
 
 .mat-form-field .mat-form-field-flex {
-  background-color: #fff; /* Color de fondo para el campo de entrada */
+  background-color: #fff;
+  border-radius: 8px;
 }
 
-.titulo {
-  display: flex; /* Utiliza flexbox para centrar */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente (si es necesario) */
-  text-align: center; /* Asegura que el texto esté centrado */
-  color: #a6d54c; /* Establece el color del texto */
-  margin: 20px 0; /* Añade márgenes para separar de otros elementos */
+.mat-icon {
+  color: #4caf50; /* Color vibrante para los iconos */
 }
 
+/* Estilo para los botones de acción */
+.mat-card-actions button {
+  background-color: #4caf50; /* Color de fondo verde */
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.mat-card-actions button:hover {
+  background-color: #388e3c; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilo de los textos */
 p {
-  margin: 4px 0;
+  color: #555;
   font-size: 1rem;
-  color: #555; /* Color del texto de descripción */
+  margin: 10px 0;
 }
 
-img {
-  height: 200px; /* Ajusta según sea necesario */
-  object-fit: cover; /* Mantiene la proporción de la imagen */
-  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-  border-top-left-radius: 8px; /* Bordes redondeados en la parte superior */
-  border-top-right-radius: 8px; /* Bordes redondeados en la parte superior */
+h2 {
+  color: #333;
+  font-size: 1.4rem;
 }

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import {Router, RouterModule} from '@angular/router';
 import {MatCard, MatCardActions, MatCardContent, MatCardTitle} from "@angular/material/card";
-import {MatButton} from "@angular/material/button"; // Importar RouterModule
+import {MatButton} from "@angular/material/button";
+import {MatIcon} from "@angular/material/icon"; // Importar RouterModule
 
 @Component({
   selector: 'app-plans',
   templateUrl: './plans.component.html',
   standalone: true,
   styleUrls: ['./plans.component.css'],
-  imports: [RouterModule, MatCard, MatCardTitle, MatCardContent, MatCardActions, MatButton] // Añadir RouterModule a los imports
+  imports: [RouterModule, MatCard, MatCardTitle, MatCardContent, MatCardActions, MatButton, MatIcon] // Añadir RouterModule a los imports
 })
 export class PlansComponent {
   basicPlanTitle: string = 'Basic Plan';

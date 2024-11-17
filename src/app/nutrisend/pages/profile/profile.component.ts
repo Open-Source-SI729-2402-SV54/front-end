@@ -7,6 +7,7 @@ import {MatButton} from "@angular/material/button";
 import {AuthService} from "../../services/auth.service";
 import {MatDialog} from "@angular/material/dialog";
 import {EditProfileDialogComponent} from "../../components/edit-profile-dialog/edit-profile-dialog.component";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-profile',
@@ -18,7 +19,8 @@ import {EditProfileDialogComponent} from "../../components/edit-profile-dialog/e
     MatCard,
     MatCardHeader,
     MatButton,
-    RouterLink
+    RouterLink,
+    MatIconModule
   ],
   styleUrls: ['./profile.component.css']
 })

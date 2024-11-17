@@ -10,6 +10,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {Router} from "@angular/router";
 import {Notification} from "../../model/notification.entity";
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-notifications',
@@ -27,7 +28,8 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
     MatCardContent,
     NgForOf,
     NgIf,
-    MatProgressSpinner
+    MatProgressSpinner,
+    MatIconModule
   ],
   styleUrls: ['./notifications.component.css']
 })

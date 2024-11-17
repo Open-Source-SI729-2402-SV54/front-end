@@ -1,17 +1,29 @@
 <mat-card class="profile-card">
-  <mat-card-content>
-    <h1>My profile</h1>
-    <p>Name: {{ profile?.name }}</p>
-    <p>Surname: {{ profile?.surname }}</p>
-    <p>Email: {{ profile?.email }}</p>
-    <p>Phone: {{ profile?.phone }}</p> <!-- Asegúrate de que esto no cause problemas -->
-  </mat-card-content>
-
-  <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="openEditDialog()">Editar</button>
-    <button mat-raised-button color="primary" [routerLink]="['/order-history']">Historial de Pedidos</button>
-    <button mat-raised-button color="accent" (click)="navigateToNotifications()">Notificaciones</button>
-    <button mat-raised-button color="warn" (click)="navigateToSchedule()">Horarios</button>
-    <button mat-raised-button color="warn" (click)="navigateToLogOut()">Cerrar Sesión</button>
+  <mat-card-header class="profile-header">
+    <div class="profile-img">
+      <img src="https://via.placeholder.com/80" alt="Profile Image"> <!-- Imagen de perfil -->
+    </div>
+    <div class="profile-info">
+      <h1>{{ profile?.name }} {{ profile?.surname }}</h1>
+      <p>{{ profile?.email }}</p>
+      <p>{{ profile?.phone }}</p>
+    </div>
+  </mat-card-header>
+  <mat-card-actions class="profile-actions">
+    <button mat-raised-button color="primary" (click)="openEditDialog()">
+      <mat-icon>edit</mat-icon> Edit Profile
+    </button>
+    <button mat-raised-button color="accent" [routerLink]="['/order-history']">
+      <mat-icon>history</mat-icon> Order History
+    </button>
+    <button mat-raised-button color="warn" (click)="navigateToNotifications()">
+      <mat-icon>notifications</mat-icon> Notifications
+    </button>
+    <button mat-raised-button color="warn" (click)="navigateToSchedule()">
+      <mat-icon>schedule</mat-icon> Schedule
+    </button>
+    <button mat-raised-button color="warn" (click)="navigateToLogOut()">
+      <mat-icon>exit_to_app</mat-icon> Log Out
+    </button>
   </mat-card-actions>
 </mat-card>

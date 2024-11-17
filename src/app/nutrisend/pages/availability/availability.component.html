@@ -1,20 +1,24 @@
 <h1 class="titulo">Availability</h1>
 
 <div class="container">
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="fill">
     <mat-label>Search</mat-label>
     <input matInput [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()" placeholder="Search for availability">
+    <mat-icon matPrefix>search</mat-icon> <!-- Ícono de búsqueda -->
   </mat-form-field>
 
-  <div>
+  <div class="availability-cards">
     <mat-card *ngFor="let availability of filteredAvailabilities" class="availability-card">
-      <mat-card-header>
-        <h1>{{ availability.name }}</h1>
-        <p>{{ availability.provider }}</p>
+      <mat-card-header class="card-header">
+        <mat-icon mat-card-avatar>access_alarm</mat-icon> <!-- Ícono representativo -->
+        <div>
+          <h2>{{ availability.name }}</h2>
+          <p>{{ availability.provider }}</p>
+        </div>
       </mat-card-header>
-      <img mat-card-image [src]="availability.img" alt="{{ availability.img }}">
+      <img mat-card-image [src]="availability.img" alt="{{ availability.name }}">
       <mat-card-content>
-        <p> {{ availability.description }} </p>
+        <p>{{ availability.description }}</p>
       </mat-card-content>
     </mat-card>
   </div>

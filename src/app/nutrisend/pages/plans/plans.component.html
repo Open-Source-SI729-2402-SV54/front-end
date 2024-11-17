@@ -1,19 +1,29 @@
 <body>
 <div class="plans-container">
+  <!-- Plan Básico -->
   <mat-card class="plan-card orange">
-    <mat-card-title class="plan-title">{{ basicPlanTitle }}</mat-card-title>
+    <mat-card-title class="plan-title">
+      <mat-icon class="plan-icon">access_alarm</mat-icon>{{ basicPlanTitle }}
+    </mat-card-title>
     <mat-card-content>
-      <p class="plan-benefits">{{ basicPlanBenefits }}</p>
+      <div class="plan-benefits">
+        <mat-icon class="check-icon">check_circle</mat-icon>{{ basicPlanBenefits }}
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="accent" class="buy-button basic" (click)="onBasicPlanClick()">Buy</button>
     </mat-card-actions>
   </mat-card>
 
+  <!-- Plan Premium -->
   <mat-card class="plan-card green">
-    <mat-card-title class="plan-title">{{ premiumPlanTitle }}</mat-card-title>
+    <mat-card-title class="plan-title">
+      <mat-icon class="plan-icon">star</mat-icon>{{ premiumPlanTitle }}
+    </mat-card-title>
     <mat-card-content>
-      <p class="plan-benefits">{{ premiumPlanBenefits }}</p>
+      <div class="plan-benefits">
+        <mat-icon class="check-icon">check_circle</mat-icon>{{ premiumPlanBenefits }}
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" class="buy-button premium" (click)="onPremiumPlanClick()">Buy</button>

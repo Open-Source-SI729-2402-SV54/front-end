@@ -5,12 +5,14 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { MatAnchor } from '@angular/material/button';
 import { FooterComponent } from "./public/pages/footer/footer.component";
 import { AuthService } from "./nutrisend/services/auth.service";
-import { NgForOf } from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, MatAnchor, RouterLink, FooterComponent, NgForOf],
+  imports: [RouterOutlet, MatToolbar, MatAnchor, RouterLink, FooterComponent, NgForOf, MatIconModule, NgIf],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
@@ -48,12 +50,12 @@ export class AppComponent implements OnInit {
 
       if (userPlan === 'premium') {
         additionalOptions.push(
-          { path: '/order-premium', title: 'Order-Premium' },
+          { path: '/order-premium', title: 'Order' },
           { path: '/profile', title: 'Profile' }
         );
       } else if (userPlan === 'basic') {
         additionalOptions.push(
-          { path: '/food-fit', title: 'Order-Free' },
+          { path: '/food-fit', title: 'Order' },
           { path: '/profile', title: 'Profile' }
         );
       }

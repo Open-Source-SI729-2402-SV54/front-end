@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 import {RouterLink} from "@angular/router";
-import {MatCard, MatCardContent, MatCardImage} from "@angular/material/card";
+import {MatCard, MatCardContent, MatCardHeader, MatCardImage} from "@angular/material/card";
 import {NgForOf} from "@angular/common";
+import {MatIcon, MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-sports',
@@ -14,7 +15,9 @@ import {NgForOf} from "@angular/common";
     MatCard,
     MatCardContent,
     MatCardImage,
-    NgForOf
+    NgForOf,
+    MatCardHeader,
+    MatIconModule,
   ],
   templateUrl: './sports.component.html',
   styleUrl: './sports.component.css'
@@ -24,22 +27,26 @@ export class SportsComponent {
     {
       name: 'Football',
       image: '././img/Logofootball.jpg',
-      route: '/football'
+      route: '/football',
+      icon: 'sports_soccer'
     },
     {
       name: 'Basketball',
       image: '././img/Logobasketball.jpg',
-      route: '/basketball'
+      route: '/basketball',
+      icon: 'sports_basketball'
     },
     {
       name: 'Swimming',
       image: '././img/LogoSwimming.jpg',
-      route: '/swimming'
+      route: '/swimming',
+      icon: 'sports_pool'
     },
     {
       name: 'Powerlifting',
       image: '././img/Logopowerlifting.jpg',
-      route: '/powerLifting'
+      route: '/powerLifting',
+      icon: 'fitness_center'
     }
     ]
 }

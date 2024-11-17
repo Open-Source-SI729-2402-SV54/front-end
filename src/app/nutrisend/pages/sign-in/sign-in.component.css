@@ -1,78 +1,37 @@
 .background-image {
   height: 100vh;
-  width: 197vh;
+  width: 100%;
   display: flex;
   background-image: url("../../../../../public/assets/imag/fondo.jpg");
   background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
 .sign-in-container {
   position: relative;
-}
-
-html, body {
-  height: 80%;
-  width: 80%;
-}
-
-body {
-  font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.navbar {
-  position: absolute;
-  top: 0;
-  width: 1440px;
-  height: 88px;
-  background-color: white;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 88px;
-}
-
-.logo {
-  width: 85px;
-  height: 85px;
-}
-
-.nav-link {
-  color: #E08E36;
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  margin-left: 30px;
-  text-decoration: none;
-}
-
-.nav-link.active {
-  font-weight: bold;
+  width: 100%;
+  height: 100%;
 }
 
 .main-image {
-  position: absolute;
-  top: 94px;
-  width: 1440px;
-  height: 842px;
-
-  background-size: cover;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .signin-form {
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
   border-radius: 50px;
   padding: 2rem;
-  max-width: 300px;
+  max-width: 400px; /* Aumentado para mejor usabilidad */
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
-  border: 2px solid #32CD32; /* Color verde del borde */
-  position: relative; /* O 'absolute' según tu diseño */
-  top: -210px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .title {
@@ -82,30 +41,26 @@ body {
   margin-bottom: 20px;
 }
 
-.label {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  color: #52DE70;
-  margin-top: 20px;
-}
-
-.input-field {
-  border-radius: 8px;
-  border: 1px solid #8B8989;
-  background-color: #F5F5F5;
+.form-field {
   width: 100%;
-  height: 41px;
-  padding-left: 10px;
+  margin-bottom: 16px;
 }
 
 .enter-button {
-  background-color: #F5F5F5;
-  border: 2px solid #52DE70;
-  color: #52DE70;
+  background-color: #52DE70;
+  border: none;
+  color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   margin-top: 20px;
+  width: 100%;
+  padding: 12px 0;
   cursor: pointer;
+  border-radius: 25px;
+}
+
+.enter-button:hover {
+  background-color: #45c760;
 }
 
 .register-text {
@@ -120,19 +75,13 @@ body {
   text-decoration: underline;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 1440px;
-  height: 88px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.register-link:hover {
+  text-decoration: none;
 }
 
-.footer-text {
-  color: #E08E36;
+.error-message {
+  color: red;
+  margin-top: 15px;
+  font-size: 14px;
   font-family: 'Poppins', sans-serif;
-  font-size: 24px;
 }

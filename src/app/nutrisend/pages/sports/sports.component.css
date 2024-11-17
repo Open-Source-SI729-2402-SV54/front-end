@@ -1,26 +1,78 @@
 .sports-container {
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 20px;
+  gap: 20px;
+  width: 100%;
 }
 
+mat-grid-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Estilo de las tarjetas de deporte */
 .sport-card {
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 240px;
+  height: 350px; /* Ajusta la altura para acomodar el contenido */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sport-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de la imagen de la tarjeta */
+mat-card-image {
+  object-fit: cover;
+  height: 60%;
+  width: 100%;
+}
+
+/* Estilo del encabezado con el icono */
+mat-card-header {
+  background-color: #F1F1F1;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-icon.sport-icon {
+  font-size: 40px;
+  color: #0A732F;
+}
+
+/* Efecto hover sobre los iconos */
+mat-icon.sport-icon:hover {
+  color: #FF5722;
+  transition: color 0.3s ease;
+}
+
+/* Contenido de la tarjeta */
+mat-card-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
 }
 
 mat-card-content h2 {
-  text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   color: #0A732F;
   font-size: 20px;
-}
-mat-card-content {
-  background-color: rgba(128, 204, 40, 0.71);
+  margin: 10px 0;
 }

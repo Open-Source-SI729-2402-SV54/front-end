@@ -2,6 +2,9 @@
   <mat-grid-list cols="4" rowHeight="400px" gutterSize="16px">
     <mat-grid-tile *ngFor="let sport of sports" [routerLink]="sport.route">
       <mat-card class="sport-card">
+        <mat-card-header>
+          <mat-icon class="sport-icon">{{ sport.icon }}</mat-icon>
+        </mat-card-header>
         <img mat-card-image [src]="sport.image" alt="{{sport.name}}"/>
         <mat-card-content>
           <h2>{{sport.name}}</h2>

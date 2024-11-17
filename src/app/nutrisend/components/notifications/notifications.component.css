@@ -1,35 +1,110 @@
+/* Contenedor principal */
 .notifications-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color: #f4f9fb; /* Fondo suave y fresco */
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+/* Títulos */
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #5e5e5e;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Cards */
+.notification-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
   padding: 16px;
 }
 
-.notification-card {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 16px;
+.notification-card:hover {
+  transform: translateY(-4px); /* Efecto de elevación */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Más sombra en hover */
 }
 
+/* Header de la card */
 .notification-card mat-card-header {
   background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.notification-card mat-card-title {
+  font-size: 18px;
+  color: #3b3b3b;
+  font-weight: 500;
+}
+
+/* Contenido de la card */
 .notification-card mat-card-content {
   font-size: 14px;
-  color: #555;
+  color: #6b6b6b;
+  margin-top: 10px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+/* Formato del campo de hora */
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Acciones */
 .actions {
   display: flex;
-  justify-content: flex-end;
-  padding: 8px 16px;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 16px;
 }
 
 .actions button {
-  margin-left: 8px;
+  font-size: 14px;
+  padding: 6px 16px;
+  background-color: #47c88f; /* Color de botón (fresco y alegre) */
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+.actions button:hover {
+  background-color: #3ba370; /* Cambio de color al pasar el ratón */
+}
+
+.actions .mat-button {
+  font-size: 14px;
+  color: #47c88f; /* Color primario */
+  text-transform: capitalize;
+}
+
+/* Contenedor de loading spinner */
 .loading-spinner {
   display: flex;
   justify-content: center;
@@ -37,15 +112,47 @@
   height: 100vh;
 }
 
+/* Estilo de error */
 .error-card {
+  background-color: #ffb0b0;
+  color: #ff4d4d;
   width: 100%;
   max-width: 400px;
-  background-color: #ffcccc;
-  color: #b71c1c;
-  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Mensaje cuando no hay notificaciones */
 .no-notifications {
-  margin-top: 16px;
-  color: #757575;
+  color: #b0b0b0;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Añadir iconos */
+.mat-icon {
+  color: #ffffff;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* Estilos de botón de icono */
+button[mat-button] {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #47c88f;
+  cursor: pointer;
+}
+
+button[mat-button]:hover {
+  color: #3ba370;
+}
+
+button[mat-button] .mat-icon {
+  margin-right: 8px;
 }

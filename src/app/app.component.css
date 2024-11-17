@@ -1,3 +1,75 @@
+/* app.component.css */
+
+/* General styles for the toolbar */
+.nav {
+  background-color: #ffffff; /* Fondo blanco, limpio y moderno */
+  color: #333; /* Texto en un tono oscuro para mejor contraste */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sutil sombra para profundidad */
+  display: flex;
+  align-items: center;
+  padding: 0 16px; /* Espaciado lateral */
+  z-index: 1000; /* Asegura que esté siempre encima */
+}
+
+/* Brand name (h1) styles */
+.nav h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff6f61; /* Un color vibrante para destacar el branding */
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav h1:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Navigation buttons */
+.nav a[mat-button] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize; /* Mejora legibilidad */
+  padding: 8px 16px;
+  margin: 0 8px; /* Espaciado entre botones */
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a[mat-button]:hover {
+  background-color: #f5f5f5; /* Fondo claro al pasar el mouse */
+  color: #a6d54c; /* Resalta el texto al pasar el mouse */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: wrap; /* Permite que los elementos ocupen más de una fila si es necesario */
+  }
+
+  .nav h1 {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .nav a[mat-button] {
+    flex: 1 1 calc(50% - 16px); /* Divide el ancho en dos columnas */
+    margin: 4px 8px;
+  }
+}
+
+/* Spacer */
 .mat-spacer {
   flex: 1 1 auto;
+}
+
+/* Footer adjustments */
+app-footer {
+  margin-top: auto;
+  background-color: #f9f9f9;
+  color: #666;
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #ddd;
 }
