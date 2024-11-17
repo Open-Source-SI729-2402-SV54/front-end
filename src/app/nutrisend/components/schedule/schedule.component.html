@@ -13,7 +13,7 @@
     <ng-container matColumnDef="breakfast">
       <mat-header-cell *matHeaderCellDef> Desayuno </mat-header-cell>
       <mat-cell *matCellDef="let element">
-        {{ schedule?.week[element.key]?.breakfast || 'No asignado' }}
+        {{ schedule.week[element.key].breakfast || 'No asignado' }}
       </mat-cell>
     </ng-container>
 
@@ -21,7 +21,7 @@
     <ng-container matColumnDef="lunch">
       <mat-header-cell *matHeaderCellDef> Almuerzo </mat-header-cell>
       <mat-cell *matCellDef="let element">
-        {{ schedule?.week[element.key]?.lunch || 'No asignado' }}
+        {{ schedule.week[element.key].lunch || 'No asignado' }}
       </mat-cell>
     </ng-container>
 
@@ -29,7 +29,7 @@
     <ng-container matColumnDef="dinner">
       <mat-header-cell *matHeaderCellDef> Cena </mat-header-cell>
       <mat-cell *matCellDef="let element">
-        {{ schedule?.week[element.key]?.dinner || 'No asignado' }}
+        {{ schedule.week[element.key].dinner || 'No asignado' }}
       </mat-cell>
     </ng-container>
 
