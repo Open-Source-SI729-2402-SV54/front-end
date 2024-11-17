@@ -10,6 +10,7 @@ import { CommonModule } from "@angular/common";
 import { MatSlider } from "@angular/material/slider";
 import { FormsModule } from "@angular/forms";
 import {Meals} from "../../model/meals.entity";
+import {Order, OrderItem} from "../../model/order.entity";
 
 @Component({
   selector: 'app-healthy',
@@ -37,28 +38,20 @@ export class HealthyComponent implements OnInit {
   lunchMeals: Meals[] = [];
   dinnerMeals: Meals[] = [];
   calorieLimit: number = 0;
+  currentOrder: Order = new Order(); // Pedido actual
+
   constructor(private router: Router, private healthyApi: HealthyService) {}
 
   ngOnInit(): void {
     this.healthyApi.getAllHealthies().subscribe({
       next: (data) => {
-        console.log('Datos de la API Healthy:', data);
-
-        // Verifica si los datos son válidos
         if (Array.isArray(data)) {
-          this.healthiness = data; // Asignar los datos directamente
+          this.healthiness = data;
           this.selectedHealthy = this.healthiness.length > 0 ? this.healthiness[0] : null;
 
           this.breakfastMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 2);
           this.lunchMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 1);
           this.dinnerMeals = this.healthiness.filter(meal => meal.categoryID === 4 && meal.typeID === 3);
-
-          console.log('Comidas saludables:', this.healthiness);
-          console.log('Desayunos:', this.breakfastMeals);
-          console.log('Almuerzos:', this.lunchMeals);
-          console.log('Cenas:', this.dinnerMeals);
-        } else {
-          console.error('Datos de la API no válidos:', data);
         }
       },
       error: (err) => {
@@ -79,4 +72,67 @@ export class HealthyComponent implements OnInit {
     );
   }
 
+  addToOrder(item: Meals) {
+    let category = '';
+
+    switch (item.typeID) {
+      case 1:
+        category = 'Lunch';
+        break;
+      case 2:
+        category = 'Breakfast';
+        break;
+      case 3:
+        category = 'Dinner';
+        break;
+      default:
+        category = 'Unknown';
+    }
+
+// Verificar si el artículo ya está en el pedido
+    const existingItemIndex = this.currentOrder.items.findIndex(orderItem => orderItem.category === category);
+
+    if (existingItemIndex > -1) {
+      // Si ya existe un platillo en esa categoría, reemplazarlo
+      const existingItem = this.currentOrder.items[existingItemIndex];
+      this.currentOrder.total -= existingItem.price * existingItem.quantity; // Resta el costo anterior
+      existingItem.name = item.name; // Actualiza el nombre del platillo
+      existingItem.price = item.price; // Actualiza el precio del platillo
+      existingItem.quantity = 1; // Reinicia la cantidad a uno
+      this.currentOrder.total += item.price; // Suma el nuevo precio al total
+    } else {
+      // Si no existe, agrega uno nuevo al pedido
+      const orderItem = new OrderItem(item.name, item.price, category);
+      orderItem.quantity = 1; // Inicializa la cantidad a uno
+      this.currentOrder.items.push(orderItem);
+      this.currentOrder.total += item.price; // Suma al total
+    }
+
+    console.log('Orden actual:', this.currentOrder);
+    localStorage.setItem('currentOrder', JSON.stringify(this.currentOrder)); // Guarda el pedido actualizado
+  }
+
+  removeFromOrder(item: OrderItem) {
+    const index = this.currentOrder.items.findIndex(orderItem => orderItem.name === item.name && orderItem.category === item.category);
+
+    if (index > -1) {
+      const quantityToRemove = this.currentOrder.items[index].quantity;
+
+      // Resta el precio total del artículo que se está eliminando
+      this.currentOrder.total -= item.price * quantityToRemove;
+
+      // Elimina el artículo del carrito
+      this.currentOrder.items.splice(index, 1);
+
+      console.log('Artículo eliminado:', item.name);
+      console.log('Orden actual después de eliminar:', this.currentOrder);
+
+      localStorage.setItem('currentOrder', JSON.stringify(this.currentOrder)); // Guarda el pedido actualizado
+    }
+  }
+
+  navigateToPay() {
+    // Redirige a la página de "order"
+    this.router.navigate(['/order']);
+  }
 }

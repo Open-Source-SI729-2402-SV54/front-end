@@ -120,3 +120,42 @@
 .go-button:hover {
   background-color: #a6d54c; /* Color al pasar el ratón */
 }
+
+.cart-container {
+  border: 1px solid #ccc; /* Borde alrededor del carrito */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 16px; /* Espaciado interno */
+  margin-top: 20px; /* Margen superior */
+  background-color: #f9f9f9; /* Fondo claro */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.cart-container h2 {
+  font-size: 24px; /* Tamaño de fuente del título */
+  margin-bottom: 16px; /* Margen inferior */
+  color: #333; /* Color del texto */
+}
+
+.cart-container p {
+  font-size: 18px; /* Tamaño de fuente de los artículos del carrito */
+  margin: 8px 0; /* Margen vertical entre artículos */
+}
+
+.cart-container h3 {
+  font-size: 20px; /* Tamaño de fuente para el total */
+  margin-top: 16px; /* Margen superior */
+  color: #e74c3c; /* Color rojo para destacar el total */
+}
+
+.cart-container button {
+  background-color: #3498db; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  padding: 10px 15px; /* Espaciado interno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.cart-container button:hover {
+  background-color: #2980b9; /* Color más oscuro al pasar el mouse sobre el botón */
+}

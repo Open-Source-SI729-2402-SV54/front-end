@@ -131,7 +131,7 @@ export class OrderComponent implements OnInit {
   saveOrder() {
     const orderToSave = {
       id: this.currentOrder.id,
-      userId: this.currentUser.id, // ID del usuario actual
+      userId: this.currentUser.id,
       items: this.currentOrder.items.map(item => ({
         name: item.name,
         price: item.price,
@@ -153,13 +153,22 @@ export class OrderComponent implements OnInit {
     this.orderService.saveOrder(orderToSave).subscribe(
       response => {
         console.log('Orden guardada:', response);
-        // Mostrar alerta de pago exitoso
-        alert('Your payment has been processed successfully!'); // Mensaje en inglés
-        // Redirigir a la pestaña "profile"
-        this.router.navigate(['/profile']);
+        // Ahora guarda el mismo pedido en order-history
+        this.orderService.saveOrderToHistory(orderToSave).subscribe(
+          historyResponse => {
+            console.log('Orden guardada en historial:', historyResponse);
+            alert('¡Tu pago ha sido procesado exitosamente!');
+            // Redirigir a la pestaña "profile"
+            this.router.navigate(['/profile']);
+          },
+          error => {
+            console.error('Error al guardar en historial', error);
+            alert('Error al guardar la orden en el historial. Por favor, verifica la consola para más detalles.');
+          }
+        );
       },
       error => {
-        console.error('Error al guardar la orden:', error);
+        console.error('Error al guardar el pedido:', error);
         alert('Error al guardar la orden. Por favor, verifica la consola para más detalles.');
       }
     );

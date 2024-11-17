@@ -18,12 +18,14 @@ import {ScheduleComponent} from "./nutrisend/components/schedule/schedule.compon
 import {NotificationsComponent} from "./nutrisend/components/notifications/notifications.component";
 import {FoodComponent} from "./nutrisend/pages/food/food.component";
 import {FoodFitComponent} from "./nutrisend/pages/food-fit/food-fit.component";
+import {OrderHistoryComponent} from "./nutrisend/components/order-history/order-history.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'plans', component: PlansComponent },
   { path: 'order-premium', component: OrderTypeComponent },
   { path: 'order', component: OrderComponent },
+  { path: 'order-history', component: OrderHistoryComponent },
   { path: 'food', component: FoodComponent },
   { path: 'food-fit', component: FoodFitComponent },
   { path: 'profile', component: ProfileComponent },
